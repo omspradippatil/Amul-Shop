@@ -1,0 +1,1092 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: #f8f6f2;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bootstrap Overrides & Custom Navbar */
+.navbar {
+    background: linear-gradient(to right, #0a4da3, #1665c1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.4s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.08);
+}
+
+.shop-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    margin: 0 0.3rem;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffde59;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffde59;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after,
+.navbar-dark .navbar-nav .nav-link.active::after {
+    width: 70%;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #ffde59;
+}
+
+/* Floating Ice Cream Background */
+.floating-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.ice-cream {
+    position: absolute;
+    opacity: 0.15;
+    animation: float 30s linear infinite;
+}
+
+/* Ice cream cone styling */
+.cone {
+    width: 60px;
+    height: 120px;
+    background: radial-gradient(circle at top, #f5a8b8 50px, transparent 50px),
+                linear-gradient(to bottom right, #e6b27a 50%, #c9935f 50%);
+    border-radius: 50% 50% 5px 5px;
+}
+
+/* Ice cream cup styling */
+.cup {
+    width: 80px;
+    height: 100px;
+    background: radial-gradient(circle at top, #92d2f5 60px, transparent 60px),
+                linear-gradient(to bottom, #e14b32 70%, #ffffff 70%);
+    border-radius: 15px 15px 15px 15px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Ice cream candy styling */
+.candy {
+    width: 40px;
+    height: 90px;
+    background: linear-gradient(45deg, 
+                #f5a8b8 0%, #f5a8b8 33%, 
+                #ffde59 33%, #ffde59 66%, 
+                #92d2f5 66%, #92d2f5 100%);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Position ice creams randomly across the screen */
+.ice-cream:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-duration: 45s;
+}
+
+.ice-cream:nth-child(2) {
+    top: 25%;
+    right: 15%;
+    animation-duration: 35s;
+}
+
+.ice-cream:nth-child(3) {
+    bottom: 15%;
+    left: 20%;
+    animation-duration: 40s;
+}
+
+.ice-cream:nth-child(4) {
+    top: 60%;
+    right: 25%;
+    animation-duration: 38s;
+}
+
+.ice-cream:nth-child(5) {
+    top: 40%;
+    left: 45%;
+    animation-duration: 42s;
+}
+
+.ice-cream:nth-child(6) {
+    bottom: 30%;
+    right: 40%;
+    animation-duration: 36s;
+}
+
+.ice-cream:nth-child(7) {
+    top: 75%;
+    left: 65%;
+    animation-duration: 39s;
+}
+
+.ice-cream:nth-child(8) {
+    top: 20%;
+    left: 75%;
+    animation-duration: 41s;
+}
+
+.ice-cream:nth-child(9) {
+    bottom: 10%;
+    left: 85%;
+    animation-duration: 37s;
+}
+
+.ice-cream:nth-child(10) {
+    top: 50%;
+    left: 5%;
+    animation-duration: 43s;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.15;
+    }
+    90% {
+        opacity: 0.15;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Reverse animation for some elements */
+.reversed {
+    animation-direction: reverse;
+}
+
+/* Make ice creams smaller on hover to give depth effect */
+.ice-cream:hover {
+    transform: scale(0.9);
+}
+
+/* Content Card Styling */
+.content-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #0a4da3;
+    font-weight: 700;
+}
+
+h2 {
+    color: #0a4da3;
+    margin: 25px 0 15px;
+    font-size: 1.8rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Bootstrap Button Overrides */
+.btn-primary {
+    background-color: #0a4da3;
+    border-color: #0a4da3;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #083b7e;
+    border-color: #083b7e;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(10, 77, 163, 0.3);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0a4da3;
+    margin-top: auto;
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-card {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Additional Animation Styles */
+.animate-hover {
+    transition: all 0.3s ease;
+}
+
+.animate-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for elements that come into view */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Product page specific styles */
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-height: 200px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.nav-pills .nav-link {
+    border-radius: 30px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    color: #0a4da3;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: rgba(10, 77, 163, 0.1);
+}
+
+.nav-pills .nav-link.active {
+    background-color: #0a4da3;
+    box-shadow: 0 5px 15px rgba(10, 77, 163, 0.3);
+    transform: translateY(-3px);
+}
+
+.ice-cream-filter {
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.ice-cream-filter.active {
+    background-color: #0a4da3;
+    color: white;
+    box-shadow: 0 5px 15px rgba(10, 77, 163, 0.3);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.float-animation {
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Updated Carousel Styling with Removed Gray Overlay and Enhanced Animations */
+#amulCarousel {
+  overflow: hidden;
+  border-radius: 0;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#amulCarousel .carousel-inner {
+  height: auto; 
+}
+
+#amulCarousel .carousel-item {
+  height: auto;
+}
+
+#amulCarousel .carousel-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+#amulCarousel .carousel-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 500px;
+  object-position: center;
+  transition: transform 10s ease, filter 1s ease;
+  filter: brightness(1); /* Increased brightness to remove grayish look */
+}
+
+/* Removed the overlay div that was adding the gray gradient */
+#amulCarousel .overlay {
+  display: none; /* Hide the overlay completely */
+}
+
+/* Enhanced animations for active slide */
+#amulCarousel .carousel-item.active .carousel-image-container img {
+  transform: scale(1.05);
+  animation: subtle-glow 5s infinite alternate;
+}
+
+/* New subtle glow animation */
+@keyframes subtle-glow {
+  from { filter: brightness(1) saturate(1); }
+  to { filter: brightness(1.05) saturate(1.1); }
+}
+
+#amulCarousel .carousel-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  /* Add semi-transparent background just to the caption for text readability */
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+}
+
+#amulCarousel .carousel-caption h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Enhanced animation for captions */
+#amulCarousel .carousel-item.active .carousel-caption h2 {
+  opacity: 1;
+  transform: translateY(0);
+  animation: bounce-in 1s ease forwards;
+}
+
+@keyframes bounce-in {
+  0% { opacity: 0; transform: translateY(50px); }
+  70% { opacity: 1; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+#amulCarousel .carousel-caption .highlight {
+  color: #ffde59;
+  display: inline-block;
+  animation: color-pulse 3s infinite alternate;
+}
+
+/* New color pulsing effect */
+@keyframes color-pulse {
+  0% { color: #ffde59; text-shadow: 0 0 5px rgba(255, 222, 89, 0.1); }
+  50% { color: #ffe988; text-shadow: 0 0 10px rgba(255, 222, 89, 0.3); }
+  100% { color: #ffde59; text-shadow: 0 0 5px rgba(255, 222, 89, 0.1); }
+}
+
+#amulCarousel .carousel-caption p {
+  max-width: 500px;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
+}
+
+#amulCarousel .carousel-item.active .carousel-caption p {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slide-in-right 0.8s ease 0.3s forwards;
+}
+
+@keyframes slide-in-right {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+#amulCarousel .btn-slider {
+  background-color: #0a4da3;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-weight: 600;
+  border: 2px solid #0a4da3;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease 0.4s, transform 1s ease 0.4s, background-color 0.3s ease, color 0.3s ease;
+  animation: button-pulse 2s infinite alternate;
+}
+
+/* Button animation */
+@keyframes button-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(10, 77, 163, 0.4); }
+  100% { transform: scale(1.05); box-shadow: 0 0 15px rgba(10, 77, 163, 0.6); }
+}
+
+#amulCarousel .carousel-item.active .btn-slider {
+  opacity: 1;
+  transform: translateY(0);
+  animation: pop-up 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s forwards, button-pulse 2s infinite alternate 1.3s;
+}
+
+@keyframes pop-up {
+  0% { opacity: 0; transform: scale(0.8); }
+  80% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+#amulCarousel .btn-slider:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+  animation: none; /* Stop the button-pulse animation on hover */
+}
+
+/* Enhanced indicators */
+#amulCarousel .carousel-indicators {
+  bottom: 30px;
+}
+
+#amulCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+
+#amulCarousel .carousel-indicators button.active {
+  opacity: 1;
+  background-color: white;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: glow-indicator 1.5s infinite alternate;
+}
+
+@keyframes glow-indicator {
+  0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+  100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+}
+
+/* Enhanced controls */
+#amulCarousel .carousel-control-prev,
+#amulCarousel .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+#amulCarousel:hover .carousel-control-prev,
+#amulCarousel:hover .carousel-control-next {
+  opacity: 0.8;
+  animation: float-controls 2s ease-in-out infinite;
+}
+
+@keyframes float-controls {
+  0%, 100% { transform: translateY(-50%); }
+  50% { transform: translateY(-53%); }
+}
+
+#amulCarousel .carousel-control-prev {
+  left: 20px;
+}
+
+#amulCarousel .carousel-control-next {
+  right: 20px;
+}
+
+#amulCarousel .carousel-control-prev:hover,
+#amulCarousel .carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Premium Ultra-Modern Carousel Styling */
+.premium-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.premium-carousel {
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #0a0a0a;
+}
+
+/* Progress Bar */
+.carousel-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #ffde59, #ff7e5f);
+  transition: width 7000ms linear;
+}
+
+/* Enhanced Inner */
+.premium-inner {
+  height: auto;
+  overflow: hidden;
+}
+
+.premium-slide-wrapper {
+  position: relative;
+  width: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  touch-action: pan-y; /* Improve swipe behavior on mobile */
+}
+
+.carousel-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #0a0a0a;
+}
+
+.carousel-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 500px;
+  object-position: center;
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 10s ease-out, filter 0.5s ease;
+  transform-origin: center;
+}
+
+/* Image reflections and effects */
+.image-reflections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  pointer-events: none;
+}
+
+/* Particles effect */
+.slide-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  opacity: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+  animation: float-particle infinite both;
+}
+
+@keyframes float-particle {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+/* Mobile Optimized Premium Caption Styling */
+.premium-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem 8%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.carousel-item.active .premium-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Improved Mobile Caption Badge */
+.caption-badge {
+  display: inline-block;
+  background-color: #ffde59;
+  color: #0a0a0a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease 0.2s;
+}
+
+.carousel-item.active .caption-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Divider */
+.caption-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 15px 0 20px;
+  position: relative;
+}
+
+.caption-divider span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ffde59;
+  transition: width 1.2s ease 0.5s;
+}
+
+.carousel-item.active .caption-divider span {
+  width: 120px;
+}
+
+/* Mobile Optimized Title Styling */
+.slide-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+
+.carousel-item.active .slide-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-title .highlight {
+  display: inline-block;
+  color: #ffde59;
+  position: relative;
+  animation: highlight-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes highlight-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 222, 89, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 222, 89, 0.8), 0 0 35px rgba(255, 222, 89, 0.5);
+  }
+}
+
+/* Description styling */
+.slide-description {
+  max-width: 500px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
+}
+
+.carousel-item.active .slide-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Optimized Button Styling */
+.btn-slider {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffde59;
+  color: #0a0a0a;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.9s, transform 0.8s ease 0.9s, background-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+.carousel-item.active .btn-slider {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-slider:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 222, 89, 0.4);
+}
+
+.btn-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.7s;
+  z-index: -1;
+}
+
+.btn-slider:hover::before {
+  left: 100%;
+}
+
+.btn-text {
+  margin-right: 10px;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-slider:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Slide number */
+.slide-number {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.8s ease 1s;
+}
+
+.carousel-item.active .slide-number {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mobile Optimized Controls */
+.premium-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 20px; /* Moved up slightly for better mobile access */
+  right: 50%;
+  transform: translateX(50%); /* Center controls on mobile */
+  z-index: 10;
+  width: 70%; /* Control width for better mobile placement */
+  max-width: 200px;
+}
+
+.premium-control {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* Make controls larger and more touch-friendly on mobile */
+@media (max-width: 576px) {
+  .premium-control {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .control-icon {
+    font-size: 1.4rem;
+  }
+}
+
+/* Enhanced Responsive Adjustments */
+@media (max-width: 992px) {
+  /* ...existing tablet adjustments... */
+}
+
+@media (max-width: 768px) {
+  .premium-caption {
+    padding: 2.5rem 6%; /* Reduced padding for better space usage */
+  }
+  
+  .slide-title {
+    font-size: 2.2rem;
+  }
+  
+  .slide-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 100%; /* Full width on smaller screens */
+  }
+  
+  .carousel-image-container img {
+    max-height: 350px;
+  }
+  
+  .btn-slider {
+    padding: 10px 20px;
+  }
+  
+  /* Hide slide number on mobile */
+  .slide-number {
+    display: none;
+  }
+  
+  /* Adjust the progress bar for mobile */
+  .carousel-progress {
+    height: 4px; /* Slightly thicker for better visibility */
+  }
+}
+
+/* Enhanced Mobile Specific Adjustments */
+@media (max-width: 576px) {
+  .premium-caption {
+    padding: 1.8rem 5%;
+  }
+  
+  .slide-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .slide-description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .carousel-image-container img {
+    max-height: 280px; /* Slightly reduced height for mobile */
+  }
+  
+  .btn-slider {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+  
+  .caption-badge {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+  }
+  
+  .caption-divider {
+    margin: 8px 0 12px; /* Reduced margins */
+  }
+  
+  /* Make carousel controls slightly larger and more visible on mobile */
+  .premium-control {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Fix mobile touch scrolling issues with carousel */
+  .premium-carousel {
+    touch-action: pan-y;
+  }
+  
+  /* Optimize main content spacing for mobile */
+  .content-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Fix touch interaction on mobile devices */
+@media (pointer: coarse) {
+  .premium-slide-wrapper {
+    cursor: grab;
+  }
+  
+  .premium-control:active,
+  .slide-indicators button:active,
+  .btn-slider:active {
+    transform: scale(0.95);
+  }
+}
