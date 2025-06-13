@@ -1090,3 +1090,92 @@ footer {
     transform: scale(0.95);
   }
 }
+
+/* Add any existing styles here */
+
+/* Feature Icons styles */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+}
+
+/* Timeline styles for About page */
+.timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: var(--bs-primary);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-item {
+    padding: 1rem 0;
+    position: relative;
+}
+
+.timeline-item:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Google Maps link styles */
+.map-link {
+    text-decoration: none;
+    color: var(--bs-primary);
+    transition: color 0.3s ease;
+}
+
+.map-link:hover {
+    color: var(--bs-primary-dark);
+    text-decoration: underline;
+}
+
+/* Management team section */
+.management-team {
+    padding: 1rem;
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+    border-radius: 0.5rem;
+}
+
+/* Mobile optimizations for timeline */
+@media (max-width: 767.98px) {
+    .timeline:before {
+        left: 30px;
+    }
+    
+    .timeline-item:before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .col-md-6.offset-md-6.timeline-item,
+    .col-md-6.timeline-item {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    /* Owner info on smaller screens */
+    .owner-info {
+        text-align: center;
+    }
+}

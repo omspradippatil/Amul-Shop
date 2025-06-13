@@ -50,7 +50,10 @@
                             <h3 class="mb-0">Store Address</h3>
                         </div>
                         <p class="mb-0">Shree Laxmi Amul Shopiee</p>
-                        <p>210, pachmarg, road, opp. police station, Delwadi, Kudan, Maharashtra 401502</p>
+                        <p class="mb-2">210, pachmarg, road, opp. police station, Delwadi, Kudan, Maharashtra 401502</p>
+                        <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank" class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-map"></i> View on Google Maps
+                        </a>
                     </div>
                 </div>
                 
@@ -94,7 +97,7 @@
                             <h3 class="mb-0">Store Timing</h3>
                         </div>
                         <p class="mb-2"><strong>Open All Days</strong></p>
-                        <p>Morning: 7:00 AM – Night: 12:00 PM</p>
+                        <p>Morning: 7:00 AM – Night: 12:00 AM</p>
                     </div>
                 </div>
             </div>
@@ -102,6 +105,16 @@
             <!-- Contact Form -->
             <div class="content-card mt-4 animate__animated animate__fadeInUp animate__delay-3s">
                 <h3 class="mb-4 text-center">Send Us a Message</h3>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6 mx-auto">
+                        <div class="text-center mb-3">
+                            <h5><i class="bi bi-people-fill text-primary"></i> Store Management</h5>
+                            <p class="mb-1"><strong>Owner:</strong> Pradip Laxuman Patil</p>
+                            <p><strong>Co-Owner:</strong> Om Pradip Patil</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <form>
                     <div class="row g-3">

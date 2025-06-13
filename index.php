@@ -11,6 +11,8 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Mobile optimization CSS -->
+    <link rel="stylesheet" href="mobile-fixes.css">
     <!-- Preload key carousel images for better mobile performance -->
     <link rel="preload" href="images/Ice Cream Collection.jpg" as="image">
     <link rel="preload" href="images/Dairy Products.jpg" as="image">
@@ -215,12 +217,17 @@
                                         <i class="bi bi-geo-alt-fill text-danger"></i> <strong>Location:</strong> Shree Laxumi Amul Shopiee, [Pachmarg]
                                     </li>
                                     <li class="list-group-item bg-transparent">
-                                        <i class="bi bi-clock-fill text-danger"></i> <strong>Timing:</strong> Open Daily – 7:00 AM to 10:00 PM
+                                        <i class="bi bi-clock-fill text-danger"></i> <strong>Timing:</strong> Open Daily – 7:00 AM to 12:00 AM
                                     </li>
                                     <li class="list-group-item bg-transparent">
                                         <i class="bi bi-telephone-fill text-danger"></i> <strong>Contact:</strong> +91 9890377098
                                     </li>
                                 </ul>
+                                <div class="text-center mt-3">
+                                    <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank" class="btn btn-outline-danger">
+                                        <i class="bi bi-map"></i> Find Us on Google Maps
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
