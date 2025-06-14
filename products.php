@@ -904,7 +904,9 @@
                             
                             <div class="col">
                                 <div class="card h-100 product-card animate-hover">
-                                    <img src="images/Amul Kool Cafe.jpg" class="card-img-top p-3" alt="Amul Kool Cafe">
+                                    <div class="position-relative">
+                                        <img src="images/Amul Kool Cafe.jpg" class="card-img-top p-3" alt="Amul Kool Cafe">
+                                    </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Amul Kool Cafe</h5>
                                         <p class="card-text">Coffee flavored milk drink, perfect for coffee lovers on the go.</p>
@@ -956,7 +958,10 @@
                 <!-- Product Availability Notice -->
                 <div class="alert alert-warning mt-4 text-center animate__animated animate__fadeIn animate__delay-3s">
                     <h5><i class="bi bi-exclamation-triangle me-2"></i> Please Note</h5>
-                    <p class="mb-0">Product availability may vary. For specific inquiries or to check stock, please contact us at <strong>+91-9890377098</strong>.</p>
+                    <p class="mb-2">Product availability may vary. For specific inquiries or to check stock, please contact us at <strong>+91-9890377098</strong>.</p>
+                    <a href="enquiry.php" class="btn btn-primary mt-2">
+                        <i class="bi bi-question-circle me-2"></i> Submit Product Enquiry
+                    </a>
                 </div>
             </div>
         </div>

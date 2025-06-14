@@ -28,6 +28,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 <li class="nav-item">
                     <a class="nav-link <?php echo ($currentPage == 'contact.php') ? 'active' : ''; ?>" href="contact.php">Contact Us</a>
                 </li>
+                        <li class="nav-item">
+                    <a class="nav-link <?php echo ($currentPage == 'enquiry.php') ? 'active' : ''; ?>" href="enquiry.php">Enquiry</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -73,7 +73,7 @@ body {
     color: #ffde59;
 }
 
-/* Floating Ice Cream Background */
+/* Enhanced Creative Ice Cream Themed Background */
 .floating-background {
     position: fixed;
     top: 0;
@@ -83,46 +83,279 @@ body {
     overflow: hidden;
     pointer-events: none;
     z-index: -1;
+    background: radial-gradient(ellipse at center, rgba(248, 246, 242, 0.8) 0%, rgba(252, 248, 227, 0.5) 100%);
+    transition: background 2s ease;
 }
 
+/* Background pattern overlay */
+.bg-pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l20 20H0V0zm0 20L20 0v20H0z' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Layer system for parallax depth */
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-out;
+}
+
+.far-layer {
+    z-index: -3;
+}
+
+.mid-layer {
+    z-index: -2;
+}
+
+.close-layer {
+    z-index: -1;
+}
+
+/* Ice cream elements styling */
 .ice-cream {
     position: absolute;
-    opacity: 0.15;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.1));
+    transform-origin: center center;
     animation: float 30s linear infinite;
-}
-
-/* Ice cream cone styling */
-.cone {
     width: 60px;
     height: 120px;
-    background: radial-gradient(circle at top, #f5a8b8 50px, transparent 50px),
-                linear-gradient(to bottom right, #e6b27a 50%, #c9935f 50%);
+    border-radius: 50% 50% 5px 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ice-cream:hover {
+    transform: scale(1.2) rotate(10deg) !important;
+    z-index: 10;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ice-cream.reversed {
+    animation: float-reverse 28s linear infinite;
+}
+
+.ice-cream.cone {
     border-radius: 50% 50% 5px 5px;
 }
 
-/* Ice cream cup styling */
-.cup {
+.ice-cream.cup {
     width: 80px;
     height: 100px;
-    background: radial-gradient(circle at top, #92d2f5 60px, transparent 60px),
-                linear-gradient(to bottom, #e14b32 70%, #ffffff 70%);
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
     border: 3px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Ice cream candy styling */
-.candy {
-    width: 40px;
+.ice-cream.sundae {
+    width: 70px;
     height: 90px;
-    background: linear-gradient(45deg, 
-                #f5a8b8 0%, #f5a8b8 33%, 
-                #ffde59 33%, #ffde59 66%, 
-                #92d2f5 66%, #92d2f5 100%);
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 35px 35px 25px 25px;
+    position: relative;
 }
 
-/* Position ice creams randomly across the screen */
+.ice-cream.popsicle {
+    width: 35px;
+    height: 90px;
+    border-radius: 20px 20px 5px 5px;
+}
+
+.ice-cream.candy {
+    width: 40px;
+    height: 90px;
+    border-radius: 15px;
+}
+
+/* Enhanced sprinkle animation */
+.sprinkle {
+    position: absolute;
+    border-radius: 2px;
+    opacity: 0.15;
+    animation: sprinkle-fall 15s linear infinite;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes sprinkle-fall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.15;
+    }
+    90% {
+        opacity: 0.15;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Enhanced bubble animation */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: bubble 30s linear infinite;
+    background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+@keyframes bubble {
+    0% {
+        transform: scale(0) translateY(100vh);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1) translateY(80vh);
+        opacity: 0.3;
+    }
+    90% {
+        transform: scale(1) translateY(10vh);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.3) translateY(0);
+        opacity: 0;
+    }
+}
+
+/* Light rays effect */
+.light-ray {
+    position: absolute;
+    height: 200vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    transform: rotate(45deg);
+    transform-origin: top left;
+    top: -100%;
+    animation: light-ray-move 30s linear infinite;
+}
+
+@keyframes light-ray-move {
+    0% {
+        transform: rotate(45deg) translateX(-100%);
+    }
+    100% {
+        transform: rotate(45deg) translateX(100vw);
+    }
+}
+
+/* Milk splash effect */
+.milk-splash {
+    position: absolute;
+    bottom: -50px;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50% 50% 50% 50%;
+    animation: milk-splash 10s ease-out infinite;
+}
+
+@keyframes milk-splash {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1);
+        opacity: 0.6;
+        border-radius: 60% 70% 40% 50%;
+    }
+    20% {
+        transform: scale(1.1) translateY(-20px);
+        opacity: 0.4;
+        border-radius: 40% 50% 60% 70%;
+    }
+    40% {
+        transform: scale(1.2) translateY(-40px);
+        opacity: 0.2;
+        border-radius: 70% 40% 50% 60%;
+    }
+    100% {
+        transform: scale(1.3) translateY(-50px);
+        opacity: 0;
+        border-radius: 50% 60% 70% 40%;
+    }
+}
+
+/* Enhanced float animations with more interesting paths */
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(-50px) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.15;
+        transform: translateY(80vh) translateX(10px) rotate(45deg) scale(0.85);
+    }
+    25% {
+        transform: translateY(60vh) translateX(30px) rotate(90deg) scale(0.9);
+    }
+    40% {
+        transform: translateY(40vh) translateX(10px) rotate(135deg) scale(1);
+    }
+    50% {
+        transform: translateY(40vh) translateX(-20px) rotate(180deg) scale(1.1);
+    }
+    65% {
+        transform: translateY(25vh) translateX(0px) rotate(225deg) scale(1);
+    }
+    75% {
+        transform: translateY(20vh) translateX(20px) rotate(270deg) scale(0.95);
+    }
+    90% {
+        opacity: 0.15;
+        transform: translateY(10vh) translateX(-10px) rotate(330deg) scale(0.9);
+    }
+    100% {
+        transform: translateY(-100px) translateX(-30px) rotate(360deg) scale(0.85);
+        opacity: 0;
+    }
+}
+
+@keyframes float-reverse {
+    0% {
+        transform: translateY(-100px) translateX(50px) rotate(360deg) scale(0.9);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.15;
+        transform: translateY(20vh) translateX(30px) rotate(315deg) scale(0.95);
+    }
+    25% {
+        transform: translateY(40vh) translateX(-10px) rotate(270deg) scale(1);
+    }
+    40% {
+        transform: translateY(50vh) translateX(-30px) rotate(225deg) scale(1.05);
+    }
+    50% {
+        transform: translateY(60vh) translateX(-10px) rotate(180deg) scale(1.1);
+    }
+    65% {
+        transform: translateY(70vh) translateX(10px) rotate(135deg) scale(1.05);
+    }
+    75% {
+        transform: translateY(80vh) translateX(0px) rotate(90deg) scale(1);
+    }
+    90% {
+        opacity: 0.15;
+        transform: translateY(90vh) translateX(20px) rotate(45deg) scale(0.9);
+    }
+    100% {
+        transform: translateY(100vh) translateX(30px) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Improved position distribution for ice creams */
 .ice-cream:nth-child(1) {
     top: 10%;
     left: 10%;
@@ -133,82 +366,103 @@ body {
     top: 25%;
     right: 15%;
     animation-duration: 35s;
+    transform: scale(0.7);
 }
 
 .ice-cream:nth-child(3) {
     bottom: 15%;
     left: 20%;
     animation-duration: 40s;
+    transform: scale(1.2);
 }
 
 .ice-cream:nth-child(4) {
     top: 60%;
     right: 25%;
     animation-duration: 38s;
+    transform: scale(0.8);
 }
 
 .ice-cream:nth-child(5) {
     top: 40%;
     left: 45%;
     animation-duration: 42s;
+    transform: scale(0.9);
 }
 
 .ice-cream:nth-child(6) {
     bottom: 30%;
     right: 40%;
     animation-duration: 36s;
+    transform: scale(1.1);
 }
 
 .ice-cream:nth-child(7) {
     top: 75%;
     left: 65%;
     animation-duration: 39s;
+    transform: scale(0.75);
 }
 
 .ice-cream:nth-child(8) {
     top: 20%;
     left: 75%;
     animation-duration: 41s;
+    transform: scale(1.3);
 }
 
 .ice-cream:nth-child(9) {
     bottom: 10%;
     left: 85%;
     animation-duration: 37s;
+    transform: scale(0.85);
 }
 
 .ice-cream:nth-child(10) {
     top: 50%;
     left: 5%;
     animation-duration: 43s;
+    transform: scale(1);
 }
 
-/* Animation for floating effect */
-@keyframes float {
+/* New sprinkles confetti background effect */
+.sprinkle {
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background-color: #ff7e5f;
+    border-radius: 2px;
+    opacity: 0.1;
+    animation: sprinkle-fall 15s linear infinite;
+}
+
+.sprinkle:nth-child(5n+1) { background-color: #ffde59; }
+.sprinkle:nth-child(5n+2) { background-color: #92d2f5; }
+.sprinkle:nth-child(5n+3) { background-color: #f5a8b8; }
+.sprinkle:nth-child(5n+4) { background-color: #a8f5b0; }
+
+@keyframes sprinkle-fall {
     0% {
-        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        transform: translateY(-20px) rotate(0deg);
         opacity: 0;
     }
     10% {
-        opacity: 0.15;
+        opacity: 0.1;
     }
     90% {
-        opacity: 0.15;
+        opacity: 0.1;
     }
     100% {
-        transform: translateY(-100px) rotate(360deg) scale(1);
+        transform: translateY(100vh) rotate(360deg);
         opacity: 0;
     }
 }
 
-/* Reverse animation for some elements */
-.reversed {
-    animation-direction: reverse;
-}
-
-/* Make ice creams smaller on hover to give depth effect */
+/* Enhanced hover effect for depth */
 .ice-cream:hover {
-    transform: scale(0.9);
+    transform: scale(1.1) rotate(10deg) !important;
+    opacity: 0.25;
+    transition: all 0.5s ease;
 }
 
 /* Content Card Styling */
@@ -255,8 +509,113 @@ h2 {
 
 /* Footer Styling */
 footer {
-    background-color: #0a4da3;
-    margin-top: auto;
+    background: linear-gradient(to right, #0a4da3, #1665c1);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+footer h5 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer h5:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer ul li {
+    transition: transform 0.3s ease;
+}
+
+footer ul li:hover {
+    transform: translateX(5px);
+}
+
+footer a:not(.btn) {
+    transition: color 0.3s ease;
+}
+
+footer a:not(.btn):hover {
+    color: #ffde59 !important;
+}
+
+footer .btn {
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+footer .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+}
+
+.whatsapp-float .btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    font-size: 1.8rem;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    }
+}
+
+/* Mobile responsiveness for footer */
+@media (max-width: 767.98px) {
+    footer h5 {
+        margin-top: 15px;
+    }
+    
+    footer .col-md-4 {
+        text-align: center;
+    }
+    
+    footer h5:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .whatsapp-float .btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
 }
 
 /* Animation for page load */
@@ -772,7 +1131,7 @@ footer {
 .caption-badge {
   display: inline-block;
   background-color: #ffde59;
-  color: #0a0a0a;
+  color: #0a4da3;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -869,7 +1228,7 @@ footer {
   background-color: #ffde59;
   color: #0a0a0a;
   border-radius: 50px;
-  padding: 12px 30px;
+  padding: 12px 35px;
   font-weight: 600;
   border: none;
   position: relative;
@@ -1177,5 +1536,1078 @@ footer {
     /* Owner info on smaller screens */
     .owner-info {
         text-align: center;
+    }
+}
+
+/* New animations and section styling */
+
+/* Floating image animation */
+.floating-img {
+    transition: transform 2s ease-in-out;
+}
+
+.floating-img.float-up {
+    transform: translateY(-10px);
+}
+
+/* Service cards with icon boxes */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #0a4da3, #1665c1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.service-card {
+    transition: all 0.4s ease;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover .icon-box {
+    background: linear-gradient(135deg, #ffde59, #ff7e5f);
+    transform: rotate(10deg);
+}
+
+/* Benefits section */
+.benefit-card {
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-card:hover {
+    background-color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #0a4da3, #2080ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(10, 77, 163, 0.2);
+    transition: all 0.3s ease;
+}
+
+.benefit-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Product highlights */
+.product-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+    transition: transform 0.5s ease;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.product-thumbnail:hover .product-img {
+    transform: scale(1.1);
+}
+
+.product-thumbnail:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-thumbnail h5 {
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.product-thumbnail:hover h5 {
+    color: #0a4da3;
+}
+
+/* Testimonials section */
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 10px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: "\f10d";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 2rem;
+    color: rgba(10, 77, 163, 0.1);
+    z-index: 0;
+}
+
+.testimonial-rating {
+    margin-bottom: 20px;
+}
+
+.testimonial-rating i {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin: 0 2px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(10, 77, 163, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.testimonial-avatar i {
+    font-size: 1.8rem;
+    color: #0a4da3;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.testimonial-control {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    color: #0a4da3;
+}
+
+.testimonial-control:hover {
+    opacity: 1;
+    background-color: #0a4da3;
+    color: white;
+}
+
+.testimonial-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.testimonial-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(10, 77, 163, 0.3);
+    margin: 0 5px;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.testimonial-indicators button.active {
+    background-color: #0a4da3;
+    transform: scale(1.2);
+}
+
+/* Location section */
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.location-item {
+    padding: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.location-item:hover {
+    transform: translateX(10px);
+}
+
+.location-item i {
+    margin-right: 10px;
+}
+
+/* CTA section */
+.cta-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/cta-background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cta-button {
+    background-image: linear-gradient(135deg, #0a4da3, #1d80e2);
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(10, 77, 163, 0.3);
+}
+
+.cta-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(10, 77, 163, 0.4);
+}
+
+.cta-button:hover::after {
+    left: 100%;
+}
+
+/* Ripple button effect */
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 3s infinite ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Pulsating button */
+.pulsate-btn {
+    animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 767.98px) {
+    .icon-box {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-box i {
+        font-size: 2rem;
+    }
+    
+    .product-img {
+        height: 150px;
+    }
+    
+    .product-badge {
+        top: -5px;
+        right: 10px;
+    }
+    
+    .product-badge span {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+}
+
+/* Enhanced What We Offer Section with Amul Theme */
+.what-we-offer-section {
+    position: relative;
+    padding: 40px 30px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.amul-theme-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: url('images/amul-pattern.png'), linear-gradient(135deg, #ffde59 0%, #ffffff 100%);
+    background-size: 150px;
+    background-repeat: repeat;
+    z-index: 0;
+}
+
+.what-we-offer-section h2 {
+    color: #0a4da3;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.what-we-offer-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #0a4da3, #ffde59);
+    border-radius: 2px;
+}
+
+.service-card {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 15px;
+    border: none;
+}
+
+.service-card-blue {
+    background: linear-gradient(135deg, rgba(10, 77, 163, 0.05), rgba(10, 77, 163, 0.15));
+    border-bottom: 3px solid #0a4da3;
+}
+
+.service-card-red {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(220, 53, 69, 0.15));
+    border-bottom: 3px solid #dc3545;
+}
+
+.service-card-orange {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.05), rgba(255, 193, 7, 0.15));
+    border-bottom: 3px solid #ffc107;
+}
+
+.service-card-green {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(40, 167, 69, 0.15));
+    border-bottom: 3px solid #28a745;
+}
+
+.service-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.icon-box-blue {
+    background: linear-gradient(135deg, #0a4da3, #1d80e2);
+}
+
+.icon-box-red {
+    background: linear-gradient(135deg, #dc3545, #f27581);
+}
+
+.icon-box-orange {
+    background: linear-gradient(135deg, #ffc107, #ffde59);
+}
+
+.icon-box-green {
+    background: linear-gradient(135deg, #28a745, #5ad176);
+}
+
+.icon-box i {
+    font-size: 3rem;
+    color: white;
+}
+
+.icon-box-orange i {
+    color: #212529; /* Darker color for better contrast on yellow */
+}
+
+.service-card:hover .icon-box {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.card-animation-element {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.service-card:hover .card-animation-element {
+    opacity: 0.5;
+    transform: scale(2);
+    animation: pulse-light 2s infinite;
+}
+
+@keyframes pulse-light {
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+    100% { opacity: 0.3; transform: scale(1); }
+}
+
+.alert-amul {
+    background: linear-gradient(135deg, #0a4da3 0%, #1d80e2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(10, 77, 163, 0.2);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.alert-amul:hover {
+    transform: translateY(-5px);
+}
+
+.alert-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    animation: pulse-grow 2s infinite;
+}
+
+.alert-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+@keyframes pulse-grow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Enhanced Product Highlight Section */
+.products-highlight {
+    background-color: #fff;
+    position: relative;
+    padding: 40px 30px;
+}
+
+.product-thumbnail {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.product-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.product-img {
+    height: 200px;
+    object-fit: contain;
+    transition: transform 0.8s ease;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 77, 163, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-thumbnail:hover .product-img-wrapper {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-thumbnail:hover .product-img {
+    transform: scale(1.15) rotate(3deg);
+}
+
+.product-thumbnail:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    z-index: 10;
+}
+
+.product-badge span {
+    display: inline-block;
+    background: linear-gradient(135deg, #0a4da3, #1d80e2);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(10, 77, 163, 0.3);
+}
+
+.animated-button {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #0a4da3;
+    color: #0a4da3;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.button-text {
+    position: relative;
+    z-index: 3;
+    transition: color 0.3s ease;
+}
+
+.button-animation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #0a4da3);
+    transition: left 0.3s ease;
+    z-index: 2;
+}
+
+.animated-button:hover {
+    color: white;
+    box-shadow: 0 10px 20px rgba(10, 77, 163, 0.2);
+    transform: translateY(-5px);
+}
+
+.animated-button:hover .button-animation {
+    left: 0;
+}
+
+@media (max-width: 767.98px) {
+    .icon-box {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-box i {
+        font-size: 2rem;
+    }
+    
+    .product-img {
+        height: 150px;
+    }
+    
+    .product-badge {
+        top: -5px;
+        right: 10px;
+    }
+    
+    .product-badge span {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+}
+
+/* Enquiry Form Styles */
+.enquiry-form-card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+    color: #0a4da3;
+    border-bottom: 2px solid rgba(10, 77, 163, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #0a4da3;
+    bottom: -2px;
+    left: 0;
+}
+
+.enquiry-form-card .input-group-text {
+    background-color: rgba(10, 77, 163, 0.05);
+    color: #0a4da3;
+    border-color: rgba(10, 77, 163, 0.2);
+}
+
+.enquiry-form-card .form-control:focus,
+.enquiry-form-card .form-select:focus {
+    border-color: #0a4da3;
+    box-shadow: 0 0 0 0.25rem rgba(10, 77, 163, 0.25);
+}
+
+/* Sidebar styles */
+.enquiry-info-sidebar {
+    background-color: rgba(10, 77, 163, 0.02);
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.enquiry-note {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.note-icon {
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #0a4da3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-list li i {
+    color: #28a745;
+    margin-right: 10px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.response-time {
+    background-color: rgba(255, 222, 89, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ffde59;
+    display: flex;
+    align-items: flex-start;
+}
+
+.response-time i {
+    margin-right: 10px;
+    color: #ff7e5f;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.enquiry-contact {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.quick-contact-btn {
+    margin-top: 10px;
+}
+
+/* Related links section */
+.related-link-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+}
+
+.related-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form submission visual feedback */
+.pulse-submit {
+    position: relative;
+}
+
+.pulse-submit::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 77, 163, 0.4);
+    border-radius: 50px;
+    z-index: -1;
+    animation: pulse-ring 1.5s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+    .enquiry-info-sidebar {
+        margin-top: 30px;
+    }
+}
+
+/* Enhanced Enquiry Button Styling */
+.enquiry-cta-btn {
+    background-color: #0a4da3 !important;
+    border-color: #0a4da3 !important;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-pulse {
+    animation: highlight-pulse 2s infinite;
+    box-shadow: 0 0 0 0 rgba(10, 77, 163, 0.5);
+    position: relative;
+}
+
+@keyframes highlight-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(10, 77, 163, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(10, 77, 163, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(10, 77, 163, 0);
+    }
+}
+
+/* Floating Enquiry Button (shown on mobile only) */
+.floating-enquiry-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.floating-enquiry-btn .btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: float-btn 3s infinite ease-in-out;
+}
+
+@keyframes float-btn {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Show floating button only on mobile */
+@media (max-width: 768px) {
+    .floating-enquiry-btn {
+        display: block;
+    }
+}
+
+/* Enhanced Footer Styling */
+footer {
+    background: linear-gradient(to right, #0a4da3, #1665c1);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+footer h5 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer h5:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer ul li {
+    transition: transform 0.3s ease;
+}
+
+footer ul li:hover {
+    transform: translateX(5px);
+}
+
+footer a:not(.btn) {
+    transition: color 0.3s ease;
+}
+
+footer a:not(.btn):hover {
+    color: #ffde59 !important;
+}
+
+footer .btn {
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+footer .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+}
+
+.whatsapp-float .btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    font-size: 1.8rem;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+    }
+}
+
+/* Mobile responsiveness for footer */
+@media (max-width: 767.98px) {
+    footer h5 {
+        margin-top: 15px;
+    }
+    
+    footer .col-md-4 {
+        text-align: center;
+    }
+    
+    footer h5:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .whatsapp-float .btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 }
