@@ -15,6 +15,8 @@
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
+    <!-- InfinityFree compatibility fixes -->
+    <link rel="stylesheet" href="infinity-compatibility.css">
     
     <style>
         /* Additional Gallery Styles */
@@ -47,38 +49,40 @@
             transform: scale(1.05);
         }
         
-        /* Removed gallery overlays/labels as requested */
-        
-        .fssai-section {
-            background-color: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 50px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        /* Explicitly style tabs to work on InfinityFree */
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
         
-        .fssai-img {
-            max-height: 200px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-        
-        .fssai-img:hover {
-            transform: scale(1.05);
+        .gallery-tabs .nav-item {
+            margin: 5px;
         }
         
         .gallery-tabs .nav-link {
+            background-color: #f8f9fa;
             color: #0a4da3;
             border-radius: 30px;
             padding: 8px 16px;
             margin: 0 5px;
             transition: all 0.3s ease;
+            display: inline-block;
         }
         
         .gallery-tabs .nav-link.active {
             background-color: #0a4da3;
             color: white;
+        }
+        
+        /* Explicit styles for tab content */
+        .tab-content > .tab-pane {
+            display: none;
+        }
+        
+        .tab-content > .active {
+            display: block;
         }
     </style>
 </head>
@@ -101,8 +105,8 @@
                     <p>Explore our clean, well-maintained store environment and check out our wide range of Amul products.</p>
                 </div>
                 
-                <!-- Gallery tabs -->
-                <ul class="nav nav-pills justify-content-center mb-4 gallery-tabs" id="galleryTabs" role="tablist" data-aos="fade-up">
+                <!-- Gallery tabs with explicit InfinityFree compatibility -->
+                <ul class="nav nav-pills gallery-tabs" id="galleryTabs" role="tablist" data-aos="fade-up">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="store-tab" data-bs-toggle="pill" data-bs-target="#store-photos" type="button" role="tab">
                             <i class="bi bi-shop"></i> Store Photos
@@ -310,12 +314,13 @@
 <script src="icecream-bg.js"></script>
 
 <script>
-    // Initialize AOS animations with slightly faster duration for gallery
+    // Initialize AOS and fix tab functionality for InfinityFree
     document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS with reduced intensity for better performance
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
-            once: false,
+            once: true,
             mirror: false
         });
         
@@ -326,6 +331,35 @@
             'fadeDuration': 300,
             'imageFadeDuration': 300,
             'albumLabel': "Image %1 of %2"
+        });
+        
+        // Manual tab functionality for InfinityFree compatibility
+        const tabButtons = document.querySelectorAll('#galleryTabs .nav-link');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabButtons.forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all buttons and panes
+                tabButtons.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => {
+                    p.classList.remove('active');
+                    p.classList.remove('show');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get target pane
+                const targetId = this.getAttribute('data-bs-target');
+                const targetPane = document.querySelector(targetId);
+                
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                    targetPane.classList.add('show');
+                }
+            });
         });
     });
 </script>

@@ -64,3 +64,22 @@
         </a>
     </div>
 </footer>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- InfinityFree Compatibility Script -->
+<script src="infinity-fixes.js"></script>
+
+<script>
+// Simple error handler for Bootstrap failures
+window.addEventListener('error', function(e) {
+    if (e.message.includes('bootstrap')) {
+        console.warn('Bootstrap error detected, applying fallback');
+        // Load compatibility script again if needed
+        const script = document.createElement('script');
+        script.src = 'infinity-fixes.js';
+        document.body.appendChild(script);
+    }
+});
+</script>

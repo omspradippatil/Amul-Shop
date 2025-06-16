@@ -103,58 +103,7 @@
             </div>
             
             <!-- Contact Form -->
-            <div class="content-card mt-4 animate__animated animate__fadeInUp animate__delay-3s">
-                <h3 class="mb-4 text-center">Send Us a Message</h3>
-                
-                <div class="row mb-4">
-                    <div class="col-md-6 mx-auto">
-                        <div class="text-center mb-3">
-                            <h5><i class="bi bi-people-fill text-primary"></i> Store Management</h5>
-                            <p class="mb-1"><strong>Owner:</strong> Pradip Laxuman Patil</p>
-                            <p><strong>Co-Owner:</strong> Om Pradip Patil</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="subject" class="form-label">Subject</label>
-                            <select class="form-select" id="subject">
-                                <option selected>Choose subject...</option>
-                                <option value="inquiry">Product Inquiry</option>
-                                <option value="order">Place an Order</option>
-                                <option value="wholesale">Wholesale Information</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message here..."></textarea>
-                        </div>
-                        <div class="col-12 text-center mt-4">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="bi bi-send"></i> Send Message
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+            
     
     <!-- Add some extra animation to the submit button -->
     <script>
