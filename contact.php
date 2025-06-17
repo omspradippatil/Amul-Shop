@@ -97,7 +97,7 @@
                             <h3 class="mb-0">Store Timing</h3>
                         </div>
                         <p class="mb-2"><strong>Open All Days</strong></p>
-                        <p>Morning: 7:00 AM – Night: 12:00 AM</p>
+                        <p>Morning: 7:00 AM – Night: 11:00 PM</p>
                     </div>
                 </div>
             </div>

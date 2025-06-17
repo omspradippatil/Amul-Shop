@@ -89,7 +89,7 @@
                                         <i class="bi bi-clock-history"></i>
                                     </div>
                                     <h5 class="card-title">Extended Hours</h5>
-                                    <p class="card-text">Open daily from 7:00 AM to 12:00 AM for your convenience.</p>
+                                    <p class="card-text">Open daily from 7:00 AM to 11:00 PM for your convenience.</p>
                                 </div>
                             </div>
                         </div>
@@ -138,6 +138,18 @@
                                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
                                         <div class="accordion-body">
                                             We take special orders for ice cream cakes and bulk products for events with advance notice.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                            <i class="bi bi-clock-history me-2"></i> Extended Hours
+                                        </button>
+                                    </h3>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                                        <div class="accordion-body">
+                                            Open daily from 7:00 AM to 11:00 PM for your convenience.
                                         </div>
                                     </div>
                                 </div>

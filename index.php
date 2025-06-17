@@ -442,7 +442,7 @@
                                         <i class="bi bi-geo-alt-fill text-danger"></i> <strong>Location:</strong> Shree Laxmi Amul Shopiee, [Pachmarg]
                                     </li>
                                     <li class="list-group-item bg-transparent location-item">
-                                        <i class="bi bi-clock-fill text-danger"></i> <strong>Timing:</strong> Open Daily – 7:00 AM to 12:00 AM
+                                        <i class="bi bi-clock-fill text-danger"></i> <strong>Timing:</strong> Open Daily – 7:00 AM to 11:00 PM
                                     </li>
                                     <li class="list-group-item bg-transparent location-item">
                                         <i class="bi bi-telephone-fill text-danger"></i> <strong>Contact:</strong> +91 9890377098

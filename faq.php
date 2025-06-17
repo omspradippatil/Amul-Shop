@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Shree Laxmi Amul Shopiee</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Mobile optimization CSS -->
+    <link rel="stylesheet" href="mobile-fixes.css">
+</head>
+<body>
+
+<?php include 'header.php'; ?>
+
+<div class="floating-background">
+    <div class="ice-cream cone"></div>
+    <div class="ice-cream cup"></div>
+    <div class="ice-cream candy"></div>
+    <div class="ice-cream cone reversed"></div>
+    <div class="ice-cream cup reversed"></div>
+    <div class="ice-cream candy reversed"></div>
+    <div class="ice-cream cone"></div>
+    <div class="ice-cream cup"></div>
+    <div class="ice-cream candy"></div>
+    <div class="ice-cream cone reversed"></div>
+</div>
+
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="content-card animate__animated animate__fadeIn">
+                <h1 class="text-center mb-4 animate__animated animate__fadeInDown">Frequently Asked Questions</h1>
+                <p class="lead text-center mb-5">Find answers to the most common questions about our store and products.</p>
+                
+                <!-- FAQ Categories Tabs -->
+                <ul class="nav nav-pills mb-4 justify-content-center" id="faqTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab">
+                            <i class="bi bi-info-circle"></i> General
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="products-tab" data-bs-toggle="pill" data-bs-target="#products" type="button" role="tab">
+                            <i class="bi bi-box"></i> Products
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="orders-tab" data-bs-toggle="pill" data-bs-target="#orders" type="button" role="tab">
+                            <i class="bi bi-cart"></i> Orders
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="store-tab" data-bs-toggle="pill" data-bs-target="#store" type="button" role="tab">
+                            <i class="bi bi-shop"></i> Store
+                        </button>
+                    </li>
+                </ul>
+                
+                <!-- FAQ Content -->
+                <div class="tab-content" id="faqTabContent">
+                    <!-- General FAQs -->
+                    <div class="tab-pane fade show active" id="general" role="tabpanel">
+                        <div class="accordion" id="generalAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#generalOne">
+                                        Are you an official Amul outlet?
+                                    </button>
+                                </h2>
+                                <div id="generalOne" class="accordion-collapse collapse show" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we are an authorized Amul outlet. Shree Laxmi Amul Shopiee is officially recognized by Gujarat Cooperative Milk Marketing Federation (GCMMF), the organization that markets Amul products.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalTwo">
+                                        What are your store hours?
+                                    </button>
+                                </h2>
+                                <div id="generalTwo" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>We are open daily from 7:00 AM to 12:00 AM (midnight), including weekends and most holidays.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalThree">
+                                        Do you accept digital payments?
+                                    </button>
+                                </h2>
+                                <div id="generalThree" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we accept cash, UPI payments (Google Pay, PhonePe, Paytm), and credit/debit cards for your convenience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalFour">
+                                        How can I check if a product is available?
+                                    </button>
+                                </h2>
+                                <div id="generalFour" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>You can call us directly at +91 9890377098 to check product availability, or use our <a href="enquiry.php">enquiry form</a> to ask about specific products. We'll respond promptly to your query.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#generalFive">
+                                        Is your store FSSAI certified?
+                                    </button>
+                                </h2>
+                                <div id="generalFive" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, our store is FSSAI certified, ensuring that we follow proper food safety and hygiene standards. You can view our certification in our <a href="gallery.php">gallery section</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products FAQs -->
+                    <div class="tab-pane fade" id="products" role="tabpanel">
+                        <div class="accordion" id="productsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#productsOne">
+                                        What range of products do you offer?
+                                    </button>
+                                </h2>
+                                <div id="productsOne" class="accordion-collapse collapse show" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer a comprehensive range of Amul products including:</p>
+                                        <ul>
+                                            <li>Various ice creams (cups, cones, family packs, novelties)</li>
+                                            <li>Milk products (Amul Gold, Taaza, etc.)</li>
+                                            <li>Butter, cheese, and ghee</li>
+                                            <li>Paneer and other dairy products</li>
+                                            <li>Amul beverages (lassi, buttermilk, flavored milk)</li>
+                                            <li>And much more!</li>
+                                        </ul>
+                                        <p>You can view our complete product range on our <a href="products.php">products page</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productsTwo">
+                                        How do you ensure product freshness?
+                                    </button>
+                                </h2>
+                                <div id="productsTwo" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>We maintain strict temperature control and storage protocols for all our products. Our cold storage facilities are regularly monitored to ensure optimal temperature for dairy products. We also carefully track product expiry dates and maintain regular inventory turnover to ensure you always get fresh products.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productsThree">
+                                        Do you offer seasonal or limited-edition Amul products?
+                                    </button>
+                                </h2>
+                                <div id="productsThree" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we stock seasonal and limited-edition Amul products when they're available. This includes special festival packs, seasonal ice cream flavors, and limited-time offerings. Follow us on Facebook or visit our store regularly to stay updated on these special products.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productsFour">
+                                        What should I do if I'm unsatisfied with a product?
+                                    </button>
+                                </h2>
+                                <div id="productsFour" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>Customer satisfaction is our priority. If you're unsatisfied with any product, please return it to our store along with the receipt as soon as possible. We'll be happy to exchange it or provide a refund, subject to our exchange policy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productsFive">
+                                        Do you have nutritional information for Amul products?
+                                    </button>
+                                </h2>
+                                <div id="productsFive" class="accordion-collapse collapse" data-bs-parent="#productsAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, nutritional information is available on product packaging. Additionally, we're developing a <a href="nutritional-info.php">nutritional information page</a> on our website with comprehensive details about Amul products. If you need specific nutritional information, please feel free to ask our store staff.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Orders FAQs -->
+                    <div class="tab-pane fade" id="orders" role="tabpanel">
+                        <div class="accordion" id="ordersAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ordersOne">
+                                        Do you accept bulk orders?
+                                    </button>
+                                </h2>
+                                <div id="ordersOne" class="accordion-collapse collapse show" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we accept bulk orders for events, parties, or business needs. For large orders, we recommend placing your order at least 2-3 days in advance to ensure availability. You can place bulk orders in person at our store or contact us at +91 9890377098.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordersTwo">
+                                        Is there a minimum order value for bulk orders?
+                                    </button>
+                                </h2>
+                                <div id="ordersTwo" class="accordion-collapse collapse" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>There is no strict minimum order value, but for special discounts on bulk orders, we typically consider orders above ₹2000. The exact discount depends on the products and quantities ordered.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordersThree">
+                                        Do you offer delivery services?
+                                    </button>
+                                </h2>
+                                <div id="ordersThree" class="accordion-collapse collapse" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer delivery for bulk orders within a 5km radius of our store, subject to minimum order value and delivery staff availability. Delivery charges may apply depending on the distance and order size. Please call us to discuss delivery options for your specific order.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordersFour">
+                                        Can I pre-order ice cream cakes?
+                                    </button>
+                                </h2>
+                                <div id="ordersFour" class="accordion-collapse collapse" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, we accept pre-orders for Amul ice cream cakes. Please place your order at least 2 days in advance. We offer various sizes (500g, 1kg) and flavors. Custom messages can be added to the cake upon request.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ordersFive">
+                                        Do you offer any special discounts?
+                                    </button>
+                                </h2>
+                                <div id="ordersFive" class="accordion-collapse collapse" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer discounts on bulk orders and occasionally run seasonal promotions. We also have special offers during festivals and holidays. Visit our store or follow our Facebook page to stay updated on current promotions and discounts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Store FAQs -->
+                    <div class="tab-pane fade" id="store" role="tabpanel">
+                        <div class="accordion" id="storeAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#storeOne">
+                                        Where is your store located?
+                                    </button>
+                                </h2>
+                                <div id="storeOne" class="accordion-collapse collapse show" data-bs-parent="#storeAccordion">
+                                    <div class="accordion-body">
+                                        <p>Our store is located at 210, pachmarg, road, opposite police station, Delwadi, Kudan, Maharashtra 401502. You can find us easily on <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank">Google Maps</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#storeTwo">
+                                        Is parking available near your store?
+                                    </button>
+                                </h2>
+                                <div id="storeTwo" class="accordion-collapse collapse" data-bs-parent="#storeAccordion">
+                                    <div class="accordion-body">
+                                        <p>Yes, there is street parking available near our store. During peak hours, parking might be limited, but you can usually find a spot within a short walking distance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#storeThree">
+                                        How long has your store been in business?
+                                    </button>
+                                </h2>
+                                <div id="storeThree" class="accordion-collapse collapse" data-bs-parent="#storeAccordion">
+                                    <div class="accordion-body">
+                                        <p>Shree Laxmi Amul Shopiee has been serving the community since 2014. We've built a reputation for quality products and excellent customer service over the years.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#storeFour">
+                                        Do you have seating facilities in your store?
+                                    </button>
+                                </h2>
+                                <div id="storeFour" class="accordion-collapse collapse" data-bs-parent="#storeAccordion">
+                                    <div class="accordion-body">
+                                        <p>We do not currently offer seating facilities inside our store. We operate primarily as a retail outlet for Amul products.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#storeFive">
+                                        Are there any holidays when your store is closed?
+                                    </button>
+                                </h2>
+                                <div id="storeFive" class="accordion-collapse collapse" data-bs-parent="#storeAccordion">
+                                    <div class="accordion-body">
+                                        <p>We remain open most days of the year, including most holidays. However, we may have modified hours during major festivals. Any temporary closures or changes in hours will be announced on our Facebook page and through a notice at our store.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Still Have Questions Section -->
+                <div class="mt-5 pt-4 border-top text-center">
+                    <h3>Still Have Questions?</h3>
+                    <p class="lead">We're here to help! Feel free to reach out to us.</p>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-4 mb-3">
+                            <a href="contact.php" class="card h-100 border-0 shadow-sm text-decoration-none text-dark animate-hover">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-telephone-fill text-primary fs-1 mb-3"></i>
+                                    <h5>Contact Us</h5>
+                                    <p class="mb-0 text-muted">Reach out via phone or visit our store</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <a href="enquiry.php" class="card h-100 border-0 shadow-sm text-decoration-none text-dark animate-hover">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-question-circle-fill text-success fs-1 mb-3"></i>
+                                    <h5>Submit an Enquiry</h5>
+                                    <p class="mb-0 text-muted">Send us your specific questions</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <a href="https://wa.me/919890377098" target="_blank" class="card h-100 border-0 shadow-sm text-decoration-none text-dark animate-hover">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-whatsapp text-success fs-1 mb-3"></i>
+                                    <h5>WhatsApp Us</h5>
+                                    <p class="mb-0 text-muted">Chat with us directly on WhatsApp</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<?php include 'footer.php'; ?>
