@@ -165,9 +165,9 @@ function fixTabs() {
         });
     });
 }
-        });
-    });
-}
+       
+  
+
 
 function fixGoogleTranslate() {
     // Fix Google Translate issues that might occur on InfinityFree

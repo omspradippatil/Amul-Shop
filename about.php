@@ -31,7 +31,8 @@
     <div class="ice-cream cone reversed"></div>
 </div>
 
-<main class="container py-5">
+
+<main class="container py-5" id="main-content">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="content-card animate__animated animate__fadeIn">
@@ -250,6 +251,18 @@
                     <a href="contact.php" class="btn btn-primary btn-lg">
                         <i class="bi bi-geo-alt"></i> Find Us
                     </a>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+
+<?php include 'footer.php'; ?>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
                 </section>
             </div>
         </div>

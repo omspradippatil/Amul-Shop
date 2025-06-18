@@ -517,9 +517,10 @@ footer {
 footer h5 {
     position: relative;
     padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-footer h5:after {
+footer h5::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -529,8 +530,17 @@ footer h5:after {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+footer h6 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+}
+
 footer ul li {
     transition: transform 0.3s ease;
+    margin-bottom: 8px;
 }
 
 footer ul li:hover {
@@ -539,6 +549,7 @@ footer ul li:hover {
 
 footer a:not(.btn) {
     transition: color 0.3s ease;
+    font-size: 0.95rem;
 }
 
 footer a:not(.btn):hover {
@@ -557,11 +568,53 @@ footer .btn:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Floating WhatsApp button */
+.social-links {
+    display: flex;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffde59;
+    transform: translateY(-3px);
+}
+
+/* Mobile responsiveness for footer and buttons */
+@media (max-width: 767.98px) {
+    .whatsapp-float {
+        bottom: 90px;
+        right: 20px;
+    }
+    
+    #back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    footer h5 {
+        margin-top: 20px;
+    }
+}
+
+/* Updated Floating WhatsApp button - moved to right side */
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    left: 30px;
+    bottom: 100px; /* Positioned above the back-to-top button */
+    right: 30px; /* Changed from left to right */
     z-index: 1000;
 }
 
@@ -576,45 +629,134 @@ footer .btn:hover {
     animation: whatsapp-pulse 2s infinite;
 }
 
-@keyframes whatsapp-pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
-    }
-    70% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
-    }
+/* Enlarged Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px; /* Increased from 40px */
+    height: 60px; /* Increased from 40px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-size: 1.5rem; /* Increased icon size */
 }
 
-/* Mobile responsiveness for footer */
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Enhanced footer styling */
+footer {
+    background: linear-gradient(to right, #0a4da3, #1665c1);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+footer h5 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer h6 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+}
+
+footer ul li {
+    transition: transform 0.3s ease;
+    margin-bottom: 8px;
+}
+
+footer ul li:hover {
+    transform: translateX(5px);
+}
+
+footer a:not(.btn) {
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+footer a:not(.btn):hover {
+    color: #ffde59 !important;
+}
+
+footer .btn {
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+footer .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffde59;
+    transform: translateY(-3px);
+}
+
+/* Mobile responsiveness for footer and buttons */
 @media (max-width: 767.98px) {
-    footer h5 {
-        margin-top: 15px;
-    }
-    
-    footer .col-md-4 {
-        text-align: center;
-    }
-    
-    footer h5:after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
     .whatsapp-float {
-        bottom: 20px;
-        left: 20px;
+        bottom: 90px;
+        right: 20px;
     }
     
-    .whatsapp-float .btn {
+    #back-to-top {
+        bottom: 20px;
+        right: 20px;
         width: 50px;
         height: 50px;
-        font-size: 1.5rem;
+    }
+    
+    footer h5 {
+        margin-top: 20px;
     }
 }
 
@@ -2436,79 +2578,105 @@ footer .btn:hover {
     }
 }
 
-/* Mobile responsiveness */
-@media (max-width: 992px) {
-    .enquiry-info-sidebar {
-        margin-top: 30px;
-    }
-}
-
-/* Enhanced Enquiry Button Styling */
-.enquiry-cta-btn {
-    background-color: #0a4da3 !important;
-    border-color: #0a4da3 !important;
-
-
-
-
-
-
+/* Enhanced Banner Styling - Updated for Smaller Size */
+.banner-container {
     position: relative;
+    width: 100%;
+    max-width: 1200px; /* Add max-width to contain banner size */
     overflow: hidden;
+    margin: 0 auto 1.5rem; /* Center the banner horizontally and reduce bottom margin */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    max-height: 250px; /* Limit overall height */
 }
 
-.highlight-pulse {
-    animation: highlight-pulse 2s infinite;
-    box-shadow: 0 0 0 0 rgba(10, 77, 163, 0.5);
-    position: relative;
+.banner-image {
+    width: 100%;
+    height: auto; /* Auto height to maintain aspect ratio */
+    max-height: 250px; /* Limit image height */
+    object-fit: cover; /* Changed to cover for better appearance in smaller size */
+    display: block;
+    transition: transform 0.8s ease;
+    filter: brightness(0.85);
 }
 
-@keyframes highlight-pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(10, 77, 163, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 15px rgba(10, 77, 163, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(10, 77, 163, 0);
-    }
+.banner-container:hover .banner-image {
+    transform: scale(1.03);
 }
 
-/* Floating Enquiry Button (shown on mobile only) */
-.floating-enquiry-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: none;
-}
-
-.floating-enquiry-btn .btn {
-    width: 60px;
-    height: 60px;
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(10, 77, 163, 0.8) 0%, rgba(10, 77, 163, 0.6) 50%, rgba(10, 77, 163, 0.3) 100%);
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    animation: float-btn 3s infinite ease-in-out;
 }
 
-@keyframes float-btn {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+.banner-content {
+    padding: 15px; /* Add padding for better text containment */
+    max-width: 80%; /* Prevent text from extending too far */
 }
 
-/* Show floating button only on mobile */
-@media (max-width: 768px) {
-    .floating-enquiry-btn {
-        display: block;
+.banner-content h2 {
+    font-size: 1.8rem; /* Reduce title size */
+    margin-bottom: 5px; /* Reduce spacing */
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.banner-content p {
+    font-size: 0.95rem; /* Reduce description size */
+    margin-bottom: 10px; /* Reduce spacing */
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.banner-btn {
+    display: inline-block;
+    padding: 6px 15px; /* Smaller button */
+    background-color: #ffde59;
+    color: #0a4da3;
+    font-size: 0.85rem; /* Smaller font */
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #ffde59;
+    margin-top: 0.5rem;
+}
+
+/* Mobile responsiveness for banner */
+@media (max-width: 767.98px) {
+    .banner-container {
+        max-height: 180px; /* Even smaller on mobile */
+    }
+    
+    .banner-image {
+        max-height: 180px;
+    }
+    
+    .banner-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .banner-content p {
+        font-size: 0.85rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .banner-btn {
+        padding: 4px 12px;
+        font-size: 0.8rem;
     }
 }
 
 /* Search Overlay Styles */
-/* Removed search overlay styles and other search-related CSS */
-/* ...existing code... */
 
 /* Remove search-related styling - search overlay, search controls, etc. */
 .search-overlay,
@@ -2523,36 +2691,34 @@ footer .btn:hover {
 mark {
     display: none !important;
 }
-
-/* Back to top button styling */
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-#back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#back-to-top:hover {
-    transform: translateY(-5px);
-}
-
-@media (max-width: 576px) {
-    #back-to-top {
-        bottom: 20px;
-        right: 20px;
+    .banner-content h2 {
+        font-size: 2rem;
     }
+    
+    .banner-content p {
+        font-size: 1rem;
+    }
+    
+    .banner-overlay {
+        background: linear-gradient(90deg, rgba(10, 77, 163, 0.8) 0%, rgba(10, 77, 163, 0.7) 100%);
+    }
+}
+        display: block;
+    }
+}
+
+/* Search Overlay Styles */
+
+/* Remove search-related styling - search overlay, search controls, etc. */
+.search-overlay,
+.search-header,
+.search-form,
+.quick-links,
+.close-search,
+.search-container,
+.search-toggle,
+.filter-btn,
+.search-result-item,
+mark {
+    display: none !important;
 }

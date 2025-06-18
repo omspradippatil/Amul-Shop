@@ -31,7 +31,9 @@
     <div class="ice-cream cone reversed"></div>
 </div>
 
-<main class="container py-5">
+
+
+<main class="container py-5" id="main-content">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <!-- Enquiry Form Hero Section -->

@@ -29,7 +29,9 @@
     <div class="ice-cream cone reversed"></div>
 </div>
 
-<main class="container py-5">
+
+
+<main class="container py-5" id="main-content">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <!-- Contact Us Hero Section -->
@@ -117,6 +119,18 @@
             submitBtn.addEventListener('mouseout', function() {
                 this.classList.remove('animate__animated', 'animate__pulse');
             });
+        });
+    </script>
+</main>
+
+<?php include 'footer.php'; ?>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Animate.css JS (Optional, for animations) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+</body>
+</html>
         });
     </script>
 </main>
