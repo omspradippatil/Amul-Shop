@@ -29,8 +29,6 @@
     <div class="ice-cream cone reversed"></div>
 </div>
 
-
-
 <main class="container py-5" id="main-content">
     <div class="row justify-content-center">
         <div class="col-lg-10">
@@ -104,33 +102,97 @@
                 </div>
             </div>
             
-            <!-- Contact Form -->
+            <!-- Map Section -->
+            <div class="content-card mt-5 animate__animated animate__fadeInUp animate__delay-3s">
+                <h3 class="mb-4 text-center"><i class="bi bi-map"></i> Find Us</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.227876302633!2d72.85!3d19.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzAwLjAiTiA3MsKwNTAnMjQuMCJF!5e0!3m2!1sen!2sin!4v1620112345678!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="bi bi-signpost-2 text-primary fs-4"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Directions</h5>
+                                <p>Located opposite to the Police Station in Pachmarg. Look for the Amul signboard.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="bi bi-p-circle text-primary fs-4"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Parking</h5>
+                                <p>Street parking is available near our shop for your convenience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <!-- Get in Touch Section -->
+            <div class="content-card mt-5 animate__animated animate__fadeInUp animate__delay-4s">
+                <h3 class="mb-4 text-center"><i class="bi bi-chat-dots"></i> Quick Contact Options</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-option text-center">
+                            <a href="tel:+919890377098" class="btn btn-outline-primary btn-lg rounded-circle mb-3">
+                                <i class="bi bi-telephone-fill fs-3"></i>
+                            </a>
+                            <h5>Call Us</h5>
+                            <p>For immediate assistance</p>
+                            <a href="tel:+919890377098" class="btn btn-primary">
+                                <i class="bi bi-telephone me-1"></i> Call Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-option text-center">
+                            <a href="https://wa.me/919890377098" class="btn btn-outline-success btn-lg rounded-circle mb-3">
+                                <i class="bi bi-whatsapp fs-3"></i>
+                            </a>
+                            <h5>WhatsApp</h5>
+                            <p>Chat with us anytime</p>
+                            <a href="https://wa.me/919890377098" class="btn btn-success">
+                                <i class="bi bi-whatsapp me-1"></i> Message Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-option text-center">
+                            <a href="enquiry.php" class="btn btn-outline-danger btn-lg rounded-circle mb-3">
+                                <i class="bi bi-chat-dots-fill fs-3"></i>
+                            </a>
+                            <h5>Submit Enquiry</h5>
+                            <p>For product queries</p>
+                            <a href="enquiry.php" class="btn btn-danger">
+                                <i class="bi bi-send me-1"></i> Send Enquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Add some extra animation to the submit button -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const submitBtn = document.querySelector('button[type="submit"]');
+            const buttons = document.querySelectorAll('.btn-primary, .btn-success, .btn-danger');
             
-            submitBtn.addEventListener('mouseover', function() {
-                this.classList.add('animate__animated', 'animate__pulse');
+            buttons.forEach(function(btn) {
+                btn.addEventListener('mouseover', function() {
+                    this.classList.add('animate__animated', 'animate__pulse');
+                });
+                
+                btn.addEventListener('mouseout', function() {
+                    this.classList.remove('animate__animated', 'animate__pulse');
+                });
             });
-            
-            submitBtn.addEventListener('mouseout', function() {
-                this.classList.remove('animate__animated', 'animate__pulse');
-            });
-        });
-    </script>
-</main>
-
-<?php include 'footer.php'; ?>
-
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Animate.css JS (Optional, for animations) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
-</body>
-</html>
         });
     </script>
 </main>

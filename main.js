@@ -1,9 +1,18 @@
 /**
  * Main JavaScript for Shree Laxmi Amul Shopiee
  * Contains common functionality used across the website
+ * With mobile optimizations
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Detect if the device is mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    // Add mobile class to body for CSS targeting
+    if (isMobile) {
+        document.body.classList.add('mobile-device');
+    }
+    
     // Search overlay functionality
     initializeSearch();
     
@@ -16,11 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Product filtering if on products page
     initializeProductFilters();
     
-    // Animate floating elements
-    initializeFloatingElements();
+    // Animate floating elements (with reduced animations on mobile)
+    initializeFloatingElements(isMobile);
     
-    // Initialize carousel animations
-    initializeCarouselAnimations();
+    // Initialize carousel animations (optimized for mobile)
+    initializeCarouselAnimations(isMobile);
+    
+    // Initialize carousels with fixed indicators
+    initializeCarousels();
+    
+    // Mobile-specific optimizations
+    if (isMobile) {
+        mobileOptimizations();
+    }
 });
 
 /**
@@ -183,30 +200,57 @@ function initializeProductFilters() {
 
 /**
  * Initialize floating animation for elements
+ * @param {boolean} isMobile - Whether the device is mobile
  */
-function initializeFloatingElements() {
+function initializeFloatingElements(isMobile) {
     const floatingElements = document.querySelectorAll('.floating-img');
-    floatingElements.forEach(element => {
-        setInterval(() => {
-            element.classList.toggle('float-up');
-        }, 2000);
-    });
+    
+    // Reduce animations on mobile for better performance
+    if (isMobile) {
+        // Use fewer animations on mobile
+        floatingElements.forEach(element => {
+            setInterval(() => {
+                element.classList.toggle('float-up');
+            }, 3000); // Slower interval for mobile
+        });
+    } else {
+        // Full animations on desktop
+        floatingElements.forEach(element => {
+            setInterval(() => {
+                element.classList.toggle('float-up');
+            }, 2000);
+        });
+    }
 }
 
 /**
  * Initialize carousel animations
+ * @param {boolean} isMobile - Whether the device is mobile
  */
-function initializeCarouselAnimations() {
+function initializeCarouselAnimations(isMobile) {
     // Fix carousel progress bar
     const progressBar = document.querySelector('.carousel-progress-bar');
     if(progressBar) {
         function resetProgressBar() {
-            progressBar.style.transition = 'none';
-            progressBar.style.width = '0%';
-            setTimeout(() => {
-                progressBar.style.transition = 'width 7000ms linear';
-                progressBar.style.width = '100%';
-            }, 10);
+            // More performant approach for mobile
+            if (isMobile) {
+                requestAnimationFrame(() => {
+                    progressBar.style.transition = 'none';
+                    progressBar.style.width = '0%';
+                    
+                    requestAnimationFrame(() => {
+                        progressBar.style.transition = 'width 7000ms linear';
+                        progressBar.style.width = '100%';
+                    });
+                });
+            } else {
+                progressBar.style.transition = 'none';
+                progressBar.style.width = '0%';
+                setTimeout(() => {
+                    progressBar.style.transition = 'width 7000ms linear';
+                    progressBar.style.width = '100%';
+                }, 10);
+            }
         }
         
         // Reset on slide change
@@ -216,6 +260,69 @@ function initializeCarouselAnimations() {
             // Initialize on page load
             resetProgressBar();
         }
+    }
+}
+
+/**
+ * Initialize all carousels and fix indicator functionality
+ */
+function initializeCarousels() {
+    // Initialize all Bootstrap carousels
+    document.querySelectorAll('.carousel').forEach(function(carousel) {
+        // Fix indicators
+        const indicators = carousel.querySelectorAll('.carousel-indicators button, .testimonial-indicators button');
+        const carouselId = carousel.id;
+        
+        indicators.forEach(function(indicator) {
+            indicator.addEventListener('click', function(e) {
+                e.preventDefault();
+                const slideIndex = this.getAttribute('data-bs-slide-to');
+                const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                
+                if (carouselInstance) {
+                    carouselInstance.to(parseInt(slideIndex));
+                } else {
+                    // Manual fallback if Bootstrap instance not available
+                    const slides = carousel.querySelectorAll('.carousel-item');
+                    
+                    // Remove active class from all slides and indicators
+                    slides.forEach(slide => slide.classList.remove('active'));
+                    indicators.forEach(ind => {
+                        ind.classList.remove('active');
+                        ind.removeAttribute('aria-current');
+                    });
+                    
+                    // Add active class to selected slide and indicator
+                    if (slides[slideIndex]) {
+                        slides[slideIndex].classList.add('active');
+                    }
+                    this.classList.add('active');
+                    this.setAttribute('aria-current', 'true');
+                }
+            });
+        });
+    });
+    
+    // Additional fix for testimonial carousel indicators
+    const testimonialCarousel = document.getElementById('testimonialCarousel');
+    if (testimonialCarousel) {
+        const testimonialIndicators = testimonialCarousel.querySelectorAll('.testimonial-indicators button');
+        
+        testimonialIndicators.forEach(function(indicator, index) {
+            indicator.addEventListener('click', function() {
+                // Remove active class from all indicators
+                testimonialIndicators.forEach(ind => ind.classList.remove('active'));
+                
+                // Add active class to clicked indicator
+                this.classList.add('active');
+                
+                // Find the carousel instance and go to slide
+                const carouselInstance = bootstrap.Carousel.getInstance(testimonialCarousel);
+                if (carouselInstance) {
+                    carouselInstance.to(index);
+                }
+            });
+        });
     }
 }
 
@@ -240,4 +347,148 @@ function styleSearchOverlay() {
         searchOverlay.style.overflowY = 'auto';
         searchOverlay.style.transition = 'all 0.3s ease';
     }
+}
+
+/**
+ * Mobile-specific optimizations
+ */
+function mobileOptimizations() {
+    // Defer non-critical images
+    deferNonCriticalImages();
+    
+    // Add better touch feedback
+    addTouchFeedback();
+    
+    // Fix viewport issues on iOS
+    fixIOSViewport();
+    
+    // Improve form usability on mobile
+    improveFormUsability();
+}
+
+/**
+ * Defer loading of non-critical images for better mobile performance
+ */
+function deferNonCriticalImages() {
+    // Find all images with data-src attribute
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        // Load images after a short delay
+        setTimeout(() => {
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            });
+        }, 1000);
+    }
+}
+
+/**
+ * Add better touch feedback for mobile users
+ */
+function addTouchFeedback() {
+    const touchElements = document.querySelectorAll('a, button, .card, .nav-link');
+    
+    touchElements.forEach(element => {
+        element.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        }, {passive: true});
+        
+        element.addEventListener('touchend', function() {
+            this.classList.remove('touch-active');
+        }, {passive: true});
+    });
+}
+
+/**
+ * Fix viewport issues specific to iOS devices
+ */
+function fixIOSViewport() {
+    // Check if device is iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+    if (isIOS) {
+        // Add iOS-specific class to body
+        document.body.classList.add('ios-device');
+        
+        // Fix for 100vh issue on iOS
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        
+        // Update on resize/orientation change
+        window.addEventListener('resize', () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    }
+}
+
+/**
+ * Improve form usability on mobile devices
+ */
+function improveFormUsability() {
+    // Fix for input zooming on iOS
+    const inputs = document.querySelectorAll('input, select, textarea');
+    
+    inputs.forEach(input => {
+        // Set font-size to 16px to prevent zoom on focus
+        input.style.fontSize = '16px';
+        
+        // Add better touch targets
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('input-focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.classList.remove('input-focused');
+        });
+    });
+    
+    // Improve scrolling to form errors
+    const forms = document.querySelectorAll('form.needs-validation');
+    
+    forms.forEach(form => {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                
+                // Find the first invalid input and scroll to it with offset
+                const firstInvalid = form.querySelector(':invalid');
+                if (firstInvalid) {
+                    const yOffset = -100; // Offset for fixed header
+                    const y = firstInvalid.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    
+                    window.scrollTo({
+                        top: y,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Focus the invalid input after scrolling
+                    setTimeout(() => {
+                        firstInvalid.focus();
+                    }, 500);
+                }
+            }
+            
+            form.classList.add('was-validated');
+        });
+    });
 }

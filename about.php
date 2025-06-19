@@ -2,17 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0a4da3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
     <title>Amul - About Us</title>
+    
+    <!-- Performance optimization -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="mobile-fixes.css" as="style">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Animate.css -->
+    <!-- Animate.css (with reduced set for mobile) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- Mobile optimization CSS -->
     <link rel="stylesheet" href="mobile-fixes.css">
+    
+    <!-- Inline critical CSS for faster rendering -->
+    <style>
+        /* Critical CSS for initial render */
+        body {margin:0; padding:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+        .content-card {background:#fff; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.08); padding:2rem;}
+        @media (max-width:767.98px) {.content-card{padding:1.25rem;}}
+    </style>
 </head>
 <body>
 
@@ -31,7 +53,6 @@
     <div class="ice-cream cone reversed"></div>
 </div>
 
-
 <main class="container py-5" id="main-content">
     <div class="row justify-content-center">
         <div class="col-lg-10">
@@ -41,18 +62,19 @@
                 <!-- About Us Section -->
                 <section class="mb-5 animate__animated animate__fadeIn animate__delay-1s">
                     <div class="row align-items-center">
+                        <!-- Increase size and add animation for store-front.jpg -->
                         <div class="col-md-5 mb-4 mb-md-0">
-                            <img src="images/store-front.jpg" alt="Shree Laxmi Amul Shopiee Store Front" class="img-fluid rounded shadow" onerror="this.src='Amul.jpg';">
+                            <!-- Make store-front.jpg bigger and add extra animations -->
+                            <img src="images/store-front.jpg"
+                                 alt="Shree Laxmi Amul Shopiee Store Front"
+                                 class="img-fluid rounded shadow animate__animated animate__zoomIn animate__pulse animate__slower"
+                                 style="width:100%; max-width:600px; height:auto;"
+                                 onerror="this.src='Amul.jpg';">
                         </div>
                         <div class="col-md-7">
                             <h2 class="border-start border-4 border-primary ps-3 mb-4">Our Story</h2>
                             <p>Welcome to Shree Laxmi Amul Shopiee, your trusted neighborhood store for all things Amul. Established in 2014, we have been serving our community with fresh, high-quality Amul products that bring joy and nutrition to families across Pachmarg and surrounding areas.</p>
                             <p>As an authorized Amul outlet, we take pride in delivering the authentic taste of India's most beloved dairy brand directly to our customers. Our journey began with a simple mission: to ensure that every household has easy access to fresh Amul products at fair prices.</p>
-                            <div class="mt-3 pt-2 border-top">
-                                <h5 class="text-primary"><i class="bi bi-people"></i> Our Team</h5>
-                                <p><strong>Owner:</strong> Pradip Laxuman Patil<br>
-                                <strong>Co-Owner:</strong> Om Pradip Patil</p>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -102,7 +124,12 @@
                     <h2 class="text-center mb-4">Services</h2>
                     <div class="row align-items-center">
                         <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                            <img src="images/service.jpg" alt="Our Services" class="img-fluid rounded shadow" onerror="this.src='Amul.jpg';">
+                            <!-- Increase size and add animation for service.jpg -->
+                            <img src="images/service.jpg"
+                                 alt="Our Services"
+                                 class="img-fluid rounded shadow animate__animated animate__zoomIn animate__shakeX animate__delay-1s"
+                                 style="width:100%; max-width:600px; height:auto;"
+                                 onerror="this.src='Amul.jpg';">
                         </div>
                         <div class="col-md-6 order-md-1">
                             <div class="accordion" id="servicesAccordion">
@@ -161,45 +188,74 @@
                 
                 <!-- Who We Are Section -->
                 <section class="mb-5 animate__animated animate__fadeIn animate__delay-3s">
-                    <div class="bg-light p-4 rounded">
+                    <div class="bg-light p-4 rounded shadow-sm who-we-are-section">
                         <h2 class="text-center mb-4">Who We Are</h2>
+                        
                         <div class="row">
                             <div class="col-md-8 offset-md-2">
-                                <p class="lead text-center">We are a dedicated team of professionals committed to bringing the best of Amul to our community.</p>
+                                <p class="lead text-center">We are a family-owned business committed to providing the best of Amul to our community since 2014. Quality, service, and customer satisfaction are at the heart of everything we do.</p>
                                 
-                                <div class="d-flex align-items-center mb-4">
+                                <div class="mission-statement text-center p-3 mb-4 rounded bg-white shadow-sm">
+                                    <h4 class="text-primary"><i class="bi bi-bullseye"></i> Our Mission</h4>
+                                    <p class="mb-0">To deliver fresh, authentic Amul products while fostering a sense of community and trust among our valued customers.</p>
+                                </div>
+                                
+                                <div class="d-flex align-items-start mb-4">
                                     <div class="flex-shrink-0">
                                         <span class="badge rounded-circle bg-primary p-3"><i class="bi bi-people-fill fs-5"></i></span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h5>Family-Owned Business</h5>
-                                        <p class="text-muted mb-0">Run by a family that values quality, service and customer satisfaction above all.</p>
+                                        <h5>Family Values</h5>
+                                        <p class="text-muted">We pride ourselves on maintaining a warm, welcoming environment that feels like home.</p>
                                     </div>
                                 </div>
-                                
-                                <div class="d-flex align-items-center mb-4">
+                                <div class="d-flex align-items-start mb-4">
                                     <div class="flex-shrink-0">
                                         <span class="badge rounded-circle bg-primary p-3"><i class="bi bi-heart-fill fs-5"></i></span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h5>Community-Focused</h5>
-                                        <p class="text-muted mb-0">We believe in building relationships with our customers and being an integral part of the community.</p>
+                                        <h5>Community Care</h5>
+                                        <p class="text-muted">Strengthening local ties by offering friendly service and participating in neighborhood events.</p>
                                     </div>
                                 </div>
-                                
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-start mb-4">
                                     <div class="flex-shrink-0">
                                         <span class="badge rounded-circle bg-primary p-3"><i class="bi bi-award-fill fs-5"></i></span>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h5>Quality Champions</h5>
-                                        <p class="text-muted mb-0">We are passionate about maintaining Amul's high standards in every product we sell.</p>
+                                        <h5>Quality First</h5>
+                                        <p class="text-muted">Strict standards to ensure only the freshest products reach your table.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                                                    
+                        <!-- Owner & Co-Owner Section -->
+                        <div class="row text-center mt-5">
+                            <div class="col-md-6">
+                                <!-- Owner image made bigger and animated -->
+                                <img src="images/papa.jpg"
+                                     alt="Owner"
+                                     class="img-fluid rounded-circle shadow mb-3 animate__animated animate__zoomIn animate__pulse animate__slower"
+                                     style="width:200px; height:200px; object-fit:cover;"
+                                     onerror="this.src='Amul.jpg';">
+                                <h5 class="mt-2">Mr. Pradip Patil</h5>
+                                <p class="text-muted">Owner</p>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Co-Owner image made bigger and animated -->
+                                <img src="images/om.jpg"
+                                     alt="Co-Owner"
+                                     class="img-fluid rounded-circle shadow mb-3 animate__animated animate__zoomIn animate__rubberBand animate__delay-2s"
+                                     style="width:200px; height:200px; object-fit:cover;"
+                                     onerror="this.src='Amul.jpg';">
+                                <h5 class="mt-2">Om Pradip Patil</h5>
+                                <p class="text-muted">Co-Owner</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
+
                 
                 <!-- What We Do Section -->
                 <section class="mb-5 animate__animated animate__fadeIn animate__delay-3s">
@@ -255,23 +311,8 @@
             </div>
         </div>
     </div>
-</main>
 
-<?php include 'footer.php'; ?>
 
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-                </section>
-            </div>
-        </div>
-    </div>
-</main>
 
-<?php include 'footer.php'; ?>
 
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  <?php include 'footer.php'; ?>

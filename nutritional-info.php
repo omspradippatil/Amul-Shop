@@ -63,58 +63,68 @@
                     <div class="tab-pane fade show active" id="dairy" role="tabpanel">
                         <div class="card mb-4">
                             <div class="card-header bg-primary text-white">
-                                <h4 class="mb-0">Amul Milk Products</h4>
+                                <h4 class="mb-0">Amul Butter (100g)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Calcium (mg)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per 100g</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Amul Gold (Full Cream Milk)</td>
-                                                <td>100 ml</td>
-                                                <td>75</td>
-                                                <td>3.2</td>
-                                                <td>4.5</td>
-                                                <td>5.0</td>
-                                                <td>120</td>
+                                                <td>Calories</td>
+                                                <td>722 kcal</td>
+                                                <td>36%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Taaza (Toned Milk)</td>
-                                                <td>100 ml</td>
-                                                <td>58</td>
-                                                <td>3.1</td>
-                                                <td>3.0</td>
-                                                <td>5.0</td>
-                                                <td>120</td>
+                                                <td>Total Fat</td>
+                                                <td>80g</td>
+                                                <td>123%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Slim & Trim (Double Toned Milk)</td>
-                                                <td>100 ml</td>
-                                                <td>45</td>
-                                                <td>3.0</td>
-                                                <td>1.5</td>
-                                                <td>5.0</td>
-                                                <td>120</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>50g</td>
+                                                <td>250%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Shakti (Toned Milk with Vitamins A & D)</td>
-                                                <td>100 ml</td>
-                                                <td>60</td>
-                                                <td>3.1</td>
-                                                <td>3.0</td>
-                                                <td>5.0</td>
-                                                <td>120</td>
+                                                <td>Cholesterol</td>
+                                                <td>215mg</td>
+                                                <td>72%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sodium</td>
+                                                <td>650mg</td>
+                                                <td>28%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>0.1g</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>0.5g</td>
+                                                <td>1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin A</td>
+                                                <td>3500 IU</td>
+                                                <td>70%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin D</td>
+                                                <td>25 IU</td>
+                                                <td>6%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>24mg</td>
+                                                <td>2%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -124,67 +134,68 @@
                         
                         <div class="card mb-4">
                             <div class="card-header bg-warning text-dark">
-                                <h4 class="mb-0">Amul Butter & Cheese</h4>
+                                <h4 class="mb-0">Amul Cheese (100g)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Sodium (mg)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per 100g</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Amul Butter</td>
-                                                <td>10 g</td>
-                                                <td>73</td>
-                                                <td>0.1</td>
-                                                <td>8.0</td>
-                                                <td>0.0</td>
-                                                <td>87</td>
+                                                <td>Calories</td>
+                                                <td>348 kcal</td>
+                                                <td>17%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Lite Butter</td>
-                                                <td>10 g</td>
-                                                <td>55</td>
-                                                <td>0.1</td>
-                                                <td>6.0</td>
-                                                <td>0.0</td>
-                                                <td>90</td>
+                                                <td>Total Fat</td>
+                                                <td>25g</td>
+                                                <td>38%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Cheese Block</td>
-                                                <td>20 g</td>
-                                                <td>62</td>
-                                                <td>4.0</td>
-                                                <td>5.0</td>
-                                                <td>0.1</td>
-                                                <td>150</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>16g</td>
+                                                <td>80%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Cheese Slices</td>
-                                                <td>20 g (1 slice)</td>
-                                                <td>60</td>
-                                                <td>4.0</td>
-                                                <td>4.8</td>
-                                                <td>0.1</td>
-                                                <td>155</td>
+                                                <td>Cholesterol</td>
+                                                <td>70mg</td>
+                                                <td>23%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Cheese Spread</td>
-                                                <td>20 g</td>
-                                                <td>55</td>
-                                                <td>3.5</td>
-                                                <td>4.5</td>
-                                                <td>1.0</td>
-                                                <td>160</td>
+                                                <td>Sodium</td>
+                                                <td>780mg</td>
+                                                <td>34%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>4.5g</td>
+                                                <td>1.5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>22g</td>
+                                                <td>44%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>700mg</td>
+                                                <td>70%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin A</td>
+                                                <td>300 IU</td>
+                                                <td>6%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin B12</td>
+                                                <td>1.5μg</td>
+                                                <td>62%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -194,58 +205,63 @@
                         
                         <div class="card mb-4">
                             <div class="card-header bg-info text-dark">
-                                <h4 class="mb-0">Amul Paneer & Yogurt</h4>
+                                <h4 class="mb-0">Amul Paneer (100g)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Calcium (mg)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per 100g</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Amul Paneer</td>
-                                                <td>100 g</td>
-                                                <td>296</td>
-                                                <td>20.0</td>
-                                                <td>22.0</td>
-                                                <td>3.7</td>
-                                                <td>400</td>
+                                                <td>Calories</td>
+                                                <td>265 kcal</td>
+                                                <td>13%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Malai Paneer</td>
-                                                <td>100 g</td>
-                                                <td>320</td>
-                                                <td>18.0</td>
-                                                <td>26.0</td>
-                                                <td>3.5</td>
-                                                <td>380</td>
+                                                <td>Total Fat</td>
+                                                <td>20g</td>
+                                                <td>31%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Masti Dahi (Yogurt)</td>
-                                                <td>100 g</td>
-                                                <td>70</td>
-                                                <td>3.2</td>
-                                                <td>3.0</td>
-                                                <td>5.8</td>
-                                                <td>120</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>13g</td>
+                                                <td>65%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Fruit Yogurt</td>
-                                                <td>100 g</td>
-                                                <td>98</td>
-                                                <td>2.8</td>
-                                                <td>3.0</td>
-                                                <td>14.0</td>
-                                                <td>100</td>
+                                                <td>Cholesterol</td>
+                                                <td>70mg</td>
+                                                <td>23%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sodium</td>
+                                                <td>30mg</td>
+                                                <td>1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>3g</td>
+                                                <td>1%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>18g</td>
+                                                <td>36%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>500mg</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin A</td>
+                                                <td>210 IU</td>
+                                                <td>4%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -262,58 +278,68 @@
                     <div class="tab-pane fade" id="ice-cream" role="tabpanel">
                         <div class="card mb-4">
                             <div class="card-header bg-primary text-white">
-                                <h4 class="mb-0">Amul Ice Cream Cups</h4>
+                                <h4 class="mb-0">Amul Vanilla Ice Cream (100g)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Sugar (g)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per 100g</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Vanilla Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>190</td>
-                                                <td>3.5</td>
-                                                <td>10.0</td>
-                                                <td>20.0</td>
-                                                <td>16.0</td>
+                                                <td>Calories</td>
+                                                <td>207 kcal</td>
+                                                <td>10%</td>
                                             </tr>
                                             <tr>
-                                                <td>Chocolate Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>210</td>
-                                                <td>3.5</td>
-                                                <td>11.0</td>
-                                                <td>22.0</td>
-                                                <td>18.0</td>
+                                                <td>Total Fat</td>
+                                                <td>10g</td>
+                                                <td>15%</td>
                                             </tr>
                                             <tr>
-                                                <td>Butterscotch Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>205</td>
-                                                <td>3.5</td>
-                                                <td>10.5</td>
-                                                <td>21.5</td>
-                                                <td>17.5</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>6g</td>
+                                                <td>30%</td>
                                             </tr>
                                             <tr>
-                                                <td>Strawberry Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>195</td>
-                                                <td>3.2</td>
-                                                <td>10.0</td>
-                                                <td>21.0</td>
-                                                <td>17.0</td>
+                                                <td>Cholesterol</td>
+                                                <td>30mg</td>
+                                                <td>10%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sodium</td>
+                                                <td>50mg</td>
+                                                <td>2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>25g</td>
+                                                <td>8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- Sugars</td>
+                                                <td>22g</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>3.5g</td>
+                                                <td>7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>120mg</td>
+                                                <td>12%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin A</td>
+                                                <td>300 IU</td>
+                                                <td>6%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -323,67 +349,68 @@
                         
                         <div class="card mb-4">
                             <div class="card-header bg-warning text-dark">
-                                <h4 class="mb-0">Amul Ice Cream Cones & Bars</h4>
+                                <h4 class="mb-0">Amul Chocolate Ice Cream (100g)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Sugar (g)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per 100g</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Chocolate Cone</td>
-                                                <td>120 ml</td>
-                                                <td>245</td>
-                                                <td>4.0</td>
-                                                <td>12.0</td>
-                                                <td>28.0</td>
-                                                <td>20.0</td>
+                                                <td>Calories</td>
+                                                <td>216 kcal</td>
+                                                <td>11%</td>
                                             </tr>
                                             <tr>
-                                                <td>Butterscotch Cone</td>
-                                                <td>120 ml</td>
-                                                <td>240</td>
-                                                <td>4.0</td>
-                                                <td>11.5</td>
-                                                <td>28.5</td>
-                                                <td>21.0</td>
+                                                <td>Total Fat</td>
+                                                <td>11g</td>
+                                                <td>17%</td>
                                             </tr>
                                             <tr>
-                                                <td>Tricone</td>
-                                                <td>120 ml</td>
-                                                <td>250</td>
-                                                <td>4.2</td>
-                                                <td>12.5</td>
-                                                <td>29.0</td>
-                                                <td>22.0</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>7g</td>
+                                                <td>35%</td>
                                             </tr>
                                             <tr>
-                                                <td>Chocobar</td>
-                                                <td>60 ml</td>
-                                                <td>150</td>
-                                                <td>2.0</td>
-                                                <td>9.0</td>
-                                                <td>15.0</td>
-                                                <td>12.0</td>
+                                                <td>Cholesterol</td>
+                                                <td>30mg</td>
+                                                <td>10%</td>
                                             </tr>
                                             <tr>
-                                                <td>Almond Bar</td>
-                                                <td>75 ml</td>
-                                                <td>180</td>
-                                                <td>3.5</td>
-                                                <td>11.0</td>
-                                                <td>16.0</td>
-                                                <td>12.5</td>
+                                                <td>Sodium</td>
+                                                <td>55mg</td>
+                                                <td>2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>26g</td>
+                                                <td>9%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- Sugars</td>
+                                                <td>24g</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>3.7g</td>
+                                                <td>7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>125mg</td>
+                                                <td>12%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Iron</td>
+                                                <td>0.5mg</td>
+                                                <td>3%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -393,58 +420,63 @@
                         
                         <div class="card mb-4">
                             <div class="card-header bg-success text-white">
-                                <h4 class="mb-0">Amul Family Pack Ice Creams</h4>
+                                <h4 class="mb-0">Amul Tricone Ice Cream (70g cone)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Sugar (g)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per cone</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Rajbhog Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>215</td>
-                                                <td>3.8</td>
-                                                <td>11.0</td>
-                                                <td>23.0</td>
-                                                <td>19.0</td>
+                                                <td>Calories</td>
+                                                <td>165 kcal</td>
+                                                <td>8%</td>
                                             </tr>
                                             <tr>
-                                                <td>Kesar Pista Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>220</td>
-                                                <td>4.0</td>
-                                                <td>12.0</td>
-                                                <td>22.0</td>
-                                                <td>18.0</td>
+                                                <td>Total Fat</td>
+                                                <td>7g</td>
+                                                <td>11%</td>
                                             </tr>
                                             <tr>
-                                                <td>Chocolate Chip Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>225</td>
-                                                <td>3.5</td>
-                                                <td>12.5</td>
-                                                <td>23.0</td>
-                                                <td>19.5</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>4.5g</td>
+                                                <td>22%</td>
                                             </tr>
                                             <tr>
-                                                <td>Tutti Frutti Ice Cream</td>
-                                                <td>100 ml</td>
-                                                <td>210</td>
-                                                <td>3.2</td>
-                                                <td>10.0</td>
-                                                <td>24.0</td>
-                                                <td>20.0</td>
+                                                <td>Cholesterol</td>
+                                                <td>20mg</td>
+                                                <td>7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sodium</td>
+                                                <td>40mg</td>
+                                                <td>2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>22g</td>
+                                                <td>7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- Sugars</td>
+                                                <td>18g</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>2.5g</td>
+                                                <td>5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>80mg</td>
+                                                <td>8%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -461,58 +493,68 @@
                     <div class="tab-pane fade" id="beverages" role="tabpanel">
                         <div class="card mb-4">
                             <div class="card-header bg-primary text-white">
-                                <h4 class="mb-0">Amul Lassi & Chaas</h4>
+                                <h4 class="mb-0">Amul Kool Flavored Milk (200ml)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Sugar (g)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per 200ml</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Amul Lassi (Sweet)</td>
-                                                <td>200 ml</td>
-                                                <td>130</td>
-                                                <td>3.5</td>
-                                                <td>3.0</td>
-                                                <td>21.0</td>
-                                                <td>18.0</td>
+                                                <td>Calories</td>
+                                                <td>170 kcal</td>
+                                                <td>8.5%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Mango Lassi</td>
-                                                <td>200 ml</td>
-                                                <td>145</td>
-                                                <td>3.2</td>
-                                                <td>3.0</td>
-                                                <td>25.0</td>
-                                                <td>22.0</td>
+                                                <td>Total Fat</td>
+                                                <td>6g</td>
+                                                <td>9%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Rose Lassi</td>
-                                                <td>200 ml</td>
-                                                <td>135</td>
-                                                <td>3.2</td>
-                                                <td>3.0</td>
-                                                <td>22.0</td>
-                                                <td>19.0</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>3.5g</td>
+                                                <td>17.5%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Chaas (Buttermilk)</td>
-                                                <td>200 ml</td>
-                                                <td>70</td>
-                                                <td>3.0</td>
-                                                <td>1.5</td>
-                                                <td>10.0</td>
-                                                <td>6.0</td>
+                                                <td>Cholesterol</td>
+                                                <td>20mg</td>
+                                                <td>7%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sodium</td>
+                                                <td>70mg</td>
+                                                <td>3%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>24g</td>
+                                                <td>8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- Sugars</td>
+                                                <td>22g</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>5g</td>
+                                                <td>10%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>230mg</td>
+                                                <td>23%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin D</td>
+                                                <td>1.5μg</td>
+                                                <td>7.5%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -521,59 +563,69 @@
                         </div>
                         
                         <div class="card mb-4">
-                            <div class="card-header bg-warning text-dark">
-                                <h4 class="mb-0">Amul Kool Flavored Milk</h4>
+                            <div class="card-header bg-success text-white">
+                                <h4 class="mb-0">Amul Buttermilk (200ml)</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="table-light">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Serving Size</th>
-                                                <th>Energy (kcal)</th>
-                                                <th>Protein (g)</th>
-                                                <th>Fat (g)</th>
-                                                <th>Carbohydrates (g)</th>
-                                                <th>Sugar (g)</th>
+                                                <th>Nutrient</th>
+                                                <th>Amount per 200ml</th>
+                                                <th>% Daily Value*</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Amul Kool Chocolate</td>
-                                                <td>200 ml</td>
-                                                <td>170</td>
-                                                <td>5.0</td>
-                                                <td>6.0</td>
-                                                <td>22.0</td>
-                                                <td>18.0</td>
+                                                <td>Calories</td>
+                                                <td>80 kcal</td>
+                                                <td>4%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Kool Cafe</td>
-                                                <td>200 ml</td>
-                                                <td>165</td>
-                                                <td>5.0</td>
-                                                <td>6.0</td>
-                                                <td>20.0</td>
-                                                <td>16.0</td>
+                                                <td>Total Fat</td>
+                                                <td>1.5g</td>
+                                                <td>2%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Kool Kesar</td>
-                                                <td>200 ml</td>
-                                                <td>160</td>
-                                                <td>5.0</td>
-                                                <td>6.0</td>
-                                                <td>19.0</td>
-                                                <td>15.0</td>
+                                                <td>- Saturated Fat</td>
+                                                <td>1g</td>
+                                                <td>5%</td>
                                             </tr>
                                             <tr>
-                                                <td>Amul Kool Elaichi</td>
-                                                <td>200 ml</td>
-                                                <td>160</td>
-                                                <td>5.0</td>
-                                                <td>6.0</td>
-                                                <td>19.0</td>
-                                                <td>15.0</td>
+                                                <td>Cholesterol</td>
+                                                <td>5mg</td>
+                                                <td>2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sodium</td>
+                                                <td>120mg</td>
+                                                <td>5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Carbohydrate</td>
+                                                <td>12g</td>
+                                                <td>4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>- Sugars</td>
+                                                <td>11g</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>3g</td>
+                                                <td>6%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>140mg</td>
+                                                <td>14%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Probiotics</td>
+                                                <td>Present</td>
+                                                <td>-</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -593,23 +645,14 @@
                         <h4 class="text-center mb-4"><i class="bi bi-shield-check"></i> Understanding Nutritional Information</h4>
                         <div class="row">
                             <div class="col-md-6">
-                                <h5><i class="bi bi-info-circle text-primary"></i> What Do These Values Mean?</h5>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item bg-transparent"><strong>Energy:</strong> Measured in kilocalories (kcal), represents the amount of energy provided by the food.</li>
-                                    <li class="list-group-item bg-transparent"><strong>Protein:</strong> Essential for building and repairing tissues in your body.</li>
-                                    <li class="list-group-item bg-transparent"><strong>Fat:</strong> Provides energy and helps your body absorb certain vitamins.</li>
-                                    <li class="list-group-item bg-transparent"><strong>Carbohydrates:</strong> Your body's main source of energy.</li>
-                                    <li class="list-group-item bg-transparent"><strong>Sugar:</strong> A type of carbohydrate that gives food a sweet taste.</li>
-                                </ul>
+                                <h5><i class="bi bi-info-circle text-primary me-2"></i> Daily Values</h5>
+                                <p>* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</p>
+                                <p>The nutritional information provided is based on standard serving sizes and may vary slightly from batch to batch.</p>
                             </div>
                             <div class="col-md-6">
-                                <h5><i class="bi bi-exclamation-triangle text-warning"></i> Important Notes</h5>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item bg-transparent">The values provided are approximate and based on average calculations.</li>
-                                    <li class="list-group-item bg-transparent">Individual products may vary slightly in nutritional content.</li>
-                                    <li class="list-group-item bg-transparent">For the most accurate and up-to-date information, always refer to the product packaging.</li>
-                                    <li class="list-group-item bg-transparent">If you have specific dietary concerns or allergies, please consult with a healthcare professional.</li>
-                                </ul>
+                                <h5><i class="bi bi-exclamation-triangle text-warning me-2"></i> Important Note</h5>
+                                <p>If you have specific dietary needs or allergies, please consult with a healthcare professional before consuming these products.</p>
+                                <p>For the most up-to-date and accurate information, always refer to the nutritional information printed on the product packaging.</p>
                             </div>
                         </div>
                     </div>

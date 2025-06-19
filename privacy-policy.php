@@ -23,10 +23,6 @@
     <div class="ice-cream cone reversed"></div>
     <div class="ice-cream cup reversed"></div>
     <div class="ice-cream candy reversed"></div>
-    <div class="ice-cream cone"></div>
-    <div class="ice-cream cup"></div>
-    <div class="ice-cream candy"></div>
-    <div class="ice-cream cone reversed"></div>
 </div>
 
 <main class="container py-5">
@@ -34,129 +30,123 @@
         <div class="col-lg-10">
             <div class="content-card">
                 <h1 class="text-center mb-4">Privacy Policy</h1>
-                <p class="lead text-center mb-5">Last Updated: <?php echo date('F d, Y'); ?></p>
+                <p class="lead text-center mb-5">Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
                 
-                <section class="mb-5">
-                    <h2>Introduction</h2>
-                    <p>At Shree Laxmi Amul Shopiee, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p>
-                    <p>This privacy policy aims to give you information on how Shree Laxmi Amul Shopiee collects and processes your personal data through your use of this website, including any data you may provide through this website when you sign up for our newsletter, submit an inquiry, or contact us.</p>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>The Data We Collect About You</h2>
-                    <p>Personal data, or personal information, means any information about an individual from which that person can be identified. It does not include data where the identity has been removed (anonymous data).</p>
-                    <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:</p>
-                    <ul>
-                        <li><strong>Identity Data</strong> includes first name, last name.</li>
-                        <li><strong>Contact Data</strong> includes email address and telephone numbers.</li>
-                        <li><strong>Technical Data</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
-                        <li><strong>Usage Data</strong> includes information about how you use our website and services.</li>
-                        <li><strong>Marketing and Communications Data</strong> includes your preferences in receiving marketing from us and our third parties and your communication preferences.</li>
+                <div class="privacy-section mb-4">
+                    <h3><i class="bi bi-shield-lock-fill text-primary me-2"></i> Information We Collect</h3>
+                    <p>At Shree Laxmi Amul Shopiee, we may collect the following types of information:</p>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item">
+                            <strong>Personal Information:</strong> Name, contact information (phone number, email address), and address when you make inquiries or place orders.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Transaction Information:</strong> Details about purchases you make at our store.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Customer Preferences:</strong> Information about your product preferences and shopping habits to serve you better.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Website Usage Data:</strong> Information about how you interact with our website, including IP address, browser type, pages visited, and time spent on our site.
+                        </li>
                     </ul>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>How We Use Your Personal Data</h2>
-                    <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+                    <p>We collect this information when you:</p>
                     <ul>
-                        <li>Where we need to perform the service you have requested (for example, responding to your inquiry).</li>
-                        <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
-                        <li>Where we need to comply with a legal obligation.</li>
+                        <li>Visit our store or website</li>
+                        <li>Place an order or make a purchase</li>
+                        <li>Contact us with inquiries</li>
+                        <li>Fill out any forms on our website</li>
+                        <li>Subscribe to our marketing communications</li>
                     </ul>
-                    <p>Generally, we do not rely on consent as a legal basis for processing your personal data although we will get your consent before sending third party direct marketing communications to you via email or text message. You have the right to withdraw consent to marketing at any time by contacting us.</p>
-                    
-                    <h3 class="mt-4">Purposes for Which We Will Use Your Personal Data</h3>
-                    <p>We have set out below, in a table format, a description of all the ways we plan to use your personal data, and which of the legal bases we rely on to do so.</p>
-                    
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Purpose/Activity</th>
-                                    <th>Type of Data</th>
-                                    <th>Lawful Basis for Processing</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>To register you as a subscriber to our newsletter</td>
-                                    <td>Identity, Contact</td>
-                                    <td>Your consent</td>
-                                </tr>
-                                <tr>
-                                    <td>To process and respond to your inquiries</td>
-                                    <td>Identity, Contact</td>
-                                    <td>Performance of a service to you</td>
-                                </tr>
-                                <tr>
-                                    <td>To administer and protect our business and this website (including troubleshooting, data analysis, testing, system maintenance, support, reporting and hosting of data)</td>
-                                    <td>Identity, Contact, Technical</td>
-                                    <td>Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security)</td>
-                                </tr>
-                                <tr>
-                                    <td>To deliver relevant website content to you and measure or understand the effectiveness of the content we serve to you</td>
-                                    <td>Identity, Contact, Usage, Marketing and Communications, Technical</td>
-                                    <td>Necessary for our legitimate interests (to study how customers use our products/services, to develop them, to grow our business and to inform our marketing strategy)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </div>
+                
+                <div class="privacy-section mb-4">
+                    <h3><i class="bi bi-graph-up text-primary me-2"></i> How We Use Your Information</h3>
+                    <p>We use the information we collect for the following purposes:</p>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-bag-check text-success me-2"></i> Process Transactions</h5>
+                                    <p class="card-text">To process and fulfill your orders, including delivery arrangements for bulk orders.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-headset text-warning me-2"></i> Customer Service</h5>
+                                    <p class="card-text">To provide customer support, respond to inquiries, and address any concerns.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-gear text-danger me-2"></i> Improve Our Services</h5>
+                                    <p class="card-text">To analyze customer preferences and improve our product offerings and service quality.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="bi bi-megaphone text-primary me-2"></i> Marketing</h5>
+                                    <p class="card-text">To inform you about promotions, new products, and special offers that may interest you.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </section>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Cookies</h2>
-                    <p>Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site. Most web browsers allow some control of most cookies through the browser settings.</p>
-                    <p>We use cookies to:</p>
+                <div class="privacy-section mb-4">
+                    <h3><i class="bi bi-share-fill text-primary me-2"></i> Information Sharing</h3>
+                    <p>We respect your privacy and do not sell, trade, or otherwise transfer your personal information to outside parties. We may share your information in the following limited circumstances:</p>
                     <ul>
-                        <li>Understand how visitors use our site</li>
-                        <li>Remember your preferences</li>
-                        <li>Improve your experience on our site</li>
+                        <li><strong>Service Providers:</strong> With trusted third parties who assist us in operating our business, such as delivery services, as long as they agree to keep this information confidential.</li>
+                        <li><strong>Legal Requirements:</strong> When we believe in good faith that disclosure is necessary to comply with the law, enforce our policies, or protect our or others' rights, property, or safety.</li>
                     </ul>
-                </section>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Data Security</h2>
-                    <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
-                    <p>We have put in place procedures to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so.</p>
-                </section>
+                <div class="privacy-section mb-4">
+                    <h3><i class="bi bi-lock-fill text-primary me-2"></i> Data Security</h3>
+                    <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Data Retention</h2>
-                    <p>We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting or reporting requirements. We may retain your personal data for a longer period in the event of a complaint or if we reasonably believe there is a prospect of litigation in respect to our relationship with you.</p>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>Your Legal Rights</h2>
-                    <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:</p>
+                <div class="privacy-section mb-4">
+                    <h3><i class="bi bi-card-list text-primary me-2"></i> Your Rights</h3>
+                    <p>You have the following rights regarding your personal information:</p>
                     <ul>
-                        <li><strong>Request access</strong> to your personal data.</li>
-                        <li><strong>Request correction</strong> of your personal data.</li>
-                        <li><strong>Request erasure</strong> of your personal data.</li>
-                        <li><strong>Object to processing</strong> of your personal data.</li>
-                        <li><strong>Request restriction of processing</strong> your personal data.</li>
-                        <li><strong>Request transfer</strong> of your personal data.</li>
-                        <li><strong>Right to withdraw consent</strong>.</li>
+                        <li>The right to access the personal information we hold about you</li>
+                        <li>The right to request correction of inaccurate information</li>
+                        <li>The right to request deletion of your information</li>
+                        <li>The right to opt out of marketing communications</li>
                     </ul>
-                    <p>If you wish to exercise any of the rights set out above, please contact us.</p>
-                </section>
+                    <p>To exercise any of these rights, please contact us using the information provided below.</p>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
-                    <p>
-                        Shree Laxmi Amul Shopiee<br>
-                        210, pachmarg, road, opp. police station, Delwadi,<br>
-                        Kudan, Maharashtra 401502<br>
-                        Phone: +91 9890377098<br>
-                        Email: ompradippatil@gmail.com
-                    </p>
-                </section>
+                <div class="privacy-section mb-4">
+                    <h3><i class="bi bi-pencil-square text-primary me-2"></i> Changes to This Policy</h3>
+                    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Changes to the Privacy Policy</h2>
-                    <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last Updated" date at the top of this page.</p>
-                    <p>You are advised to review this privacy policy periodically for any changes. Changes to this privacy policy are effective when they are posted on this page.</p>
-                </section>
+                <div class="privacy-section mb-4">
+                    <h3><i class="bi bi-telephone-fill text-primary me-2"></i> Contact Us</h3>
+                    <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <address class="mb-0">
+                                <strong>Shree Laxmi Amul Shopiee</strong><br>
+                                210, pachmarg, road, opp. police station,<br>
+                                Delwadi, Kudan, Maharashtra 401502<br>
+                                <abbr title="Phone">Phone:</abbr> +91 9890377098<br>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <p class="text-muted"><small>Last updated: January 2023</small></p>
+                </div>
             </div>
         </div>
     </div>
@@ -164,7 +154,3 @@
 
 <?php include 'footer.php'; ?>
 
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

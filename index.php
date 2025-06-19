@@ -1,26 +1,50 @@
+<?php
+// Check if device is mobile for optimized content delivery
+function isMobile() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", 
+        $_SERVER['HTTP_USER_AGENT']);
+}
+$isMobile = isMobile();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Amul - Home</title>
+    <!-- Mobile-specific meta tags -->
+    <meta name="theme-color" content="#0a4da3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Performance optimization -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Preloading critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="<?php echo $isMobile ? 'images/Ice Cream Collection-mobile.jpg' : 'images/Ice Cream Collection.jpg'; ?>" as="image">
+    <link rel="preload" href="style.css" as="style">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Animate.css -->
+    <!-- Animate.css (with reduced payload for mobile) -->
+    <?php if ($isMobile): ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <?php else: ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <?php endif; ?>
     <link rel="stylesheet" href="style.css">
     <!-- Mobile optimization CSS -->
     <link rel="stylesheet" href="mobile-fixes.css">
-    <!-- InfinityFree compatibility fixes -->
-    <link rel="stylesheet" href="infinity-compatibility.css">
-    <!-- AOS Animation Library -->
+    <!-- AOS Animation Library (conditionally loaded for non-mobile) -->
+    <?php if (!$isMobile): ?>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Preload key carousel images for better mobile performance -->
-    <link rel="preload" href="images/Ice Cream Collection.jpg" as="image">
-    <link rel="preload" href="images/Dairy Products.jpg" as="image">
-    <link rel="preload" href="images/Refreshing Beverages.jpg" as="image">
+    <?php endif; ?>
 </head>
 <body>
 
@@ -472,12 +496,7 @@
                 </div>
             </div>
 
-            <!-- SECTION 9: FLOATING ENQUIRY BUTTON (for Mobile) -->
-            <div class="floating-enquiry-btn">
-                <a href="enquiry.php" class="btn btn-primary rounded-circle shadow" title="Quick Product Enquiry">
-                    <i class="bi bi-question-circle-fill"></i>
-                </a>
-            </div>
+            
         </div>
     </div>
 </main>
@@ -486,52 +505,126 @@
 
 <!-- Bootstrap JS Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- AOS Animation Library -->
+
+<!-- AOS Animation Library (conditionally loaded for non-mobile) -->
+<?php if (!$isMobile): ?>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<!-- Ice Cream Background Animation -->
-<script src="icecream-bg.js"></script>
+<?php endif; ?>
 
-<!-- InfinityFree Compatibility Script -->
-<script src="infinity-fixes.js"></script>
-
-<!-- Animation Scroll Script -->
+<!-- Ice Cream Background Animation (conditionally loaded & optimized) -->
 <script>
-    // Initialize AOS animations
-    document.addEventListener('DOMContentLoaded', function() {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-        
-        // Create floating animation for images with class 'floating-img'
-        const floatingElements = document.querySelectorAll('.floating-img');
-        floatingElements.forEach(element => {
-            setInterval(() => {
-                element.classList.toggle('float-up');
-            }, 2000);
-        });
-        
-        // Fix carousel progress bar
-        const progressBar = document.querySelector('.carousel-progress-bar');
-        function resetProgressBar() {
-            progressBar.style.transition = 'none';
-            progressBar.style.width = '0%';
-            setTimeout(() => {
-                progressBar.style.transition = 'width 7000ms linear';
-                progressBar.style.width = '100%';
-            }, 10);
+document.addEventListener('DOMContentLoaded', function() {
+    // Generate ice-creams in the background
+    const floatingBg = document.querySelector('.floating-background');
+    if (floatingBg) {
+        <?php if (!$isMobile): ?>
+        // Full animation for desktop
+        for (let i = 0; i < 10; i++) {
+            createIceCreamElement(floatingBg);
         }
+        <?php else: ?>
+        // Reduced animation for mobile
+        for (let i = 0; i < 5; i++) {
+            createIceCreamElement(floatingBg);
+        }
+        <?php endif; ?>
+    }
+    
+    function createIceCreamElement(container) {
+        const types = ['cone', 'cup', 'candy'];
+        const type = types[Math.floor(Math.random() * types.length)];
+        const reversed = Math.random() > 0.5 ? ' reversed' : '';
         
-        // Reset on slide change
+        const iceCream = document.createElement('div');
+        iceCream.className = `ice-cream ${type}${reversed}`;
+        
+        // Set random position and appearance
+        iceCream.style.left = `${Math.random() * 90}%`;
+        iceCream.style.top = `${Math.random() * 90}%`;
+        iceCream.style.opacity = (Math.random() * 0.3 + 0.1).toString();
+        iceCream.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+        
+        container.appendChild(iceCream);
+    }
+    
+    <?php if (!$isMobile): ?>
+    // Initialize AOS animations for desktop
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+    <?php endif; ?>
+    
+    // More performant carousel progress bar
+    const progressBar = document.querySelector('.carousel-progress-bar');
+    if (progressBar) {
+        const resetProgressBar = () => {
+            requestAnimationFrame(() => {
+                progressBar.style.transition = 'none';
+                progressBar.style.width = '0%';
+                
+                requestAnimationFrame(() => {
+                    progressBar.style.transition = 'width 7000ms linear';
+                    progressBar.style.width = '100%';
+                });
+            });
+        };
+        
         const carousel = document.getElementById('amulCarousel');
         if (carousel) {
             carousel.addEventListener('slide.bs.carousel', resetProgressBar);
-            // Initialize on page load
             resetProgressBar();
         }
-    });
+    }
+});
+</script>
+
+<!-- IntersectionObserver for lazy loading and animation -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Use IntersectionObserver for lazy loading and animations
+    if ('IntersectionObserver' in window) {
+        // Lazy load images
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const image = entry.target;
+                    if (image.dataset.src) {
+                        image.src = image.dataset.src;
+                        image.removeAttribute('data-src');
+                    }
+                    image.classList.add('loaded');
+                    imageObserver.unobserve(image);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+        
+        // Animate elements when they scroll into view
+        <?php if (!$isMobile): ?>
+        const animatedElems = document.querySelectorAll('.animate-on-scroll');
+        const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    animationObserver.unobserve(entry.target);
+                }
+            });
+        });
+        
+        animatedElems.forEach(elem => animationObserver.observe(elem));
+        <?php else: ?>
+        // Just show elements immediately on mobile for better performance
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            el.classList.add('visible');
+        });
+        <?php endif; ?>
+    }
+});
 </script>
 </body>
 </html>

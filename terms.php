@@ -34,93 +34,105 @@
         <div class="col-lg-10">
             <div class="content-card">
                 <h1 class="text-center mb-4">Terms of Use</h1>
-                <p class="lead text-center mb-5">Last Updated: <?php echo date('F d, Y'); ?></p>
+                <p class="lead text-center mb-5">Please read these terms carefully before using our services.</p>
                 
-                <section class="mb-5">
-                    <h2>Introduction</h2>
-                    <p>These terms and conditions outline the rules and regulations for the use of Shree Laxmi Amul Shopiee's Website, located at https://shreelaxmiamulshopiee.byethost7.com/.</p>
-                    <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use the website if you do not agree to take all of the terms and conditions stated on this page.</p>
-                </section>
+                <div class="terms-section mb-4">
+                    <h3><i class="bi bi-1-circle-fill text-primary me-2"></i> Introduction</h3>
+                    <p>Welcome to Shree Laxmi Amul Shopiee. By accessing our website and/or purchasing products from our store, you engage in our service and agree to be bound by the following terms and conditions.</p>
+                    <p>These Terms of Use govern your use of our website and store. The terms "we," "us," and "our" refer to Shree Laxmi Amul Shopiee. "You" refers to you, the customer or website visitor.</p>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Intellectual Property Rights</h2>
-                    <p>Other than the content you own, under these terms, Shree Laxmi Amul Shopiee and/or its licensors own all the intellectual property rights and materials contained in this Website.</p>
-                    <p>You are granted a limited license only for purposes of viewing the material contained on this Website.</p>
-                </section>
+                <div class="terms-section mb-4">
+                    <h3><i class="bi bi-2-circle-fill text-primary me-2"></i> Store Policies</h3>
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">2.1 Product Availability</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>We strive to keep all listed products in stock. However, availability may vary based on demand and supply. We reserve the right to limit quantities of certain products.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">2.2 Pricing and Payment</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>All prices are in Indian Rupees (INR) and include applicable taxes. Prices are subject to change without notice. We accept cash, UPI payments, and credit/debit cards.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">2.3 Product Return Policy</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>If you are unsatisfied with a product, you may return it within 24 hours of purchase, provided it is in its original condition and packaging, with a valid receipt. Perishable items cannot be returned once they leave our premises unless they are defective at the time of purchase.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Restrictions</h2>
-                    <p>You are specifically restricted from all of the following:</p>
-                    <ul>
-                        <li>Publishing any Website material in any other media;</li>
-                        <li>Selling, sublicensing and/or otherwise commercializing any Website material;</li>
-                        <li>Publicly performing and/or showing any Website material;</li>
-                        <li>Using this Website in any way that is or may be damaging to this Website;</li>
-                        <li>Using this Website in any way that impacts user access to this Website;</li>
-                        <li>Using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</li>
-                        <li>Engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</li>
-                        <li>Using this Website to engage in any advertising or marketing.</li>
-                    </ul>
-                    <p>Certain areas of this Website are restricted from being accessed by you and Shree Laxmi Amul Shopiee may further restrict access by you to any areas of this Website, at any time, in its absolute discretion. Any user ID and password you may have for this Website are confidential and you must maintain confidentiality as well.</p>
-                </section>
+                <div class="terms-section mb-4">
+                    <h3><i class="bi bi-3-circle-fill text-primary me-2"></i> Website Usage</h3>
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">3.1 Content Accuracy</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>We strive to ensure that all information on our website is accurate and up-to-date. However, we do not guarantee the accuracy, completeness, or timeliness of information on our website. Product images are for representation purposes only and actual products may vary.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">3.2 Copyright and Intellectual Property</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>All content on this website, including text, graphics, logos, button icons, images, and software, is the property of Shree Laxmi Amul Shopiee or our content suppliers and is protected by Indian and international copyright laws.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">3.3 Third-Party Links</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Our website may contain links to third-party websites. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Your Content</h2>
-                    <p>In these terms and conditions, "Your Content" shall mean any audio, video, text, images or other material you choose to display on this Website. By displaying Your Content, you grant Shree Laxmi Amul Shopiee a non-exclusive, worldwide irrevocable, sub-licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.</p>
-                    <p>Your Content must be your own and must not be invading any third-party's rights. Shree Laxmi Amul Shopiee reserves the right to remove any of Your Content from this Website at any time without notice.</p>
-                </section>
+                <div class="terms-section mb-4">
+                    <h3><i class="bi bi-4-circle-fill text-primary me-2"></i> Limitation of Liability</h3>
+                    <p>Shree Laxmi Amul Shopiee shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use our services.</p>
+                    <p>We do not guarantee that our services will be uninterrupted, timely, secure, or error-free.</p>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>No Warranties</h2>
-                    <p>This Website is provided "as is," with all faults, and Shree Laxmi Amul Shopiee expresses no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.</p>
-                </section>
+                <div class="terms-section mb-4">
+                    <h3><i class="bi bi-5-circle-fill text-primary me-2"></i> Changes to Terms</h3>
+                    <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on our website. Your continued use of our services after any changes indicates your acceptance of the modified terms.</p>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Limitation of Liability</h2>
-                    <p>In no event shall Shree Laxmi Amul Shopiee, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. Shree Laxmi Amul Shopiee, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
-                </section>
+                <div class="terms-section mb-4">
+                    <h3><i class="bi bi-6-circle-fill text-primary me-2"></i> Governing Law</h3>
+                    <p>These terms and conditions are governed by and construed in accordance with the laws of India, and you submit to the non-exclusive jurisdiction of the state and federal courts located in Maharashtra for the resolution of any disputes.</p>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Indemnification</h2>
-                    <p>You hereby indemnify to the fullest extent Shree Laxmi Amul Shopiee from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.</p>
-                </section>
+                <div class="alert alert-info mt-5">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-info-circle-fill text-primary fs-3"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5>Have Questions?</h5>
+                            <p class="mb-0">If you have any questions about these Terms of Use, please contact us at +91 9890377098 or visit our store.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <section class="mb-5">
-                    <h2>Severability</h2>
-                    <p>If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.</p>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>Variation of Terms</h2>
-                    <p>Shree Laxmi Amul Shopiee is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.</p>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>Assignment</h2>
-                    <p>Shree Laxmi Amul Shopiee is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.</p>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>Entire Agreement</h2>
-                    <p>These Terms constitute the entire agreement between Shree Laxmi Amul Shopiee and you in relation to your use of this Website, and supersede all prior agreements and understandings.</p>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>Governing Law & Jurisdiction</h2>
-                    <p>These Terms will be governed by and interpreted in accordance with the laws of India, and you submit to the non-exclusive jurisdiction of the state and federal courts located in India for the resolution of any disputes.</p>
-                </section>
-                
-                <section class="mb-5">
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions about these Terms, please contact us at:</p>
-                    <p>
-                        Shree Laxmi Amul Shopiee<br>
-                        210, pachmarg, road, opp. police station, Delwadi,<br>
-                        Kudan, Maharashtra 401502<br>
-                        Phone: +91 9890377098<br>
-                        Email: ompradippatil@gmail.com
-                    </p>
-                </section>
+                <div class="text-center mt-5">
+                    <p class="text-muted"><small>Last updated: January 2023</small></p>
+                </div>
             </div>
         </div>
     </div>
