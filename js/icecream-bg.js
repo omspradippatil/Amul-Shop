@@ -345,3 +345,100 @@ function darkenColor(hex, percent) {
     // Convert back to hex
     return `#${darkenedR.toString(16).padStart(2, '0')}${darkenedG.toString(16).padStart(2, '0')}${darkenedB.toString(16).padStart(2, '0')}`;
 }
+
+// Create animations in CSS
+const style = document.createElement('style');
+style.textContent = `
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-100px) rotate(10deg); }
+}
+
+@keyframes bubble {
+    0%, 100% { 
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translateY(-100px) scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+.sprinkle {
+    position: absolute;
+    border-radius: 50px;
+    animation: float infinite ease-in-out alternate;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    bottom: -20px;
+}
+
+.light-ray {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+    transform: skewX(-20deg);
+    animation: ray infinite ease-in-out alternate;
+}
+
+@keyframes ray {
+    0% { opacity: 0.02; }
+    100% { opacity: 0.08; }
+}
+
+.milk-splash {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.8) 0%, transparent 70%);
+    animation: splash infinite ease-in-out;
+}
+
+@keyframes splash {
+    0%, 100% { 
+        transform: scale(0.8);
+        opacity: 0.2;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.3s ease-out;
+}
+
+.ice-cream {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50% 50% 5px 5px;
+    animation: float infinite ease-in-out;
+    z-index: -1;
+}
+
+.bg-pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="0.5" fill="rgba(0,0,0,0.03)"/></svg>');
+    opacity: 0.5;
+    z-index: -1;
+}
+`;
+
+document.head.appendChild(style);

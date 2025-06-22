@@ -1,0 +1,166 @@
+/**
+ * Animation Fixes CSS
+ * Ensures animations and transitions work properly across browsers
+ */
+
+/* Fix for animation glitches in Chrome and Safari */
+.animate__animated {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+/* Fix animations for mobile devices (improve performance) */
+@media (max-width: 767.98px) {
+    .animate__animated {
+        animation-duration: 0.8s !important;
+    }
+    
+    /* Disable more complex animations on mobile */
+    .animate__bounceIn, .animate__bounceOut, .animate__flip, 
+    .animate__lightSpeedIn, .animate__lightSpeedOut {
+        animation-name: fadeIn !important;
+    }
+    
+    /* Simplify infinite animations to improve performance */
+    .animate__infinite {
+        animation-iteration-count: 5 !important;
+    }
+}
+
+/* Make sure AOS animations work properly */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+[data-aos][data-aos][data-aos-duration="50"],
+body[data-aos-duration="50"] [data-aos] {
+    transition-duration: 50ms;
+}
+
+[data-aos][data-aos][data-aos-delay="50"],
+body[data-aos-delay="50"] [data-aos] {
+    transition-delay: 0;
+}
+
+[data-aos][data-aos][data-aos-delay="50"].aos-animate,
+body[data-aos-delay="50"] [data-aos].aos-animate {
+    transition-delay: 50ms;
+}
+
+/* Fix flickering issues on Safari */
+.premium-carousel, 
+.carousel-item,
+.carousel-image-container,
+.product-card,
+.content-card {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+/* Fix stacking context issues in animations */
+.carousel-caption,
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 2;
+}
+
+/* Fix floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-img {
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-up {
+    transform: translateY(-10px);
+    transition: transform 2s ease-in-out;
+}
+
+/* Ripple button effect fix */
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-btn:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    padding-top: 240%;
+    padding-left: 240%;
+    margin-top: -120%;
+    margin-left: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.ripple-btn:active:after {
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Hover animation fixes */
+@media (hover: hover) {
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Ensure transitions are disabled for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .animate__animated {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Fix pulsate animation */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+.pulsate-btn {
+    animation: pulsate 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}

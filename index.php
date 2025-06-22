@@ -26,7 +26,7 @@ $isMobile = isMobile();
     <!-- Preloading critical resources -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
     <link rel="preload" href="<?php echo $isMobile ? 'images/Ice Cream Collection-mobile.jpg' : 'images/Ice Cream Collection.jpg'; ?>" as="image">
-    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="css/common.css" as="style">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,13 +38,19 @@ $isMobile = isMobile();
     <?php else: ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <?php endif; ?>
-    <link rel="stylesheet" href="style.css">
+    <!-- Core CSS files -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layouts/header-footer.css">
+    <!-- Page-specific styling -->
+    <link rel="stylesheet" href="css/pages/index.css">
     <!-- Mobile optimization CSS -->
-    <link rel="stylesheet" href="mobile-fixes.css">
-    <!-- AOS Animation Library (conditionally loaded for non-mobile) -->
-    <?php if (!$isMobile): ?>
+    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <!-- InfinityFree compatibility fixes -->
+    <link rel="stylesheet" href="css/compatibility/infinity-compatibility.css">
+    <!-- Animation fixes to ensure colors and animations work -->
+    <link rel="stylesheet" href="css/animation-fixes.css">
+    <!-- AOS Animation Library (loaded for all devices) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <?php endif; ?>
 </head>
 <body>
 
@@ -138,11 +144,6 @@ $isMobile = isMobile();
           <i class="bi bi-chevron-left"></i>
         </span>
       </button>
-      <div class="slide-indicators">
-        <button type="button" data-bs-target="#amulCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-        <button type="button" data-bs-target="#amulCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#amulCarousel" data-bs-slide-to="2"></button>
-      </div>
       <button class="carousel-control-next premium-control" type="button" data-bs-target="#amulCarousel" data-bs-slide="next">
         <span class="control-icon">
           <i class="bi bi-chevron-right"></i>
@@ -436,11 +437,6 @@ $isMobile = isMobile();
                         <button class="carousel-control-prev testimonial-control" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                             <i class="bi bi-chevron-left"></i>
                         </button>
-                        <div class="testimonial-indicators">
-                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
-                        </div>
                         <button class="carousel-control-next testimonial-control" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
                             <i class="bi bi-chevron-right"></i>
                         </button>
@@ -505,78 +501,51 @@ $isMobile = isMobile();
 
 <!-- Bootstrap JS Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- InfinityFree compatibility fixes -->
+<script src="infinity-fixes.js"></script>
 
-<!-- AOS Animation Library (conditionally loaded for non-mobile) -->
-<?php if (!$isMobile): ?>
+<!-- AOS Animation Library (always loaded) -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<?php endif; ?>
 
-<!-- Ice Cream Background Animation (conditionally loaded & optimized) -->
+<!-- Animation fixes script -->
+<script src="animations.js"></script>
+
+<!-- Additional page-specific animations -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Generate ice-creams in the background
-    const floatingBg = document.querySelector('.floating-background');
-    if (floatingBg) {
-        <?php if (!$isMobile): ?>
-        // Full animation for desktop
-        for (let i = 0; i < 10; i++) {
-            createIceCreamElement(floatingBg);
-        }
-        <?php else: ?>
-        // Reduced animation for mobile
-        for (let i = 0; i < 5; i++) {
-            createIceCreamElement(floatingBg);
-        }
-        <?php endif; ?>
-    }
+    // Initialize all animations via our animation script
     
-    function createIceCreamElement(container) {
-        const types = ['cone', 'cup', 'candy'];
-        const type = types[Math.floor(Math.random() * types.length)];
-        const reversed = Math.random() > 0.5 ? ' reversed' : '';
+    // Extra animations for this page
+    document.querySelectorAll('.product-thumbnail').forEach(product => {
+        product.addEventListener('mouseenter', function() {
+            this.classList.add('animate__animated', 'animate__pulse');
+        });
         
-        const iceCream = document.createElement('div');
-        iceCream.className = `ice-cream ${type}${reversed}`;
-        
-        // Set random position and appearance
-        iceCream.style.left = `${Math.random() * 90}%`;
-        iceCream.style.top = `${Math.random() * 90}%`;
-        iceCream.style.opacity = (Math.random() * 0.3 + 0.1).toString();
-        iceCream.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
-        
-        container.appendChild(iceCream);
-    }
-    
-    <?php if (!$isMobile): ?>
-    // Initialize AOS animations for desktop
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
+        product.addEventListener('mouseleave', function() {
+            this.classList.remove('animate__animated', 'animate__pulse');
+        });
     });
-    <?php endif; ?>
     
-    // More performant carousel progress bar
-    const progressBar = document.querySelector('.carousel-progress-bar');
-    if (progressBar) {
-        const resetProgressBar = () => {
-            requestAnimationFrame(() => {
-                progressBar.style.transition = 'none';
-                progressBar.style.width = '0%';
-                
-                requestAnimationFrame(() => {
-                    progressBar.style.transition = 'width 7000ms linear';
-                    progressBar.style.width = '100%';
-                });
-            });
-        };
+    // Enable all animations that might be disabled
+    document.querySelectorAll('.animate__animated').forEach(el => {
+        // Make sure animations aren't disabled
+        el.style.animationDuration = '';
+        el.style.animationDelay = '';
+    });
+    
+    // Initialize AOS with more dynamic settings
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: false
+        });
         
-        const carousel = document.getElementById('amulCarousel');
-        if (carousel) {
-            carousel.addEventListener('slide.bs.carousel', resetProgressBar);
-            resetProgressBar();
-        }
+        // Refresh AOS when scrolling to catch any missed animations
+        window.addEventListener('scroll', function() {
+            AOS.refresh();
+        }, {passive: true});
     }
 });
 </script>

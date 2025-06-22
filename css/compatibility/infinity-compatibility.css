@@ -1,0 +1,252 @@
+/**
+ * InfinityFree Compatibility CSS
+ * Fixes for hosting on InfinityFree platform
+ */
+
+/* Force load Bootstrap Icons properly */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
+
+/* Fix color issues on InfinityFree */
+body {
+    color: #343a40 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: inherit !important;
+}
+
+/* Amul brand colors - with increased specificity */
+body .text-primary {
+    color: #0a4da3 !important;
+}
+
+body .text-secondary {
+    color: #6c757d !important;
+}
+
+body .text-success {
+    color: #28a745 !important;
+}
+
+body .text-danger {
+    color: #dc3545 !important;
+}
+
+body .text-warning {
+    color: #ffc107 !important;
+}
+
+body .text-info {
+    color: #17a2b8 !important;
+}
+
+body .bg-primary {
+    background-color: #0a4da3 !important;
+}
+
+body .bg-secondary {
+    background-color: #6c757d !important;
+}
+
+body .bg-success {
+    background-color: #28a745 !important;
+}
+
+body .bg-danger {
+    background-color: #dc3545 !important;
+}
+
+body .bg-warning {
+    background-color: #ffc107 !important;
+}
+
+body .bg-info {
+    background-color: #17a2b8 !important;
+}
+
+body .bg-light {
+    background-color: #f8f9fa !important;
+}
+
+body .bg-dark {
+    background-color: #343a40 !important;
+}
+
+/* Fix text colors in colored backgrounds */
+body .bg-primary, 
+body .bg-secondary, 
+body .bg-success, 
+body .bg-danger, 
+body .bg-warning, 
+body .bg-info, 
+body .bg-dark {
+    color: white !important;
+}
+
+body .card-header.bg-primary,
+body .card-header.bg-secondary, 
+body .card-header.bg-success, 
+body .card-header.bg-danger, 
+body .card-header.bg-warning, 
+body .card-header.bg-info, 
+body .card-header.bg-dark {
+    color: white !important;
+}
+
+/* Make sure images display properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix box shadows that might not render properly */
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Fix border-radius that might not render properly */
+.rounded {
+    border-radius: 0.25rem !important;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+/* Fix animation issues */
+.animate__animated {
+    animation-duration: 1s !important;
+    animation-fill-mode: both !important;
+}
+
+/* Make sure card stylings work */
+.card {
+    background-color: #fff !important;
+    border: 1px solid rgba(0,0,0,.125) !important;
+}
+
+/* Fix navbar styling */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8) !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff !important;
+}
+
+/* Fix button hover effects and colors */
+.btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-info, .btn-dark {
+    color: #fff !important;
+}
+
+.btn-warning {
+    color: #212529 !important;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+/* Fix button link colors */
+.btn-primary a, .btn-secondary a, .btn-success a, .btn-danger a, .btn-info a, .btn-dark a {
+    color: #fff !important;
+}
+
+/* Fix WhatsApp floating button */
+.whatsapp-float {
+    position: fixed !important;
+    bottom: 80px !important;
+    right: 20px !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #25D366 !important; 
+    color: white !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    font-size: 30px !important;
+    z-index: 100 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Fix back to top button */
+#back-to-top {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #0a4da3 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#back-to-top.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+
+/* Fix main navbar and footer backgrounds */
+.navbar, footer {
+    background: linear-gradient(to right, #0a4da3, #1665c1) !important;
+}
+
+/* Fix footer text colors */
+footer h5, 
+footer .text-white {
+    color: white !important;
+}
+
+footer .text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fix carousel color issues */
+.slide-title, .slide-description {
+    color: white !important;
+}
+
+.caption-badge {
+    color: #333 !important;
+}
+
+.slide-title .highlight {
+    color: #ffde59 !important;
+}
+
+.btn-slider {
+    background-color: #ffde59 !important;
+    color: #0a0a0a !important;
+}
+
+/* Fix button text colors when using btn-* classes */
+.btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-info, .btn-dark {
+    color: white !important;
+}
+
+.btn-light, .btn-warning {
+    color: #212529 !important;
+}
+
+/* Ensure buttons inside tabs have correct colors */
+.nav-pills .nav-link.active {
+    color: white !important;
+}

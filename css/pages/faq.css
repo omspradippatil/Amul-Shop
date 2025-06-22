@@ -1,0 +1,100 @@
+/**
+ * Specific styles for the FAQ page
+ */
+
+/* FAQ Tabs Styling */
+.nav-pills {
+    margin-bottom: 2rem;
+}
+
+.nav-pills .nav-link {
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    margin: 0 5px 10px;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #0a4da3;
+    color: white;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+/* Accordion Styling */
+.accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    padding: 1.25rem;
+    font-weight: 500;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(10, 77, 163, 0.05);
+    color: #0a4da3;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-body {
+    padding: 1.25rem;
+    background-color: #f8f9fa;
+}
+
+.accordion-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Still Have Questions Section */
+.animate-hover {
+    transition: all 0.3s ease;
+}
+
+.animate-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.animate-hover i {
+    transition: all 0.3s ease;
+}
+
+.animate-hover:hover i {
+    transform: scale(1.2);
+}
+
+@media (max-width: 767.98px) {
+    .nav-pills .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .accordion-button {
+        padding: 1rem;
+    }
+    
+    .accordion-body {
+        padding: 1rem;
+    }
+}

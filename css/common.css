@@ -1,0 +1,429 @@
+/**
+ * Common styles for Shree Laxmi Amul Shopiee
+ * Core styles shared across all pages
+ */
+
+:root {
+    /* Amul brand colors - brighter and more vibrant */
+    --primary: #0a4da3;         /* Amul Blue */
+    --primary-dark: #083d82;    /* Darker Blue for hover states */
+    --primary-light: #4a8de0;   /* Lighter Blue for accents */
+    --secondary: #1665c1;       /* Lighter Blue */
+    --accent: #ffde59;          /* Amul Yellow */
+    --accent-dark: #ffd326;     /* Darker Yellow for hover */
+    --accent-secondary: #ff7e2a; /* Amul Orange */
+    --accent-secondary-dark: #ff6b10; /* Darker Orange */
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #343a40;
+    background-color: #f8f9fa;
+}
+
+/* Common content card styling */
+.content-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Common button styling */
+.btn {
+    border-radius: 4px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 77, 163, 0.3);
+}
+
+/* Accent buttons - Amul Yellow */
+.btn-accent {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #333 !important;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 89, 0.3);
+}
+
+/* Accent Secondary buttons - Amul Orange */
+.btn-accent-secondary {
+    background-color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    color: white !important;
+}
+
+.btn-accent-secondary:hover {
+    background-color: var(--accent-secondary-dark);
+    border-color: var(--accent-secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 126, 42, 0.3);
+}
+
+/* Enhanced WhatsApp floating button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 80px;
+    right: 20px;
+    background-color: #25D366;
+    color: white !important;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.whatsapp-float:hover {
+    background-color: #20c15e;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+/* Enhanced Back to Top Button - Made consistent with WhatsApp float */
+#back-to-top {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent);
+    color: #333 !important;
+    border-radius: 50%;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: pulse-backtotop 2s infinite;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    background-color: var(--accent-secondary);
+    color: white !important;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+@keyframes pulse-backtotop {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 222, 89, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 222, 89, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 222, 89, 0);
+    }
+}
+
+/* Floating background */
+.floating-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(248, 246, 242, 0.8) 0%, rgba(252, 248, 227, 0.5) 100%);
+}
+
+/* Common styles for ice cream elements */
+.ice-cream {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0.1;
+    filter: blur(1px);
+    animation: float 15s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.ice-cream.cone {
+    background: radial-gradient(circle at top, #f5a8b8 50px, transparent 50px), 
+                linear-gradient(to bottom right, #e6b27a 50%, #d9a066 50%);
+    border-radius: 50% 50% 5px 5px;
+}
+
+.ice-cream.cup {
+    background: radial-gradient(circle at top, #92d2f5 60px, transparent 60px), 
+                linear-gradient(to bottom, #e14b32 70%, #ffffff 70%);
+    border-radius: 50% 50% 10px 10px;
+}
+
+.ice-cream.candy {
+    background: linear-gradient(45deg, #ff7e5f 0%, #ff7e5f 33%, #feb47b 33%, #feb47b 66%, #ffde59 66%, #ffde59 100%);
+    border-radius: 10px;
+}
+
+.ice-cream.reversed {
+    animation-direction: alternate-reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-100px) rotate(10deg); }
+}
+
+/* Common form styling */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(10, 77, 163, 0.25);
+}
+
+/* Badges and icons */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: white !important;
+}
+
+.icon-box-blue {
+    background-color: var(--primary);
+}
+
+.icon-box-red {
+    background-color: var(--danger);
+}
+
+.icon-box-orange {
+    background-color: var(--accent-secondary);
+}
+
+.icon-box-green {
+    background-color: var(--success);
+}
+
+.icon-box-yellow {
+    background-color: var(--accent);
+    color: #333 !important;
+}
+
+/* Common text colors */
+body .text-primary { color: var(--primary) !important; }
+body .text-secondary { color: var(--secondary) !important; }
+body .text-success { color: var(--success) !important; }
+body .text-danger { color: var(--danger) !important; }
+body .text-warning { color: var(--warning) !important; }
+body .text-info { color: var(--info) !important; }
+body .text-accent { color: var(--accent) !important; }
+body .text-accent-secondary { color: var(--accent-secondary) !important; }
+
+/* Background colors */
+body .bg-primary { background-color: var(--primary) !important; }
+body .bg-secondary { background-color: var(--secondary) !important; }
+body .bg-success { background-color: var(--success) !important; }
+body .bg-danger { background-color: var(--danger) !important; }
+body .bg-warning { background-color: var(--warning) !important; }
+body .bg-info { background-color: var(--info) !important; }
+body .bg-accent { background-color: var(--accent) !important; }
+body .bg-accent-secondary { background-color: var(--accent-secondary) !important; }
+
+/* Text on colored backgrounds */
+body .bg-primary, 
+body .bg-secondary, 
+body .bg-success, 
+body .bg-danger, 
+body .bg-info, 
+body .bg-dark,
+body .bg-accent-secondary {
+    color: white !important;
+}
+
+body .bg-warning,
+body .bg-accent,
+body .bg-light {
+    color: #333 !important;
+}
+
+/* Links with enhanced interactivity */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Special animated sections */
+.animated-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(10, 77, 163, 0.1) 0%, rgba(10, 77, 163, 0) 70%);
+    z-index: 0;
+}
+
+.animated-section::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 222, 89, 0.1) 0%, rgba(255, 222, 89, 0) 70%);
+    z-index: 0;
+}
+
+/* Animated headings */
+.animated-heading {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.animated-heading:hover::after {
+    width: 100%;
+}
+
+/* Customized horizontal rules */
+hr.colored {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    margin: 2rem 0;
+    opacity: 0.7;
+}
+
+/* Card effects */
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Preloader for images */
+.img-loading {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.img-loaded {
+    opacity: 1;
+}
+
+/* Mobile optimizations */
+@media (max-width: 767.98px) {
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 70px;
+        right: 15px;
+    }
+    
+    #back-to-top {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 70px;
+        right: 15px;
+    }
+}

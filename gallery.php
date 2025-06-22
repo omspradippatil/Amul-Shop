@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amul - Gallery</title>
-    <!-- Bootstrap CSS -->
+    <title>Amul - Gallery</title>    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -14,7 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Site-specific styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Mobile optimization CSS -->
+    <link rel="stylesheet" href="mobile-fixes.css">
     <!-- InfinityFree compatibility fixes -->
     <link rel="stylesheet" href="infinity-compatibility.css">
     
@@ -312,6 +314,8 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <!-- Ice Cream Background Animation -->
 <script src="icecream-bg.js"></script>
+<!-- InfinityFree compatibility fixes -->
+<script src="infinity-fixes.js"></script>
 
 <script>
     // Initialize AOS and fix tab functionality for InfinityFree

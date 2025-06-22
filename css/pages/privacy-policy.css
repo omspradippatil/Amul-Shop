@@ -1,0 +1,95 @@
+/**
+ * Specific styles for the Privacy Policy page
+ */
+
+.privacy-content h2 {
+    color: #0a4da3;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.privacy-content h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+}
+
+.privacy-content ul, .privacy-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.privacy-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+.privacy-toc {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.privacy-toc-title {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.privacy-toc-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.privacy-toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.privacy-toc-list a {
+    color: #0a4da3;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.privacy-toc-list a:hover {
+    color: #083d82;
+    text-decoration: underline;
+}
+
+.privacy-emphasis {
+    background-color: rgba(10, 77, 163, 0.05);
+    border-left: 4px solid #0a4da3;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.privacy-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+@media (max-width: 767.98px) {
+    .privacy-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .privacy-content h3 {
+        font-size: 1.15rem;
+    }
+    
+    .privacy-toc {
+        padding: 1.25rem;
+    }
+}

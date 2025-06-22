@@ -39,12 +39,30 @@ switch($currentPage) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title><?php echo $pageTitle; ?></title>
     <meta name="description" content="<?php echo $pageDescription; ?>" />
-    
     <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mobile-fixes.css" />
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Core CSS files -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layouts/header-footer.css" />
+    <!-- Page-specific CSS determined by current page -->
+    <?php
+    $cssFile = pathinfo($currentPage, PATHINFO_FILENAME);
+    if(file_exists("css/pages/{$cssFile}.css")) {
+        echo "<link rel=\"stylesheet\" href=\"css/pages/{$cssFile}.css\" />";
+    }
+    ?>
+    <!-- Mobile optimization CSS -->
+    <link rel="stylesheet" href="css/mobile-fixes.css" />
+    <!-- Animation fixes to ensure colors and animations work -->
+    <link rel="stylesheet" href="css/animation-fixes.css" />
+    <!-- Color fixes CSS - new file -->
+    <link rel="stylesheet" href="css/color-fixes.css" />
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <!-- Custom Inline Styles for Header -->
     <style>

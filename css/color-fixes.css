@@ -1,0 +1,348 @@
+/**
+ * Color fixes for Amul Shop website
+ * This file contains overrides to fix color-related issues
+ */
+
+/* Enhanced color palette with vibrant Amul-themed colors */
+:root {
+    --primary: #0a4da3;         /* Amul Blue - more vibrant */
+    --primary-dark: #083d82;    /* Darker Blue */
+    --primary-light: #4a8de0;   /* Lighter Blue for accents */
+    --secondary: #1665c1;       /* Secondary Blue */
+    --accent: #ffde59;          /* Amul Yellow - more vibrant */
+    --accent-dark: #ffd026;     /* Darker Yellow */
+    --accent-light: #fff2b8;    /* Lighter Yellow */
+    --accent-secondary: #ff7e2a; /* Amul Orange - more vibrant */
+    --accent-secondary-dark: #ff6b10; /* Darker Orange */
+    --success: #28a745;         /* Success color */
+    --danger: #dc3545;          /* Danger color */
+    --warning: #ffc107;         /* Warning color */
+    --info: #17a2b8;            /* Info color */
+    --light: #f8f9fa;           /* Light background */
+    --dark: #343a40;            /* Dark text */
+}
+
+/* Link and button color fixes */
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Navbar and footer links */
+.navbar a, 
+.navbar .navbar-brand, 
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+footer a:hover {
+    color: white !important;
+}
+
+footer .text-white {
+    color: white !important;
+}
+
+footer .text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Button styling with enhanced colors */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 77, 163, 0.3);
+}
+
+/* Accent buttons - Amul Yellow */
+.btn-accent {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #333 !important;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 89, 0.3);
+    color: #333 !important;
+}
+
+/* Accent Secondary buttons - Amul Orange */
+.btn-accent-2, .btn-accent-secondary {
+    background-color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    color: white !important;
+}
+
+.btn-accent-2:hover, .btn-accent-secondary:hover {
+    background-color: var(--accent-secondary-dark);
+    border-color: var(--accent-secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 126, 42, 0.3);
+    color: white !important;
+}
+
+/* Other button color fixes */
+.btn-secondary, 
+.btn-success, 
+.btn-danger, 
+.btn-info, 
+.btn-dark {
+    color: white !important;
+}
+
+.btn-light, 
+.btn-warning {
+    color: #212529 !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+.btn-outline-accent, .btn-outline-warning {
+    color: #333 !important;
+    border-color: var(--accent) !important;
+}
+
+.btn-outline-accent:hover, .btn-outline-warning:hover {
+    background-color: var(--accent) !important;
+    color: #333 !important;
+}
+
+/* Badge colors */
+.badge.bg-primary,
+.badge.bg-secondary,
+.badge.bg-success,
+.badge.bg-danger,
+.badge.bg-info,
+.badge.bg-dark {
+    color: white !important;
+}
+
+.badge.bg-accent,
+.badge.bg-warning,
+.badge.bg-light {
+    color: #212529 !important;
+}
+
+/* Ensure good contrast for icons in colored backgrounds */
+.icon-box {
+    color: white !important;
+}
+
+/* Fix the Back to Top Button - match with WhatsApp floating button */
+#back-to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent) !important;
+    color: var(--primary) !important;
+    border-radius: 50%;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 100 !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    border: none;
+    cursor: pointer;
+}
+
+#back-to-top.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#back-to-top:hover {
+    background-color: var(--accent-secondary) !important;
+    color: white !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed !important;
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 80px !important;
+    right: 20px !important;
+    background-color: #25D366 !important;
+    color: white !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    font-size: 30px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    z-index: 100 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.whatsapp-float:hover {
+    background-color: #20c15e;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix slider text and images */
+.carousel-image-container {
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.premium-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 10% 4rem;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.slide-title {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-title .highlight {
+    color: var(--accent) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-description {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+.caption-badge {
+    background-color: var(--accent);
+    color: #333 !important;
+}
+
+/* Card headers */
+.card-header.bg-primary,
+.card-header.bg-secondary,
+.card-header.bg-success,
+.card-header.bg-danger,
+.card-header.bg-info,
+.card-header.bg-dark {
+    color: white !important;
+}
+
+/* Fix for text colors with more specificity */
+body .text-primary { color: var(--primary) !important; }
+body .text-secondary { color: var(--secondary) !important; }
+body .text-success { color: var(--success) !important; }
+body .text-danger { color: var(--danger) !important; }
+body .text-warning, body .text-accent { color: var(--accent) !important; }
+body .text-info { color: var(--info) !important; }
+body .text-accent-secondary { color: var(--accent-secondary) !important; }
+body .text-white { color: white !important; }
+
+/* Fix for background colors with more specificity */
+body .bg-primary { background-color: var(--primary) !important; }
+body .bg-secondary { background-color: var(--secondary) !important; }
+body .bg-success { background-color: var(--success) !important; }
+body .bg-danger { background-color: var(--danger) !important; }
+body .bg-warning { background-color: var(--warning) !important; }
+body .bg-info { background-color: var(--info) !important; }
+body .bg-accent { background-color: var(--accent) !important; }
+body .bg-accent-secondary { background-color: var(--accent-secondary) !important; }
+
+/* Contact page specific fixes */
+.contact-hero-content {
+    background-color: rgba(10, 77, 163, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.store-badge {
+    background-color: var(--accent);
+    color: #333 !important;
+}
+
+.store-hours .hours {
+    color: var(--primary);
+}
+
+.contact-info-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form-sidebar {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.btn-animation-circle {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+}
+
+.contact-card-icon {
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-card-icon {
+    transform: scale(1.1);
+}

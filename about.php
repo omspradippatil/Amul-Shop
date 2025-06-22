@@ -17,16 +17,18 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="mobile-fixes.css" as="style">
-    
-    <!-- Bootstrap CSS -->
+      <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Animate.css (with reduced set for mobile) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Site-specific styling -->
     <link rel="stylesheet" href="style.css">
     <!-- Mobile optimization CSS -->
     <link rel="stylesheet" href="mobile-fixes.css">
+    <!-- InfinityFree compatibility fixes -->
+    <link rel="stylesheet" href="infinity-compatibility.css">
     
     <!-- Inline critical CSS for faster rendering -->
     <style>

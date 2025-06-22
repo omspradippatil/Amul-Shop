@@ -1,0 +1,128 @@
+/**
+ * Specific styles for the About Us page
+ */
+
+/* About Hero Section */
+.about-hero {
+    margin-bottom: 3rem;
+}
+
+.about-hero img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+.about-hero img:hover {
+    transform: scale(1.03);
+}
+
+/* Features Section */
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+}
+
+/* Services Section */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(10, 77, 163, 0.05);
+    color: #0a4da3;
+}
+
+.accordion-button:focus {
+    border-color: #0a4da3;
+    box-shadow: 0 0 0 0.25rem rgba(10, 77, 163, 0.25);
+}
+
+/* Who We Are Section */
+.who-we-are-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-statement {
+    border-left: 4px solid #0a4da3;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Timeline styling */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: #e9ecef;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #0a4da3;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: auto;
+    right: -8px;
+}
+
+/* Team member styling */
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom responsive fixes */
+@media (max-width: 767.98px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item::before {
+        left: 12px;
+    }
+    
+    .timeline-item:nth-child(even)::before {
+        left: 12px;
+        right: auto;
+    }
+    
+    .timeline .col-md-6.offset-md-6 {
+        margin-left: 0;
+    }
+}

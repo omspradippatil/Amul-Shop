@@ -1,0 +1,427 @@
+/**
+ * Specific styles for the Contact Us page
+ * Modern redesign with Amul brand colors
+ */
+
+/* Hero Section Styles */
+.contact-hero {
+    min-height: 50vh;
+    background-color: #0a4da3;
+    color: white;
+    overflow: hidden;
+}
+
+.contact-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../images/map-pattern.png') repeat;
+    background-size: 300px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(10, 77, 163, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+/* Contact Card Styles */
+.contact-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-card-icon {
+    transform: scale(1.1);
+}
+
+.contact-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact-card-text {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card-large-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.contact-link {
+    color: #0a4da3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #083d82;
+    text-decoration: underline;
+}
+
+/* Store Info Card */
+.store-info-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.store-info-image {
+    position: relative;
+    height: 100%;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.store-info-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.store-info-card:hover .store-info-image img {
+    transform: scale(1.05);
+}
+
+.store-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 222, 89, 0.9);
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.store-hours {
+    margin-bottom: 1.5rem;
+}
+
+.day-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted #e1e1e1;
+}
+
+.day-row:last-child {
+    border-bottom: none;
+}
+
+.day {
+    font-weight: 600;
+    color: #333;
+}
+
+.hours {
+    color: #0a4da3;
+    font-weight: 500;
+}
+
+.store-info-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.store-info-list li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.store-info-list i {
+    color: #28a745;
+    margin-right: 0.5rem;
+}
+
+/* Map Section */
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.map-header {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.map-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+}
+
+.map-footer {
+    border-top: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+}
+
+/* Contact Form */
+.contact-form-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-sidebar {
+    background: linear-gradient(135deg, #0a4da3, #1665c1);
+    color: white;
+    position: relative;
+    height: 100%;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.contact-info-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-info-text h5 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: white;
+}
+
+.contact-info-text p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form-pattern {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: url('../../images/pattern.png') no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+}
+
+.contact-form-content {
+    background-color: white;
+}
+
+.form-floating > label {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.form-floating > .form-control:focus ~ label {
+    color: #0a4da3;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0a4da3;
+    box-shadow: 0 0 0 0.25rem rgba(10, 77, 163, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #0a4da3;
+    border-color: #0a4da3;
+}
+
+/* Button animation */
+.btn-animation-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.btn-animation-circle {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+
+.btn:hover .btn-animation-circle {
+    transform: translateY(0);
+}
+
+/* Success message animation */
+.form-success-message {
+    padding: 2rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #28a745;
+    animation: bounceIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Call to Action Box */
+.cta-box {
+    background: linear-gradient(135deg, #0a4da3, #1665c1);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-accent {
+    background-color: #ffde59;
+    border-color: #ffde59;
+    color: #333;
+}
+
+.btn-accent:hover {
+    background-color: #ffd02e;
+    border-color: #ffd02e;
+    color: #333;
+    transform: translateY(-3px);
+}
+
+.btn-accent-2 {
+    background-color: #ff7e2a;
+    border-color: #ff7e2a;
+    color: white;
+}
+
+.btn-accent-2:hover {
+    background-color: #ff6b10;
+    border-color: #ff6b10;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .contact-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .store-info-image {
+        min-height: 200px;
+    }
+    
+    .contact-form-sidebar {
+        padding: 1.5rem !important;
+    }
+    
+    .contact-form-content {
+        padding: 1.5rem !important;
+    }
+    
+    .cta-box {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .cta-box .btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
