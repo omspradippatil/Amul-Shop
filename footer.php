@@ -18,10 +18,10 @@
                 
                 <!-- Social icons with enhanced styling -->
                 <div class="social-icons">
-                    <a href="#" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.facebook.com/share/16Y5YfVZGN/?mibextid=qi2Omg" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
                     <a href="#" class="social-icon" title="Twitter"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/919890377098" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
                 <!-- Awards section -->
