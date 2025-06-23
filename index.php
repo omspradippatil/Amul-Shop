@@ -178,7 +178,7 @@ $isMobile = isMobile();
                     </div>
                     <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
                         <div class="text-center">
-                            <img src="images/iceindex.webp" alt="Amul Products" class="img-fluid rounded shadow-sm floating-img" style="max-height: 300px;">
+                            <img src="images/iceindex.webp" alt="Amul Products" class="img-fluid rounded shadow-sm" style="max-height: 300px;">
                         </div>
                     </div>
                 </div>
