@@ -56,7 +56,7 @@ If you encounter any issues with the website or have questions about the store:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [MIT](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
