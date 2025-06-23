@@ -507,6 +507,9 @@ $isMobile = isMobile();
 <!-- AOS Animation Library (always loaded) -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+<!-- Ice Cream Background Animation -->
+<script src="js/icecream-bg.js"></script>
+
 <!-- Animation fixes script -->
 <script src="animations.js"></script>
 

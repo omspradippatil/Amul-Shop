@@ -313,7 +313,7 @@
 <!-- AOS Animation Library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <!-- Ice Cream Background Animation -->
-<script src="icecream-bg.js"></script>
+<script src="js/icecream-bg.js"></script>
 <!-- InfinityFree compatibility fixes -->
 <script src="infinity-fixes.js"></script>
 
