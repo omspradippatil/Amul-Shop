@@ -29,6 +29,11 @@
 </head>
 <body>
 
+<?php
+include 'db/db.php'; // This tells PHP to load db.php from the db folder
+?>
+
+
 <?php include 'header.php'; ?>
 
 <!-- Hero Section with Map Background -->
@@ -275,11 +280,11 @@
                         <div class="col-md-7">
                             <div class="contact-form-content p-4 p-md-5">
                                 <h3 class="mb-4">Send us a Message</h3>
-                                <form id="contactForm" class="needs-validation" novalidate>
+                                <form id="contactForm" action="submit_contact.php" method="POST" class="needs-validation" novalidate>
                                     <div class="row g-3">
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                                 <label for="name"><i class="bi bi-person me-2"></i>Your Name</label>
                                                 <div class="invalid-feedback">
                                                     Please enter your name.
@@ -288,7 +293,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
                                                 <label for="phone"><i class="bi bi-telephone me-2"></i>Phone Number</label>
                                                 <div class="invalid-feedback">
                                                     Please enter your phone number.
@@ -297,13 +302,13 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
                                                 <label for="email"><i class="bi bi-envelope me-2"></i>Email Address (Optional)</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <select class="form-select" id="subject" required>
+                                                <select class="form-select" id="subject" name="subject" required>
                                                     <option value="" selected disabled>Select Subject</option>
                                                     <option value="Product Inquiry">Product Inquiry</option>
                                                     <option value="Bulk Order">Bulk Order</option>
@@ -318,7 +323,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <textarea class="form-control" id="message" placeholder="Your Message" style="height: 120px" required></textarea>
+                                                <textarea class="form-control" id="message" name="message" placeholder="Your Message" style="height: 120px" required></textarea>
                                                 <label for="message"><i class="bi bi-chat-dots me-2"></i>Your Message</label>
                                                 <div class="invalid-feedback">
                                                     Please enter your message.
@@ -327,7 +332,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="consent" required>
+                                                <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
                                                 <label class="form-check-label" for="consent">
                                                     I agree to be contacted regarding this inquiry
                                                 </label>
@@ -432,8 +437,15 @@
                     submitBtn.disabled = true;
                     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Sending...';
                     
-                    // Simulate server delay
-                    setTimeout(function() {
+                    // Submit form via AJAX
+                    const formData = new FormData(contactForm);
+                    
+                    fetch('submit_contact.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
                         // Hide form and show success message
                         contactForm.classList.add('fade-out');
                         
@@ -442,7 +454,15 @@
                             formSuccessMessage.classList.remove('d-none');
                             formSuccessMessage.classList.add('fade-in');
                         }, 300);
-                    }, 1500);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was an error submitting the form. Please try again later.');
+                        
+                        // Reset button state
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="bi bi-send me-2"></i> Send Message <div class="btn-animation-wrapper"><span class="btn-animation-circle"></span></div>';
+                    });
                 }
                 
                 contactForm.classList.add('was-validated');
