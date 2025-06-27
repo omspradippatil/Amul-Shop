@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amul - Product Enquiry</title>    <!-- Bootstrap CSS -->
+    <title>Product Enquiry - Shree Laxmi Amul Shopiee</title>    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -45,14 +46,14 @@
                     <!-- Left side with form -->
                     <div class="col-lg-8">
                         <h3 class="mb-4 form-title"><i class="bi bi-clipboard-check"></i> Enquiry Form</h3>
-                        <form id="enquiryForm" class="needs-validation" novalidate>
+                        <form id="enquiryForm" action="submit_enquiry.php" method="POST" class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <!-- Personal Information -->
                                 <div class="col-md-6">
                                     <label for="name" class="form-label">Your Name *</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                                         <div class="invalid-feedback">
                                             Please provide your name.
                                         </div>
@@ -63,7 +64,7 @@
                                     <label for="phone" class="form-label">Phone Number *</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-telephone"></i></span>
-                                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
                                         <div class="invalid-feedback">
                                             Please provide a valid 10-digit phone number.
                                         </div>
@@ -74,7 +75,7 @@
                                     <label for="email" class="form-label">Email Address</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter your email (optional)">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email (optional)">
                                         <div class="invalid-feedback">
                                             Please provide a valid email address.
                                         </div>
@@ -85,7 +86,7 @@
                                     <label for="preferredContact" class="form-label">Preferred Contact Method *</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-chat"></i></span>
-                                        <select class="form-select" id="preferredContact" required>
+                                        <select class="form-select" id="preferredContact" name="preferredContact" required>
                                             <option value="" selected disabled>Choose preferred contact...</option>
                                             <option value="phone">Phone Call</option>
                                             <option value="whatsapp">WhatsApp</option>
@@ -107,7 +108,7 @@
                                     <label for="productCategory" class="form-label">Product Category *</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-tag"></i></span>
-                                        <select class="form-select" id="productCategory" required>
+                                        <select class="form-select" id="productCategory" name="productCategory" required>
                                             <option value="" selected disabled>Select product category...</option>
                                             <option value="ice-cream">Ice Creams</option>
                                             <option value="butter-cheese">Butter & Cheese</option>
@@ -125,7 +126,7 @@
                                     <label for="productName" class="form-label">Product Name</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-box"></i></span>
-                                        <input type="text" class="form-control" id="productName" placeholder="Product name (if known)">
+                                        <input type="text" class="form-control" id="productName" name="productName" placeholder="Product name (if known)">
                                     </div>
                                 </div>
                                 
@@ -133,7 +134,7 @@
                                     <label for="enquiryType" class="form-label">Enquiry Type *</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-question-circle"></i></span>
-                                        <select class="form-select" id="enquiryType" required>
+                                        <select class="form-select" id="enquiryType" name="enquiryType" required>
                                             <option value="" selected disabled>Select type of enquiry...</option>
                                             <option value="price">Price Inquiry</option>
                                             <option value="availability">Product Availability</option>
@@ -152,7 +153,7 @@
                                     <label for="urgency" class="form-label">Urgency</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-alarm"></i></span>
-                                        <select class="form-select" id="urgency">
+                                        <select class="form-select" id="urgency" name="urgency">
                                             <option value="normal" selected>Normal</option>
                                             <option value="urgent">Urgent (need response today)</option>
                                             <option value="planning">Just Planning (no rush)</option>
@@ -164,7 +165,7 @@
                                     <label for="message" class="form-label">Your Query/Message *</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
-                                        <textarea class="form-control" id="message" rows="4" placeholder="Please describe your enquiry in detail..." required></textarea>
+                                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Please describe your enquiry in detail..." required></textarea>
                                         <div class="invalid-feedback">
                                             Please provide details about your enquiry.
                                         </div>
@@ -173,7 +174,7 @@
                                 
                                 <div class="col-12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                                        <input class="form-check-input" type="checkbox" value="1" id="termsCheck" name="termsCheck" required>
                                         <label class="form-check-label" for="termsCheck">
                                             I agree to be contacted regarding this enquiry *
                                         </label>
@@ -305,9 +306,9 @@
                 event.preventDefault();
                 event.stopPropagation();
             } else {
-                event.preventDefault(); // Prevent default form submission
+                // For AJAX submission
+                event.preventDefault();
                 
-                // Simulate form submission (in a real implementation, this would send data to the server)
                 const submitButton = form.querySelector('button[type="submit"]');
                 const originalText = submitButton.innerHTML;
                 
@@ -315,8 +316,13 @@
                 submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
                 submitButton.disabled = true;
                 
-                // Simulate server processing time
-                setTimeout(function() {
+                // Use fetch to submit the form data
+                fetch('submit_enquiry.php', {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => response.text())
+                .then(data => {
                     // Hide the form
                     form.classList.add('fade-out');
                     
@@ -332,8 +338,13 @@
                         // Scroll to status message
                         statusMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }, 500);
-                    
-                }, 1500);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting the form. Please try again.');
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                });
             }
             
             form.classList.add('was-validated');
