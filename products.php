@@ -91,6 +91,11 @@
                                             </div>
                                             <span class="price fw-bold">₹25 - ₹160</span>
                                         </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Vanilla Ice Cream&size=100ml/500ml&price=₹25 - ₹160&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -108,6 +113,11 @@
                                             </div>
                                             <span class="price fw-bold">₹30 - ₹180</span>
                                         </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Chocolate Ice Cream&size=100ml/500ml&price=₹30 - ₹180&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -124,6 +134,11 @@
                                                 <span class="badge bg-light text-dark">500ml</span>
                                             </div>
                                             <span class="price fw-bold">₹30 - ₹180</span>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Butterscotch Ice Cream&size=100ml/500ml&price=₹30 - ₹180&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -145,6 +160,11 @@
                                             </div>
                                             <span class="price fw-bold">₹40</span>
                                         </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Chocolate Cone&size=120ml&price=₹40&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -160,6 +180,11 @@
                                                 <span class="badge bg-light text-dark">120ml</span>
                                             </div>
                                             <span class="price fw-bold">₹40</span>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Butterscotch Cone&size=120ml&price=₹40&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -181,6 +206,11 @@
                                             </div>
                                             <span class="price fw-bold">₹220</span>
                                         </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Rajbhog Ice Cream&size=1L&price=₹220&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,6 +226,11 @@
                                                 <span class="badge bg-light text-dark">1L</span>
                                             </div>
                                             <span class="price fw-bold">₹230</span>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Kesar Pista Ice Cream&size=1L&price=₹230&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -214,6 +249,11 @@
                                             </div>
                                             <span class="price fw-bold">₹30</span>
                                         </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Chocobar&size=60ml&price=₹30&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -229,6 +269,11 @@
                                                 <span class="badge bg-light text-dark">75ml</span>
                                             </div>
                                             <span class="price fw-bold">₹50</span>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Almond Bar&size=75ml&price=₹50&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -248,6 +293,11 @@
                                             </div>
                                             <span class="price fw-bold">₹30 - ₹180</span>
                                         </div>
+                                    <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Strawberry Ice Cream&size=100ml&price=₹30&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -265,6 +315,11 @@
                                             </div>
                                             <span class="price fw-bold">₹35 - ₹190</span>
                                         </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Black Currant Ice Cream&size=75ml&price=₹50&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -281,6 +336,11 @@
                                                 <span class="badge bg-light text-dark">120ml</span>
                                             </div>
                                             <span class="price fw-bold">₹40</span>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <a href="enquiry.php?product=Strawberry Cone&size=120ml&price=₹40&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -302,6 +362,11 @@
                                             <span class="price fw-bold">₹50</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Tricone&size=120ml&price=₹50&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -319,6 +384,11 @@
                                             <span class="price fw-bold">₹220</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Chocolate Chip Ice Cream&size=1L&price=₹220&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -334,6 +404,11 @@
                                             </div>
                                             <span class="price fw-bold">₹210</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Tutti Frutti Ice Cream&size=1L&price=₹210&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -352,15 +427,17 @@
                                             <span class="price fw-bold">₹20</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Orange Bar&size=60ml&price=₹20&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
                             <div class="col ice-cream-item bars">
                                 <div class="card h-100 product-card animate-hover">
-                                    <div class="position-relative">
-                                        <img src="images/Chocolate Royale.jpg" class="card-img-top p-3" alt="King Cone">
-                                        <span class="badge bg-primary position-absolute top-0 end-0 m-2">Premium</span>
-                                    </div>
+                                    <img src="images/Chocolate Royale.jpg" class="card-img-top p-3" alt="King Cone">
                                     <div class="card-body">
                                         <h5 class="card-title">Chocolate Royale</h5>
                                         <p class="card-text">Premium chocolate bar with rich cocoa coating and creamy chocolate inside.</p>
@@ -370,6 +447,11 @@
                                             </div>
                                             <span class="price fw-bold">₹60</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Chocolate Royale&size=80ml&price=₹60&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -387,6 +469,11 @@
                                             </div>
                                             <span class="price fw-bold">₹35</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Ice Cream Sandwich&size=90ml&price=₹35&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -407,6 +494,11 @@
                                             </div>
                                             <span class="price fw-bold">₹450 - ₹850</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Ice Cream Cake&size=500g/1kg&price=₹450 - ₹850&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -434,6 +526,11 @@
                                             <span class="price fw-bold">₹55 - ₹245</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Butter&size=100g/500g&price=₹55 - ₹245&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -455,6 +552,11 @@
                                             <span class="price fw-bold">₹115 - ₹265</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Cheese Block&size=200g/500g&price=₹115 - ₹265&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -472,6 +574,11 @@
                                             <span class="price fw-bold">₹65 - ₹125</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Cheese Slices&size=5 or 10 slices&price=₹65 - ₹125&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -487,6 +594,11 @@
                                             </div>
                                             <span class="price fw-bold">₹90</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Cheese Spread&size=200g&price=₹90&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -505,6 +617,11 @@
                                             </div>
                                             <span class="price fw-bold">₹50 - ₹235</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Lite Butter&price=₹50 - ₹235&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -527,6 +644,11 @@
                                             <span class="price fw-bold">₹130 - ₹580</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Mozzarella Cheese&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -543,6 +665,11 @@
                                             </div>
                                             <span class="price fw-bold">₹125 - ₹290</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Pizza Cheese&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -566,6 +693,11 @@
                                             <span class="price fw-bold">₹80 - ₹340</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Paneer&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -581,6 +713,11 @@
                                             </div>
                                             <span class="price fw-bold">₹90</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Malai Paneer&category=butter-cheese" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -608,6 +745,11 @@
                                             <span class="price fw-bold">₹33 - ₹65</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Gold Milk&size=500ml/1L&price=₹33 - ₹65&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -627,6 +769,11 @@
                                             <span class="price fw-bold">₹25 - ₹49</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Taaza Milk&size=500ml/1L&price=₹25 - ₹49&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -644,6 +791,11 @@
                                             </div>
                                             <span class="price fw-bold">₹30</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Kadhai Dudh&size=200ml&price=₹30&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -667,6 +819,11 @@
                                             <span class="price fw-bold">₹25 - ₹95</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Masti Dahi&size=200g/400g/1kg&price=₹25 - ₹95&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -685,6 +842,11 @@
                                             <span class="price fw-bold">₹22 - ₹44</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Slim & Trim Milk&size=500ml/1L&price=₹22 - ₹44&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -701,6 +863,11 @@
                                             </div>
                                             <span class="price fw-bold">₹27 - ₹53</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Shakti Milk&size=500ml/1L&price=₹27 - ₹53&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -724,6 +891,11 @@
                                             <span class="price fw-bold">₹120 - ₹550</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Pure Ghee&size=200ml/500ml/1L&price=₹120 - ₹550&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -741,39 +913,10 @@
                                             <span class="price fw-bold">₹65 - ₹125</span>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Additional Yogurt Products -->
-                            <div class="col">
-                                <div class="card h-100 product-card animate-hover">
-                                    <img src="images/Fruit Yogurt.jpg" class="card-img-top p-3" alt="Fruit Yogurt">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Fruit Yogurt</h5>
-                                        <p class="card-text">Delicious yogurt with real fruit pieces, available in various flavors.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="sizes">
-                                                <span class="badge bg-light text-dark">100g</span>
-                                            </div>
-                                            <span class="price fw-bold">₹25</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card h-100 product-card animate-hover">
-                                    <img src="images/Amul Shrikhand.jpg" class="card-img-top p-3" alt="Amul Shrikhand">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Amul Shrikhand</h5>
-                                        <p class="card-text">Traditional sweet yogurt dessert, available in various flavors.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="sizes">
-                                                <span class="badge bg-light text-dark">100g</span>
-                                                <span class="badge bg-light text-dark">500g</span>
-                                            </div>
-                                            <span class="price fw-bold">₹30 - ₹140</span>
-                                        </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Mithai Mate&size=200g/400g&price=₹65 - ₹125&category=milk" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -801,6 +944,11 @@
                                             <span class="price fw-bold">₹20 - ₹80</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Lassi&size=200ml/1L&price=₹20 - ₹80&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -820,6 +968,11 @@
                                             <span class="price fw-bold">₹15 - ₹65</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Chaas&size=200ml/1L&price=₹15 - ₹65&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -837,6 +990,11 @@
                                             </div>
                                             <span class="price fw-bold">₹25</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Kool&size=200ml&price=₹25&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -856,6 +1014,11 @@
                                             <span class="price fw-bold">₹25 - ₹90</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Mango Lassi&size=200ml/1L&price=₹25 - ₹90&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -872,6 +1035,11 @@
                                             </div>
                                             <span class="price fw-bold">₹20 - ₹85</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Rose Lassi&size=200ml/1L&price=₹20 - ₹85&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -894,6 +1062,11 @@
                                             <span class="price fw-bold">₹25 - ₹90</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Kool Chocolate&size=200ml/1L&price=₹25 - ₹90&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -911,6 +1084,11 @@
                                             </div>
                                             <span class="price fw-bold">₹25</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Kool Cafe&size=200ml&price=₹25&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -930,6 +1108,11 @@
                                             <span class="price fw-bold">₹25</span>
                                         </div>
                                     </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Kool Kesar&size=200ml&price=₹25&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -947,6 +1130,11 @@
                                             </div>
                                             <span class="price fw-bold">₹25</span>
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <a href="enquiry.php?product=Amul Kool Elaichi&size=200ml&price=₹25&category=beverages" class="btn btn-primary btn-sm w-100">
+                                            <i class="bi bi-question-circle me-1"></i> Enquire
+                                        </a>
                                     </div>
                                 </div>
                             </div>
