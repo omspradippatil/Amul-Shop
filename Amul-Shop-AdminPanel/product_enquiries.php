@@ -83,6 +83,7 @@ include 'includes/header.php';
                             <th>Urgency</th>
                             <th>Message</th>
                             <th>Consent</th>
+                            <th>Status</th>
                             <th>Created At</th>
                             <?php if (isAdmin()): ?>
                                 <th>Actions</th>
@@ -177,6 +178,11 @@ include 'includes/header.php';
                                     <?php endif; ?>
                                 </td>
                                 <td>
+                                    <span class="badge bg-<?php echo ($enquiry['status'] === 'Replied') ? 'success' : 'warning'; ?>">
+                                        <?php echo htmlspecialchars($enquiry['status']); ?>
+                                    </span>
+                                </td>
+                                <td>
                                     <small>
                                         <?php echo date('M d, Y', strtotime($enquiry['created_at'])); ?><br>
                                         <span class="text-muted"><?php echo date('H:i:s', strtotime($enquiry['created_at'])); ?></span>
@@ -185,6 +191,16 @@ include 'includes/header.php';
                                 <?php if (isAdmin()): ?>
                                     <td>
                                         <?php if (!$show_trash): ?>
+                                            <?php if (!empty($enquiry['email'])): ?>
+                                                <a href="mailto:<?php echo htmlspecialchars($enquiry['email']); ?>?subject=Reply to your product enquiry" class="btn btn-primary btn-sm me-1">
+                                                    <i class="fas fa-reply"></i> Reply
+                                                </a>
+                                            <?php endif; ?>
+                                            <?php if ($enquiry['status'] !== 'Replied'): ?>
+                                                <button class="btn btn-success btn-sm me-1" onclick="markAsReplied('product_enquiries', <?php echo $enquiry['id']; ?>)">
+                                                    <i class="fas fa-check"></i> Mark as Replied
+                                                </button>
+                                            <?php endif; ?>
                                             <button class="btn btn-warning btn-sm me-1" 
                                                 onclick="softDeleteRecord('product_enquiries', <?php echo $enquiry['id']; ?>, 'enquiry from <?php echo htmlspecialchars($enquiry['name']); ?>')">
                                                 <i class="fas fa-trash"></i> Delete
@@ -246,6 +262,11 @@ include 'includes/header.php';
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <?php if (!empty($enquiry['email'])): ?>
+                            <a href="mailto:<?php echo htmlspecialchars($enquiry['email']); ?>?subject=Reply to your product enquiry" class="btn btn-primary">
+                                <i class="fas fa-reply"></i> Reply
+                            </a>
+                        <?php endif; ?>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -279,6 +300,19 @@ function sendAction(action, table, id, itemName) {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `action=${action}&table=${table}&id=${id}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        window.location.reload();
+    })
+    .catch(error => alert('Error: ' + error.message));
+}
+function markAsReplied(table, id) {
+    fetch('admin_actions.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `action=mark_replied&table=${table}&id=${id}`
     })
     .then(response => response.json())
     .then(data => {

@@ -49,6 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
             $stmt = $db->prepare("DELETE FROM $table WHERE id = ?");
             $result = $stmt->execute([$id]);
             echo json_encode(['success' => $result, 'message' => $result ? 'Record permanently deleted.' : 'Failed to delete record.']);
+        } elseif ($_POST['action'] == 'mark_replied') {
+            // Mark as replied: set status to 'Replied'
+            if (!in_array($table, ['contact_messages', 'product_enquiries'])) {
+                echo json_encode(['success' => false, 'message' => 'Invalid table for status update.']);
+                exit();
+            }
+            $stmt = $db->prepare("UPDATE $table SET status = 'Replied' WHERE id = ?");
+            $result = $stmt->execute([$id]);
+            echo json_encode(['success' => $result, 'message' => $result ? 'Status updated to Replied.' : 'Failed to update status.']);
         } else {
             echo json_encode(['success' => false, 'message' => 'Invalid action.']);
         }
