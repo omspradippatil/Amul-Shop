@@ -3,19 +3,7 @@
  */
 
 /* Premium Slider/Carousel Styling */
-.premium-slider-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-    background-color: #f8f9fa;
-}
 
-.premium-carousel {
-    position: relative;
-}
 
 .carousel-progress {
     position: absolute;
@@ -202,54 +190,115 @@
     pointer-events: none;
 }
 
-/* Premium carousel controls */
+/* --- MODERN GLASS/NEUMORPHIC SLIDER CONTROLS --- */
+.premium-slider-container .premium-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 48px;
+    z-index: 40;
+    pointer-events: none; /* This disables click for the wrapper */
+}
 .premium-control {
-    width: 50px;
-    height: 50px;
-    opacity: 0.7;
-    background: rgba(0, 0, 0, 0.5);
+    pointer-events: auto; /* This re-enables click for the buttons */
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
+    background: rgba(255,255,255,0.22);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18), 0 2px 8px 0 rgba(255,222,89,0.10);
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.18s, background 0.18s;
+    pointer-events: auto;
+    opacity: 0.92;
+    outline: none;
+    position: relative;
+    overflow: visible;
+    user-select: none;
+    will-change: transform, box-shadow;
 }
-
+.premium-control:focus {
+    outline: 2.5px solid #ffde59;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px #ffde59aa, 0 8px 32px 0 rgba(31,38,135,0.18);
+}
+.premium-control:active {
+    box-shadow: 0 2px 8px 0 rgba(31,38,135,0.10) inset, 0 1px 2px 0 #ffde59 inset;
+    background: rgba(255,255,255,0.32);
+    transform: scale(0.96);
+}
 .premium-control:hover {
     opacity: 1;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255,255,255,0.38);
+    box-shadow: 0 0 0 8px #ffde5955, 0 8px 32px 0 rgba(31,38,135,0.22);
+    border-color: #ffde59;
+    transform: scale(1.10) translateY(-2px);
 }
-
-.control-icon {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.slide-indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
+.control-icon-wrapper {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+}
+.control-icon {
+    color: #0a4da3;
+    font-size: 2.2rem;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.13));
+    transition: color 0.25s, transform 0.25s cubic-bezier(.4,2,.6,1);
+    will-change: color, transform;
+}
+.premium-control:hover .control-icon {
+    color: #ff7e2a;
+    transform: scale(1.18) translateX(2px);
+}
+.premium-control:active .control-icon {
+    color: #ffde59;
+    transform: scale(0.95) translateX(-2px);
 }
 
+/* --- SLIDE INDICATORS (DOTS) --- */
+.slide-indicators {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 35;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 .slide-indicators button {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255,255,255,0.55);
     border: none;
     outline: none;
-    transition: all 0.3s ease;
-    padding: 0;
+    transition: all 0.25s cubic-bezier(.4,2,.6,1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    cursor: pointer;
+    position: relative;
+    will-change: transform, box-shadow, background;
 }
-
 .slide-indicators button.active {
-    background-color: #ffde59;
-    transform: scale(1.2);
+    background: linear-gradient(90deg, #ffde59 60%, #ff7e2a 100%);
+    transform: scale(1.45);
+    box-shadow: 0 0 0 8px rgba(255,222,89,0.18);
+}
+.slide-indicators button:focus {
+    outline: 2px solid #ffde59;
+    outline-offset: 2px;
 }
 
 /* Benefits section */
@@ -724,6 +773,24 @@
     .premium-caption {
         padding: 2rem 5% 3rem;
     }
+    .premium-slider-container .premium-controls {
+        padding: 0 14px;
+    }
+    .premium-control {
+        width: 44px;
+        height: 44px;
+    }
+    .control-icon {
+        font-size: 1.4rem;
+    }
+    .slide-indicators {
+        gap: 10px;
+        bottom: 16px;
+    }
+    .slide-indicators button {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -742,5 +809,19 @@
     .btn-slider {
         padding: 8px 20px !important;
         font-size: 0.9rem;
+    }
+    
+    .premium-control {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .control-icon {
+        font-size: 1rem;
+    }
+    
+    .slide-indicators button {
+        width: 7px;
+        height: 7px;
     }
 }

@@ -114,6 +114,26 @@ function initCarouselWithFixedImages() {
             // Fallback initialization
             fallbackCarouselInit(carousel);
         }
+
+        // --- SLIDE INDICATORS SYNC ---
+        const indicators = carousel.querySelectorAll('.slide-indicators button');
+        if (indicators.length > 0) {
+            // Bootstrap event
+            carousel.addEventListener('slide.bs.carousel', function(e) {
+                indicators.forEach(btn => btn.classList.remove('active'));
+                const idx = e.to !== undefined ? e.to : Array.from(carousel.querySelectorAll('.carousel-item')).indexOf(e.relatedTarget);
+                if (indicators[idx]) {
+                    indicators[idx].classList.add('active');
+                }
+            });
+            // Click event for indicators (for fallback)
+            indicators.forEach((btn, idx) => {
+                btn.addEventListener('click', function() {
+                    indicators.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+        }
     });
 }
 

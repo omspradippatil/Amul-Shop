@@ -214,15 +214,61 @@ function initWhatsAppButton() {
         whatsappButton.target = '_blank';
         whatsappButton.innerHTML = '<i class="bi bi-whatsapp"></i>';
         whatsappButton.setAttribute('aria-label', 'Contact on WhatsApp');
+        whatsappButton.setAttribute('title', 'Chat with us on WhatsApp');
+        
+        // Apply styles directly to ensure visibility
+        whatsappButton.style.position = 'fixed';
+        whatsappButton.style.width = '60px';
+        whatsappButton.style.height = '60px';
+        whatsappButton.style.bottom = '80px';
+        whatsappButton.style.right = '20px';
+        whatsappButton.style.backgroundColor = '#25D366';
+        whatsappButton.style.color = 'white';
+        whatsappButton.style.borderRadius = '50px';
+        whatsappButton.style.textAlign = 'center';
+        whatsappButton.style.fontSize = '30px';
+        whatsappButton.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+        whatsappButton.style.zIndex = '1000';
+        whatsappButton.style.display = 'flex';
+        whatsappButton.style.alignItems = 'center';
+        whatsappButton.style.justifyContent = 'center';
+        whatsappButton.style.transition = 'all 0.3s ease';
+        whatsappButton.style.animation = 'pulse-whatsapp 2s infinite';
+        
+        // Add hover effect
+        whatsappButton.addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#20ba5a';
+            this.style.transform = 'translateY(-5px) scale(1.05)';
+            this.style.boxShadow = '0 6px 15px rgba(0, 0, 0, 0.3)';
+        });
+        
+        whatsappButton.addEventListener('mouseout', function() {
+            this.style.backgroundColor = '#25D366';
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+        });
+        
         document.body.appendChild(whatsappButton);
         
-        // Force the button to be visible
-        setTimeout(() => {
-            whatsappButton.style.display = 'flex';
-            whatsappButton.style.visibility = 'visible';
-            whatsappButton.style.opacity = '1';
-            whatsappButton.style.zIndex = '1000';
-        }, 500);
+        // Add keyframe animation if it doesn't exist
+        if (!document.querySelector('style#whatsapp-animation')) {
+            const style = document.createElement('style');
+            style.id = 'whatsapp-animation';
+            style.innerHTML = `
+                @keyframes pulse-whatsapp {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+                    }
+                    70% {
+                        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
     }
 }
 
@@ -250,7 +296,7 @@ function optimizePerformance() {
     });
     
     // Add passive event listeners for touch and wheel events
-    const supportsPassive = false;
+    let supportsPassive = false;
     try {
         window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
             get: function () { supportsPassive = true; }

@@ -41,6 +41,7 @@ $isMobile = isMobile();
     <!-- Core CSS files -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/layouts/header-footer.css">
+    
     <!-- Page-specific styling -->
     <link rel="stylesheet" href="css/pages/index.css">
     <!-- Mobile optimization CSS -->
@@ -63,13 +64,15 @@ $isMobile = isMobile();
 <!-- SECTION 1: HERO - Ultra-Modern Premium Carousel Slider (Fixed) -->
 <div class="premium-slider-container mt-3 mb-4">
   <div id="amulCarousel" class="carousel slide premium-carousel" data-bs-ride="carousel">
+    
     <!-- Carousel Progress Bar -->
     <div class="carousel-progress">
       <div class="carousel-progress-bar"></div>
     </div>
 
     <!-- 3D Carousel Inner -->
-    <div class="carousel-inner premium-inner">
+    <div class="carousel-inner premium-inner">  
+      
       <!-- Slide 1 -->
       <div class="carousel-item active" data-slide-id="1">
         <div class="premium-slide-wrapper">
@@ -135,21 +138,19 @@ $isMobile = isMobile();
           </div>
         </div>
       </div>
+
     </div>
-    
-    <!-- Premium Controls -->
-    <div class="premium-controls">
-      <button class="carousel-control-prev premium-control" type="button" data-bs-target="#amulCarousel" data-bs-slide="prev">
-        <span class="control-icon">
-          <i class="bi bi-chevron-left"></i>
-        </span>
-      </button>
-      <button class="carousel-control-next premium-control" type="button" data-bs-target="#amulCarousel" data-bs-slide="next">
-        <span class="control-icon">
-          <i class="bi bi-chevron-right"></i>
-        </span>
-      </button>
-    </div>
+
+    <!-- Modern Neumorphic Navigation Buttons -->
+   <div class="testimonial-controls">
+                        <button class="carousel-control-prev testimonial-control" type="button" data-bs-target="#amulCarousel" data-bs-slide="prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-next testimonial-control" type="button" data-bs-target="#amulCarousel" data-bs-slide="next">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+
   </div>
 </div>
 
