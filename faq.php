@@ -120,7 +120,7 @@
                                 </h2>
                                 <div id="generalFive" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
                                     <div class="accordion-body">
-                                        <p>Yes, our store is FSSAI certified, ensuring that we follow proper food safety and hygiene standards. You can view our certification in our <a href="gallery.php">gallery section</a>.</p>
+                                        <p>Yes, our store is FSSAI certified, ensuring that we follow proper food safety and hygiene standards. You can view our certification in our <a href="gallery.php#certification">gallery section</a>.</p>
                                     </div>
                                 </div>
                             </div>

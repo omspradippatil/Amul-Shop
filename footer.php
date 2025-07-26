@@ -28,11 +28,19 @@
                 <div class="footer-awards mt-4">
                     <div class="award-item">
                         <div class="award-icon"><i class="bi bi-award"></i></div>
-                        <div class="award-text">FSSAI Certified</div>
+                        <div class="award-text">
+                            <a href="gallery.php#certification" class="text-white text-decoration-none" style="cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='white'">
+                                FSSAI Certified
+                            </a>
+                        </div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon"><i class="bi bi-shield-check"></i></div>
-                        <div class="award-text">Authentic Products</div>
+                        <div class="award-text">
+                            <a href="products.php" class="text-white text-decoration-none" style="cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='white'">
+                                Authentic Products
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,11 +72,8 @@
                 <address class="text-white-50">
                     <p><i class="bi bi-geo-alt-fill"></i> 210, pachmarg, road,<br>opp. police station, Delwadi, Kudan,<br>Maharashtra 401502</p>
                     <p><i class="bi bi-telephone-fill"></i> <a href="tel:+919890377098">+91 9890377098</a></p>
-                    <p><i class="bi bi-envelope-fill"></i> <a href="mailto:ompradippatil@gmail.com">ompradippatil@gmail.com</a></p>
+                    <p style="display: flex; align-items: center;"><i class="bi bi-envelope-fill me-1"></i> <a href="mailto:ompradippatil@gmail.com" style="word-break: break-word; font-size: 0.90em;">ompradippatil@gmail.com</a></p>
                 </address>
-                <a href="contact.php" class="btn btn-outline-light btn-sm">
-                    <i class="bi bi-chat-dots me-1"></i> Send Message
-                </a>
             </div>
         </div>
         
@@ -90,8 +95,9 @@
     <i class="bi bi-whatsapp"></i>
 </a>
 
+
 <!-- Back to Top Button - Only one instance -->
-<button id="back-to-top" title="Go to top">
+<button id="back-to-top" title="Go to top" style="position: fixed; bottom: 20px; right: 25px; z-index: 999;">
     <i class="bi bi-arrow-up"></i>
 </button>
 

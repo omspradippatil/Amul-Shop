@@ -72,7 +72,7 @@ $selectedPrice = isset($_GET['price']) ? htmlspecialchars($_GET['price']) : '';
                                     <label for="phone" class="form-label">Phone Number *</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-telephone"></i></span>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
                                         <div class="invalid-feedback">
                                             Please provide a valid 10-digit phone number.
                                         </div>
@@ -324,6 +324,14 @@ $selectedPrice = isset($_GET['price']) ? htmlspecialchars($_GET['price']) : '';
         const form = document.getElementById('enquiryForm');
         
         form.addEventListener('submit', function(event) {
+            // Phone number validation
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput.value.length !== 10) {
+                phoneInput.setCustomValidity('Phone number must be exactly 10 digits');
+            } else {
+                phoneInput.setCustomValidity('');
+            }
+            
             if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();

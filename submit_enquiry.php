@@ -1,6 +1,12 @@
 <?php
 include 'db/db.php';
 
+// Check if database connection is available
+if (!$conn) {
+    echo "Database connection error. Please try again later or contact support.";
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
     $name = $_POST['name'] ?? '';
@@ -19,6 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and execute SQL statement
     $stmt = $conn->prepare("INSERT INTO product_enquiries (name, phone, email, preferred_contact, product_category, product_name, enquiry_type, urgency, message, consent, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    
+    if (!$stmt) {
+        echo "Error in preparing statement: " . $conn->error;
+        exit;
+    }
+    
     $stmt->bind_param("sssssssssss", $name, $phone, $email, $preferredContact, $productCategory, $productName, $enquiryType, $urgency, $message, $consent, $status);
 
     if ($stmt->execute()) {

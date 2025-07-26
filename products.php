@@ -78,20 +78,16 @@
                             <div class="col ice-cream-item cups">
                                 <div class="card h-100 product-card animate-hover">
                                     <div class="position-relative">
-                                        <img src="images/Amul-Cup-Vanilla-Royale.jpg" class="card-img-top p-3" alt="Vanilla Ice Cream">
+                                        <img src="images/Amul-Cup-Vanilla-Royale.jpg" class="card-img-top p-3" alt="Vanilla Ice Cream" style="height: 200px; object-fit: contain;">
                                         <span class="badge bg-danger position-absolute top-0 end-0 m-2">Bestseller</span>
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">Vanilla Ice Cream</h5>
-                                        <p class="card-text">Rich and creamy vanilla ice cream made with the finest ingredients.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="sizes">
-                                                <span class="badge bg-light text-dark">100ml</span>
-                                                <span class="badge bg-light text-dark">500ml</span>
-                                            </div>
+                                        <p class="card-text flex-grow-1">Rich and creamy vanilla ice cream made with the finest ingredients.</p>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
                                             <span class="price fw-bold">₹25 - ₹160</span>
                                         </div>
-                                        <div class="text-center mt-3">
+                                        <div class="text-center mt-auto">
                                             <a href="enquiry.php?product=Vanilla Ice Cream&size=100ml/500ml&price=₹25 - ₹160&category=ice-cream" class="btn btn-primary btn-sm w-100">
                                                 <i class="bi bi-question-circle me-1"></i> Enquire
                                             </a>
@@ -102,18 +98,14 @@
                             
                             <div class="col ice-cream-item cups">
                                 <div class="card h-100 product-card animate-hover">
-                                    <img src="images/Chocolate Ice Cream.jpg" class="card-img-top p-3" alt="Chocolate Ice Cream">
-                                    <div class="card-body">
+                                    <img src="images/Chocolate Ice Cream.jpg" class="card-img-top p-3" alt="Chocolate Ice Cream" style="height: 200px; object-fit: contain;">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">Chocolate Ice Cream</h5>
-                                        <p class="card-text">Creamy chocolate ice cream made with real cocoa for rich flavor.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="sizes">
-                                                <span class="badge bg-light text-dark">100ml</span>
-                                                <span class="badge bg-light text-dark">500ml</span>
-                                            </div>
+                                        <p class="card-text flex-grow-1">Creamy chocolate ice cream made with real cocoa for rich flavor.</p>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
                                             <span class="price fw-bold">₹30 - ₹180</span>
                                         </div>
-                                        <div class="text-center mt-3">
+                                        <div class="text-center mt-auto">
                                             <a href="enquiry.php?product=Chocolate Ice Cream&size=100ml/500ml&price=₹30 - ₹180&category=ice-cream" class="btn btn-primary btn-sm w-100">
                                                 <i class="bi bi-question-circle me-1"></i> Enquire
                                             </a>
@@ -124,18 +116,14 @@
                             
                             <div class="col ice-cream-item cups">
                                 <div class="card h-100 product-card animate-hover">
-                                    <img src="images/Butterscotch Ice Cream.jpg" class="card-img-top p-3" alt="Butterscotch Ice Cream">
-                                    <div class="card-body">
+                                    <img src="images/Butterscotch Ice Cream.jpg" class="card-img-top p-3" alt="Butterscotch Ice Cream" style="height: 200px; object-fit: contain;">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">Butterscotch Ice Cream</h5>
-                                        <p class="card-text">Creamy butterscotch flavored ice cream with caramel swirls.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="sizes">
-                                                <span class="badge bg-light text-dark">100ml</span>
-                                                <span class="badge bg-light text-dark">500ml</span>
-                                            </div>
+                                        <p class="card-text flex-grow-1">Creamy butterscotch flavored ice cream with caramel swirls.</p>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
                                             <span class="price fw-bold">₹30 - ₹180</span>
                                         </div>
-                                        <div class="text-center mt-3">
+                                        <div class="text-center mt-auto">
                                             <a href="enquiry.php?product=Butterscotch Ice Cream&size=100ml/500ml&price=₹30 - ₹180&category=ice-cream" class="btn btn-primary btn-sm w-100">
                                                 <i class="bi bi-question-circle me-1"></i> Enquire
                                             </a>
@@ -481,24 +469,20 @@
                             <div class="col ice-cream-item novelty">
                                 <div class="card h-100 product-card animate-hover">
                                     <div class="position-relative">
-                                        <img src="images/Ice Cream Cake.jpg" class="card-img-top p-3" alt="Ice Cream Cake">
+                                        <img src="images/Ice Cream Cake.jpg" class="card-img-top p-3" alt="Ice Cream Cake" style="height: 200px; object-fit: contain;">
                                         <span class="badge bg-danger position-absolute top-0 end-0 m-2">Special Order</span>
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">Ice Cream Cake</h5>
-                                        <p class="card-text">Celebration cake made with layers of premium ice cream. Pre-order required.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="sizes">
-                                                <span class="badge bg-light text-dark">500g</span>
-                                                <span class="badge bg-light text-dark">1kg</span>
-                                            </div>
+                                        <p class="card-text flex-grow-1">Celebration cake made with layers of premium ice cream. Pre-order required.</p>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
                                             <span class="price fw-bold">₹450 - ₹850</span>
                                         </div>
-                                    </div>
-                                    <div class="text-center mt-3">
-                                        <a href="enquiry.php?product=Ice Cream Cake&size=500g/1kg&price=₹450 - ₹850&category=ice-cream" class="btn btn-primary btn-sm w-100">
-                                            <i class="bi bi-question-circle me-1"></i> Enquire
-                                        </a>
+                                        <div class="text-center mt-auto">
+                                            <a href="enquiry.php?product=Ice Cream Cake&size=500g/1kg&price=₹450 - ₹850&category=ice-cream" class="btn btn-primary btn-sm w-100">
+                                                <i class="bi bi-question-circle me-1"></i> Enquire
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

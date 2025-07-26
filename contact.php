@@ -165,7 +165,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                 <div class="mt-3">
                                     <h5><i class="bi bi-info-circle text-primary"></i> Additional Information</h5>
                                     <ul class="store-info-list">
-                                        <li><i class="bi bi-check-circle"></i> FSSAI Certified Store</li>
+                                        <li><i class="bi bi-check-circle"></i> <a href="gallery.php#certification" class="text-decoration-none">FSSAI Certified Store</a></li>
                                         <li><i class="bi bi-check-circle"></i> Wholesale & Bulk Orders Available</li>
                                         <li><i class="bi bi-check-circle"></i> Street Parking Available</li>
                                     </ul>
@@ -293,10 +293,10 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required maxlength="10" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
                                                 <label for="phone"><i class="bi bi-telephone me-2"></i>Phone Number</label>
                                                 <div class="invalid-feedback">
-                                                    Please enter your phone number.
+                                                    Please enter a valid 10-digit phone number.
                                                 </div>
                                             </div>
                                         </div>
@@ -426,6 +426,14 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
         
         if (contactForm) {
             contactForm.addEventListener('submit', function(event) {
+                // Phone number validation
+                const phoneInput = document.getElementById('phone');
+                if (phoneInput.value.length !== 10) {
+                    phoneInput.setCustomValidity('Phone number must be exactly 10 digits');
+                } else {
+                    phoneInput.setCustomValidity('');
+                }
+                
                 if (!contactForm.checkValidity()) {
                     event.preventDefault();
                     event.stopPropagation();
