@@ -1,11 +1,11 @@
 <?php
 // Database configuration
 class Database {
-    // Database credentials
-    private $host = "sql308.byethost33.com";
-    private $db = "b33_39246376_amul";  // Using lowercase to match server configuration
-    private $user = "b33_39246376";
-    private $pass = "OM@om123";
+    // Database credentials for XAMPP
+    private $host = "localhost";
+    private $db = "amul";
+    private $user = "root";
+    private $pass = "";
     private $conn = null;
     
     // Method to get connection

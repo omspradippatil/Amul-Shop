@@ -51,24 +51,33 @@ The website is hosted on multiple platforms for reliability:
 
 To set up this project locally:
 
-1. Clone the repository to your local XAMPP htdocs folder:
+1. **Install XAMPP**
+   - Download and install XAMPP from https://www.apachefriends.org/
+   - Start Apache and MySQL services from XAMPP Control Panel
+
+2. Clone or copy the project to XAMPP htdocs:
    ```bash
-   git clone https://github.com/username/Amul-Shop.git c:\xampp\htdocs\Amul-Shop
+   # Copy the entire Amul-Shop folder to:
+   C:\xampp\htdocs\Amul-Shop\
    ```
-   or download and extract the ZIP file to `c:\xampp\htdocs\Amul-Shop`
 
-2. Start Apache and MySQL servers in XAMPP Control Panel
+3. **Database Setup**
+   - Open phpMyAdmin: http://localhost/phpmyadmin
+   - Create database: `CREATE DATABASE amul;`
+   - Import the provided SQL file (see database/amul.sql)
+   - Or run the database test: http://localhost/Amul-Shop/test_db.php
 
-3. Import the database (if applicable):
-   - Navigate to phpMyAdmin (http://localhost/phpmyadmin)
-   - Create a new database named "amul_shop"
-   - Import the SQL file from the `database` folder
+4. **Test Database Connection**
+   - Navigate to: http://localhost/Amul-Shop/test_db.php
+   - This will test the connection and show available tables
 
-4. Configure environment (if needed):
-   - Rename `config.example.php` to `config.php`
-   - Update database credentials and other settings
+5. **Access the Website**
+   - Main site: http://localhost/Amul-Shop/
+   - Admin panel: http://localhost/Amul-Shop/Amul-Shop-AdminPanel/
 
-5. Access the website at `http://localhost/Amul-Shop/`
+6. **Admin Panel Login**
+   - Username: `om` / Password: `om27031980` (Admin)
+   - Username: `guest` / Password: `1234` (Guest)
 
 ## 📁 Project Structure
 
