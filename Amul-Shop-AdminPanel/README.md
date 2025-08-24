@@ -21,31 +21,56 @@ A complete PHP admin panel for managing Amul shop contact messages and product e
 
 ### Prerequisites
 
-1. **XAMPP** installed and running
-   - Apache server started
-   - MySQL server started
-   - Download from: https://www.apachefriends.org/
+1. **XAMPP** installed on your system
+2. **MySQL/MariaDB** running
+3. **Apache** server running
 
 ### Setup Steps
 
-1. **Ensure XAMPP is Running**
-   - Start XAMPP Control Panel
-   - Start Apache and MySQL services
-   - Verify at: http://localhost/
+1. **Copy Files**
+   ```
+   Copy the entire "Amul-Shop-AdminPanel" folder to your XAMPP htdocs directory:
+   C:\xampp\htdocs\Amul-Shop-AdminPanel\
+   ```
 
 2. **Database Setup**
-   - Open phpMyAdmin: http://localhost/phpmyadmin
-   - Create database: `CREATE DATABASE amul;`
-   - Import the SQL file: database/amul.sql
-   - Or let the application create tables automatically
+   - Open phpMyAdmin: `http://localhost/phpmyadmin`
+   - Create a database named `amul`
+   - The application expects these tables to exist:
+     ```sql
+     CREATE TABLE contact_messages (
+         id INT AUTO_INCREMENT PRIMARY KEY,
+         name VARCHAR(100) NOT NULL,
+         phone VARCHAR(15) NOT NULL,
+         email VARCHAR(100),
+         subject VARCHAR(50) NOT NULL,
+         message TEXT NOT NULL,
+         consent BOOLEAN NOT NULL DEFAULT TRUE,
+         submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     );
 
-3. **Access the Admin Panel**
-   - Navigate to: http://localhost/Amul-Shop/Amul-Shop-AdminPanel/
-   - Login with admin credentials: om/om27031980
+     CREATE TABLE product_enquiries (
+       id INT(11) NOT NULL AUTO_INCREMENT,
+       name VARCHAR(100) NOT NULL,
+       phone VARCHAR(20) NOT NULL,
+       email VARCHAR(100) DEFAULT NULL,
+       preferred_contact VARCHAR(20) NOT NULL,
+       product_category VARCHAR(50) NOT NULL,
+       product_name VARCHAR(100) DEFAULT NULL,
+       enquiry_type VARCHAR(50) NOT NULL,
+       urgency VARCHAR(20) DEFAULT 'normal',
+       message TEXT NOT NULL,
+       consent TINYINT(1) NOT NULL DEFAULT 0,
+       created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (id)
+     );
+     ```
+   - **Note**: The `users` table for user management will be created automatically when you first access the User Management page.
 
-4. **Test Database Connection**
-   - Visit: http://localhost/Amul-Shop/test_db.php
-   - Should show successful connection and tables
+3. **Access the Application**
+   - Open your web browser
+   - Navigate to: `http://localhost/Amul-Shop-AdminPanel`
+   - You will be redirected to the login page
 
 ## Login Credentials
 
@@ -149,31 +174,6 @@ To modify these settings, edit `config/database.php`.
 
 1. **"Connection error" message**
    - Ensure MySQL is running in XAMPP
-   - Check database name is exactly "amul"
-   - Verify database credentials in `config/database.php`
-
-2. **"Page not found" error**
-   - Ensure files are in correct directory: `C:\xampp\htdocs\Amul-Shop-AdminPanel\`
-   - Start Apache server in XAMPP
-
-3. **Login not working**
-   - Use exact credentials (case-sensitive)
-   - Clear browser cache and cookies
-
-4. **Tables not displaying data**
-   - Ensure database tables exist with correct structure
-   - Check if data exists in the tables
-
-### Support
-
-For technical support or questions about this admin panel, please check:
-1. XAMPP is properly installed and running
-2. Database connection settings are correct
-3. All files are in the correct directory structure
-
-## Version
-
-Version 1.0 - June 2025
    - Check database name is exactly "amul"
    - Verify database credentials in `config/database.php`
 

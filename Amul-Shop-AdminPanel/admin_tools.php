@@ -74,9 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($_POST['action'] == 'backup') {
             try {
                 $backup_file = 'backup_' . date('Y-m-d_H-i-s') . '.sql';
-                // Updated command for XAMPP
-                $mysqldump_path = '"C:\\xampp\\mysql\\bin\\mysqldump.exe"';
-                $command = "$mysqldump_path --host=localhost --user=root --password= amul > backups/$backup_file";
+                $command = "mysqldump --host=localhost --user=root --password= amul > backups/$backup_file";
                 
                 // Create backups directory if it doesn't exist
                 if (!is_dir('backups')) {
@@ -106,7 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $sql_content = file_get_contents($restore_file_path);
                 if ($sql_content !== false) {
                     try {
-                        // Updated connection for XAMPP
                         $mysqli = new mysqli('localhost', 'root', '', 'amul');
                         if ($mysqli->connect_errno) {
                             $error_message = "MySQL connection failed: " . $mysqli->connect_error;
@@ -139,7 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $sql_content = file_get_contents($tmp_name);
                 if ($sql_content !== false) {
                     try {
-                        // Updated connection for XAMPP
                         $mysqli = new mysqli('localhost', 'root', '', 'amul');
                         if ($mysqli->connect_errno) {
                             $error_message = "MySQL connection failed: " . $mysqli->connect_error;
