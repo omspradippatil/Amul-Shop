@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block admin panel from search indexing
+Disallow: /Amul-Shop-AdminPanel/
+
+# Point crawlers to sitemap
+Sitemap: https://shreelaxmiamul.fast-page.org/sitemap.xml
