@@ -88,24 +88,24 @@ A complete PHP admin panel for managing Amul shop contact messages and product e
 
 ```
 Amul-Shop-AdminPanel/
-├── config/
-│   └── database.php          # Database connection configuration
-├── includes/
-│   ├── session.php          # Session management functions
-│   ├── header.php           # Common header template
-│   └── footer.php           # Common footer template
-├── index.php                # Redirects to login
-├── login.php                # Login page
-├── auth.php                 # Authentication handler
-├── logout.php               # Logout handler
-├── dashboard.php            # Main dashboard
-├── contact_messages.php     # Contact messages listing
-├── product_enquiries.php    # Product enquiries listing
-├── user_management.php      # User management (Admin only)
-├── admin_tools.php          # Admin tools and bulk operations (Admin only)
-├── admin_actions.php        # AJAX handler for admin operations
-├── export.php              # CSV export functionality (Admin only)
-└── README.md               # This file
+ config/
+    database.php          # Database connection configuration
+ includes/
+    session.php          # Session management functions
+    header.php           # Common header template
+    footer.php           # Common footer template
+ index.php                # Redirects to login
+ login.php                # Login page
+ auth.php                 # Authentication handler
+ logout.php               # Logout handler
+ dashboard.php            # Main dashboard
+ contact_messages.php     # Contact messages listing
+ product_enquiries.php    # Product enquiries listing
+ user_management.php      # User management (Admin only)
+ admin_tools.php          # Admin tools and bulk operations (Admin only)
+ admin_actions.php        # AJAX handler for admin operations
+ export.php              # CSV export functionality (Admin only)
+ README.md               # This file
 ```
 
 ## Database Configuration
@@ -199,3 +199,14 @@ For technical support or questions about this admin panel, please check:
 ## Version
 
 Version 1.0 - June 2025
+
+---
+
+##  Contact the Developer
+
+**Developed by OM Patil**
+
+- **Portfolio**: [ompradippatil.netlify.app](https://ompradippatil.netlify.app/)
+- **GitHub**: [@omspradippatil](https://github.com/omspradippatil)
+- **LinkedIn**: [OM Pradip Patil](https://in.linkedin.com/in/om-pradip-patil)
+- **Email**: [omspradippatil@gmail.com](mailto:omspradippatil@gmail.com)
