@@ -78,7 +78,7 @@
                             <small class="text-muted">
                                 <strong>Demo Credentials:</strong><br>
                                 <br>
-                                Guest: guest / 1234
+                                Guest: guest / GUEST_PASSWORD_PLACEHOLDER
                             </small>
                         </div>
                     </div>

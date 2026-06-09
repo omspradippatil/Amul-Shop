@@ -34,14 +34,14 @@ try {
     $check_om->execute();
     if ($check_om->fetchColumn() == 0) {
         $insert_om = $db->prepare("INSERT INTO users (username, password, role, created_by) VALUES ('om', ?, 'admin', 'system')");
-        $insert_om->execute([password_hash('om27031980', PASSWORD_DEFAULT)]);
+        $insert_om->execute([password_hash('ADMIN_PASSWORD_PLACEHOLDER', PASSWORD_DEFAULT)]);
     }
 
     $check_guest = $db->prepare("SELECT COUNT(*) FROM users WHERE username = 'guest'");
     $check_guest->execute();
     if ($check_guest->fetchColumn() == 0) {
         $insert_guest = $db->prepare("INSERT INTO users (username, password, role, created_by) VALUES ('guest', ?, 'guest', 'system')");
-        $insert_guest->execute([password_hash('1234', PASSWORD_DEFAULT)]);
+        $insert_guest->execute([password_hash('GUEST_PASSWORD_PLACEHOLDER', PASSWORD_DEFAULT)]);
     }
 
 } catch(PDOException $exception) {

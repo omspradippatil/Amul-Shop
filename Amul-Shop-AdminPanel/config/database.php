@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private $host = 'localhost';
-    private $db_name = 'amul';
-    private $username = 'root';
-    private $password = '';
+    private $host = 'sql308.byethost33.com';
+    private $db_name = 'b33_39246376_amul';
+    private $username = 'b33_39246376';
+    private $password = 'DB_PASSWORD_PLACEHOLDER';
     public $conn;
 
     public function getConnection() {

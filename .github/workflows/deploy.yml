@@ -1,0 +1,49 @@
+name: Deploy to Bytehost FTP
+
+on:
+  push:
+    branches:
+      - Byte
+  workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
+
+jobs:
+  deploy:
+    name: Deploy to FTP Server
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+        with:
+          ref: Byte # Explicitly checkout the Byte branch
+          
+      - name: 🔑 Inject All Passwords
+        run: |
+          # 1. Inject Database Password (using FTP_PASSWORD)
+          sed -i "s/DB_PASSWORD_PLACEHOLDER/${{ secrets.FTP_PASSWORD }}/g" Amul-Shop-AdminPanel/config/database.php
+          sed -i "s/DB_PASSWORD_PLACEHOLDER/${{ secrets.FTP_PASSWORD }}/g" Amul-Shop-AdminPanel/admin_tools.php
+          
+          # 2. Inject Admin and Guest Passwords
+          sed -i "s/ADMIN_PASSWORD_PLACEHOLDER/${{ secrets.ADMIN_PASSWORD }}/g" Amul-Shop-AdminPanel/auth.php
+          sed -i "s/ADMIN_PASSWORD_PLACEHOLDER/${{ secrets.ADMIN_PASSWORD }}/g" Amul-Shop-AdminPanel/user_management.php
+          sed -i "s/GUEST_PASSWORD_PLACEHOLDER/${{ secrets.GUEST_PASSWORD }}/g" Amul-Shop-AdminPanel/auth.php
+          sed -i "s/GUEST_PASSWORD_PLACEHOLDER/${{ secrets.GUEST_PASSWORD }}/g" Amul-Shop-AdminPanel/user_management.php
+          sed -i "s/GUEST_PASSWORD_PLACEHOLDER/${{ secrets.GUEST_PASSWORD }}/g" Amul-Shop-AdminPanel/login.php
+      
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # The destination folder on your FTP server
+          server-dir: /shreelaxmiamul.fast-page.org/htdocs/
+          # Optional: Exclude files you don't want to upload
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .vscode/**
+            .github/**

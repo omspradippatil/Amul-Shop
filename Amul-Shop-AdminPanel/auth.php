@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 // Fallback to hardcoded users (for initial setup)
                 $valid_users = [
-                    'om' => ['password' => 'om27031980', 'role' => 'admin'],
-                    'guest' => ['password' => '1234', 'role' => 'guest']
+                    'om' => ['password' => 'ADMIN_PASSWORD_PLACEHOLDER', 'role' => 'admin'],
+                    'guest' => ['password' => 'GUEST_PASSWORD_PLACEHOLDER', 'role' => 'guest']
                 ];
                 
                 if (isset($valid_users[$username]) && $valid_users[$username]['password'] === $password) {

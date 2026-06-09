@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($_POST['action'] == 'backup') {
             try {
                 $backup_file = 'backup_' . date('Y-m-d_H-i-s') . '.sql';
-                $command = "mysqldump --host=localhost --user=root --password= amul > backups/$backup_file";
+                $command = "mysqldump --host=localhost --user=root --password=DB_PASSWORD_PLACEHOLDER > backups/$backup_file";
                 
                 // Create backups directory if it doesn't exist
                 if (!is_dir('backups')) {
