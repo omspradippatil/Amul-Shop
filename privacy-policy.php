@@ -135,7 +135,7 @@
                         <div class="card-body">
                             <address class="mb-0">
                                 <strong>Shree Laxmi Amul Shopiee</strong><br>
-                                210, pachmarg, road, opp. police station,<br>
+                                210, Pachmarg, road, opp. police station,<br>
                                 Delwadi, Kudan, Maharashtra 401502<br>
                                 <abbr title="Phone">Phone:</abbr> +91 9890377098<br>
                             </address>

@@ -75,7 +75,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     <h3 class="contact-card-title">Our Location</h3>
                     <address class="contact-card-address">
                         Shree Laxmi Amul Shopiee<br>
-                        210, pachmarg, road,<br>opp. police station,<br>
+                        210, Pachmarg, road,<br>opp. police station,<br>
                         Delwadi, Kudan, Maharashtra 401502
                     </address>
                     <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank" class="btn btn-outline-primary rounded-pill">
@@ -270,7 +270,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                     </div>
                                     <div class="contact-info-text">
                                         <h5>Visit Our Shop</h5>
-                                        <p>210, pachmarg, road, opp. police station, Delwadi</p>
+                                        <p>210, Pachmarg, road, opp. police station, Delwadi</p>
                                     </div>
                                 </div>
                                 

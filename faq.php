@@ -287,7 +287,7 @@
                                 </h2>
                                 <div id="storeOne" class="accordion-collapse collapse show" data-bs-parent="#storeAccordion">
                                     <div class="accordion-body">
-                                        <p>Our store is located at 210, pachmarg, road, opposite police station, Delwadi, Kudan, Maharashtra 401502. You can find us easily on <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank">Google Maps</a>.</p>
+                                        <p>Our store is located at 210, Pachmarg, road, opposite police station, Delwadi, Kudan, Maharashtra 401502. You can find us easily on <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank">Google Maps</a>.</p>
                                     </div>
                                 </div>
                             </div>

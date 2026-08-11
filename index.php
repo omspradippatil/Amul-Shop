@@ -8,9 +8,9 @@ $isMobile = isMobile();
 
 // SEO metadata for improved search indexing
 $siteName = 'Shree Laxmi Amul Shopiee';
-$pageTitle = 'Shree Laxmi Amul Shopiee - Official Amul Store in Pachmarhi';
-$pageDescription = 'Buy fresh and authentic Amul products in Pachmarhi. Ice creams, milk, butter, cheese, beverages, and more at Shree Laxmi Amul Shopiee.';
-$pageKeywords = 'Amul shop Pachmarhi, Amul ice cream, dairy products, Amul milk, Amul butter, Amul cheese, Shree Laxmi Amul Shopiee';
+$pageTitle = 'Shree Laxmi Amul Shopiee - Official Amul Store in Pachmarg, Palghar';
+$pageDescription = 'Buy fresh and authentic Amul products in Pachmarg, Palghar. Ice creams, milk, butter, cheese, beverages, and more at Shree Laxmi Amul Shopiee.';
+$pageKeywords = 'Amul shop Pachmarg, Amul ice cream Palghar, dairy products, Amul milk, Amul butter, Amul cheese, Shree Laxmi Amul Shopiee Kudan';
 
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
@@ -207,7 +207,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
             <!-- Hero Section -->
             <div class="content-card mb-5" data-aos="fade-up" data-aos-duration="1000">
                 <div class="text-center mb-4">
-                    <h1 class="animate__animated animate__fadeInDown"><i class="bi bi-cart3"></i> Shree Laxmi Amul Shopiee</h1>
+                    <h1 class="animate__animated animate__fadeInDown"><i class="bi bi-cart3"></i> Shree Laxmi Amul Shopiee - Pachmarg, Palghar</h1>
                     <p class="badge bg-danger fs-6 animate__animated animate__fadeIn animate__delay-1s">Official Amul Outlet</p>
                 </div>
                 

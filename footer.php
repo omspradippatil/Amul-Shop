@@ -70,7 +70,7 @@
             <div class="col-lg-2 mb-4">
                 <h5 class="text-white">Contact Us</h5>
                 <address class="text-white-50">
-                    <p><i class="bi bi-geo-alt-fill"></i> 210, pachmarg, road,<br>opp. police station, Delwadi, Kudan,<br>Maharashtra 401502</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> 210, Pachmarg, road,<br>opp. police station, Delwadi, Kudan,<br>Maharashtra 401502</p>
                     <p><i class="bi bi-telephone-fill"></i> <a href="tel:+919890377098">+91 9890377098</a></p>
                     <p style="display: flex; align-items: center;"><i class="bi bi-envelope-fill me-1"></i> <a href="mailto:ompradippatil@gmail.com" style="word-break: break-word; font-size: 0.90em;">ompradippatil@gmail.com</a></p>
                 </address>

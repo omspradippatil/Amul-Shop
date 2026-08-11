@@ -115,7 +115,7 @@ If you encounter any issues with the website or have questions about the store:
 - **Owner Contact**: +91 9028915605
 - **Email**: omspradippatil@gmail.com
 - **Store Phone**: +91 9890377098
-- **Store Address**: 210, pachmarg road, opp. police station, Delwadi, Kudan, Maharashtra 401502
+- **Store Address**: 210, Pachmarg road, opp. police station, Delwadi, Kudan, Maharashtra 401502
 
 ## 🔄 Maintenance & Updates
 
