@@ -96,8 +96,11 @@ function initFormValidation() {
     // Get all forms with needs-validation class
     const forms = document.querySelectorAll('.needs-validation');
     
-    // Loop over them and prevent submission if invalid
+    // Loop over them and prevent submission if invalid (skip forms with dedicated AJAX handlers)
     Array.from(forms).forEach(function(form) {
+        if (form.id === 'contactForm' || form.id === 'enquiryForm') {
+            return;
+        }
         form.addEventListener('submit', function(event) {
             if (!form.checkValidity()) {
                 event.preventDefault();
@@ -276,18 +279,21 @@ function initWhatsAppButton() {
  * Performance optimization techniques
  */
 function optimizePerformance() {
-    // Preload critical links on hover
+    // Preload critical links on hover (deduplicated)
+    const preloadedUrls = new Set();
     document.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('mouseenter', function() {
-            // Don't preload external links or anchors
+            // Don't preload external links, anchors, or already-preloaded URLs
             if (link.href && 
                 link.hostname === window.location.hostname && 
                 !link.href.startsWith('#') &&
                 !link.href.includes('tel:') &&
-                !link.href.includes('mailto:')) {
+                !link.href.includes('mailto:') &&
+                !preloadedUrls.has(link.href)) {
                 
+                preloadedUrls.add(link.href);
                 const preloadLink = document.createElement('link');
-                preloadLink.rel = 'preload';
+                preloadLink.rel = 'prefetch';
                 preloadLink.as = 'document';
                 preloadLink.href = link.href;
                 document.head.appendChild(preloadLink);

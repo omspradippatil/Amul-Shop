@@ -174,8 +174,10 @@ function initializeFloatingElements() {
         element.style.animationDelay = `${delay}s`;
     });
     
-    // Special animation for ice cream background elements if present
-    if (document.querySelector('.floating-background')) {
+    // Special animation for ice cream background elements if present and not already loaded
+    if (document.querySelector('.floating-background') &&
+        typeof window.createIceCreamElement === 'undefined' &&
+        !document.querySelector('script[src*="icecream-bg.js"]')) {
         // Try to load ice cream background script
         const script = document.createElement('script');
         script.src = 'js/icecream-bg.js';

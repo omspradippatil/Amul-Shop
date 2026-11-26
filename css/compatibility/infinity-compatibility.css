@@ -210,6 +210,8 @@ img {
 }
 
 /* Fix footer text colors */
+footer h2,
+footer h3,
 footer h5, 
 footer .text-white {
     color: white !important;

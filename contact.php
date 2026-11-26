@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Shree Laxmi Amul Shopiee</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Animate.css for animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Core CSS files -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/layouts/header-footer.css">
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="css/pages/contact.css">
-    <!-- Mobile optimization CSS -->
-    <link rel="stylesheet" href="css/mobile-fixes.css">
-    <!-- Animation fixes CSS -->
-    <link rel="stylesheet" href="css/animation-fixes.css">
-    <!-- Color fixes CSS -->
-    <link rel="stylesheet" href="css/color-fixes.css">
-    <!-- InfinityFree compatibility fixes -->
-    <link rel="stylesheet" href="css/compatibility/infinity-compatibility.css">
-</head>
-<body>
-
 <?php
-include 'db/db.php'; // This tells PHP to load db.php from the db folder
+include 'db/db.php';
+
+$pageTitle = 'Contact, Address & Hours | Shree Laxmi Amul Shopiee';
+$pageDescription = 'Visit Shree Laxmi Amul Shopiee at 210 Pachmarg Road, opp. Police Station, Delwadi, Kudan, Maharashtra 401502. Open daily 7 AM to 11 PM.';
+$pageKeywords = 'Shree Laxmi Amul Shopiee contact, Amul shop Pachmarg address, Amul store Kudan phone number, Palghar';
+
+include 'header.php';
 ?>
-
-
-<?php include 'header.php'; ?>
 
 <!-- Hero Section with Map Background -->
 <section class="contact-hero position-relative overflow-hidden">
@@ -62,7 +34,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
 </section>
 
 <!-- Main Content -->
-<main class="container py-5" id="main-content">
+<div class="container py-5">
     <!-- Contact Information Cards -->
     <section id="contact-details" class="mb-5">
         <div class="row g-4 justify-content-center">
@@ -72,7 +44,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     <div class="contact-card-icon bg-primary text-white mx-auto">
                         <i class="bi bi-geo-alt"></i>
                     </div>
-                    <h3 class="contact-card-title">Our Location</h3>
+                    <h2 class="contact-card-title h3">Our Location</h2>
                     <address class="contact-card-address">
                         Shree Laxmi Amul Shopiee<br>
                         210, Pachmarg, road,<br>opp. police station,<br>
@@ -90,7 +62,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     <div class="contact-card-icon bg-success text-white mx-auto">
                         <i class="bi bi-telephone"></i>
                     </div>
-                    <h3 class="contact-card-title">Phone</h3>
+                    <h2 class="contact-card-title h3">Phone</h2>
                     <p class="contact-card-text">Call us directly at:</p>
                     <p class="contact-card-large-text">
                         <a href="tel:+919890377098" class="contact-link">+91 9890377098</a>
@@ -108,7 +80,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     <div class="contact-card-icon bg-success text-white mx-auto">
                         <i class="bi bi-whatsapp"></i>
                     </div>
-                    <h3 class="contact-card-title">WhatsApp</h3>
+                    <h2 class="contact-card-title h3">WhatsApp</h2>
                     <p class="contact-card-text">Message us on WhatsApp:</p>
                     <p class="contact-card-large-text">
                         <a href="https://wa.me/919890377098" class="contact-link">+91 9890377098</a>
@@ -126,7 +98,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     <div class="contact-card-icon bg-danger text-white mx-auto">
                         <i class="bi bi-envelope"></i>
                     </div>
-                    <h3 class="contact-card-title">Email</h3>
+                    <h2 class="contact-card-title h3">Email</h2>
                     <p class="contact-card-text">Write to us at:</p>
                     <p class="contact-card-text">
                         <a href="mailto:ompradippatil@gmail.com" class="contact-link">ompradippatil@gmail.com</a>
@@ -146,7 +118,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     <div class="row g-0 align-items-center">
                         <div class="col-md-6">
                             <div class="store-info-image">
-                                <img src="images/store-front.jpg" alt="Store Front" class="img-fluid rounded-start" onerror="this.src='Amul.jpg';">
+                                <img src="images/shop (1).jpg" alt="Shree Laxmi Amul Shopiee Store Front" class="img-fluid rounded-start" loading="lazy" onerror="this.src='Amul.jpg';">
                                 <div class="store-badge">
                                     <span><i class="bi bi-shop"></i> Official Amul Store</span>
                                 </div>
@@ -154,7 +126,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                         </div>
                         <div class="col-md-6">
                             <div class="store-info-content p-4 p-md-5">
-                                <h3>Store Hours</h3>
+                                <h2 class="h3">Store Hours</h2>
                                 <div class="store-hours">
                                     <div class="day-row">
                                         <span class="day">Monday - Sunday</span>
@@ -163,7 +135,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                 </div>
                                 <hr>
                                 <div class="mt-3">
-                                    <h5><i class="bi bi-info-circle text-primary"></i> Additional Information</h5>
+                                    <h3 class="h5"><i class="bi bi-info-circle text-primary"></i> Additional Information</h3>
                                     <ul class="store-info-list">
                                         <li><i class="bi bi-check-circle"></i> <a href="gallery.php#certification" class="text-decoration-none">FSSAI Certified Store</a></li>
                                         <li><i class="bi bi-check-circle"></i> Wholesale & Bulk Orders Available</li>
@@ -194,13 +166,13 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                 <i class="bi bi-geo-alt-fill text-danger fs-1"></i>
                             </div>
                             <div>
-                                <h3 class="mb-0">Find Our Store</h3>
+                                <h2 class="mb-0 h3">Find Our Store</h2>
                                 <p class="text-muted mb-0">Located opposite to Police Station in Pachmarg</p>
                             </div>
                         </div>
                     </div>
                     <div class="ratio ratio-21x9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.227876302633!2d72.85!3d19.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzAwLjAiTiA3MsKwNTAnMjQuMCJF!5e0!3m2!1sen!2sin!4v1620112345678!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.227876302633!2d72.85!3d19.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzAwLjAiTiA3MsKwNTAnMjQuMCJF!5e0!3m2!1sen!2sin!4v1620112345678!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Shree Laxmi Amul Shopiee Location Map"></iframe>
                     </div>
                     <div class="map-footer p-3">
                         <div class="row">
@@ -210,7 +182,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                         <i class="bi bi-signpost-split text-primary fs-3"></i>
                                     </div>
                                     <div>
-                                        <h5>Getting Here</h5>
+                                        <h3 class="h5">Getting Here</h3>
                                         <p class="text-muted mb-0">Look for the Amul signboard opposite to Police Station</p>
                                     </div>
                                 </div>
@@ -221,7 +193,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                         <i class="bi bi-info-circle text-primary fs-3"></i>
                                     </div>
                                     <div>
-                                        <h5>Nearby Landmarks</h5>
+                                        <h3 class="h5">Nearby Landmarks</h3>
                                         <p class="text-muted mb-0">Police Station, Pachmarg Main Road</p>
                                     </div>
                                 </div>
@@ -241,7 +213,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     <div class="row g-0">
                         <div class="col-md-5">
                             <div class="contact-form-sidebar p-4 p-md-5">
-                                <h3>Get In Touch</h3>
+                                <h2 class="h3">Get In Touch</h2>
                                 <p class="text-white-50 mb-4">We'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.</p>
                                 
                                 <div class="contact-info-item">
@@ -249,7 +221,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                         <i class="bi bi-telephone"></i>
                                     </div>
                                     <div class="contact-info-text">
-                                        <h5>Call Us On</h5>
+                                        <h3 class="h5">Call Us On</h3>
                                         <p>+91 9890377098</p>
                                     </div>
                                 </div>
@@ -259,7 +231,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                         <i class="bi bi-envelope"></i>
                                     </div>
                                     <div class="contact-info-text">
-                                        <h5>Email Us At</h5>
+                                        <h3 class="h5">Email Us At</h3>
                                         <p>ompradippatil@gmail.com</p>
                                     </div>
                                 </div>
@@ -269,7 +241,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                         <i class="bi bi-shop"></i>
                                     </div>
                                     <div class="contact-info-text">
-                                        <h5>Visit Our Shop</h5>
+                                        <h3 class="h5">Visit Our Shop</h3>
                                         <p>210, Pachmarg, road, opp. police station, Delwadi</p>
                                     </div>
                                 </div>
@@ -279,7 +251,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                         </div>
                         <div class="col-md-7">
                             <div class="contact-form-content p-4 p-md-5">
-                                <h3 class="mb-4">Send us a Message</h3>
+                                <h2 class="mb-4 h3">Send us a Message</h2>
                                 <form id="contactForm" action="submit_contact.php" method="POST" class="needs-validation" novalidate>
                                     <div class="row g-3">
                                         <div class="col-md-6">
@@ -357,7 +329,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                                     <div class="success-icon mb-4">
                                         <i class="bi bi-check-circle-fill"></i>
                                     </div>
-                                    <h4>Thank You!</h4>
+                                    <h3 class="h4">Thank You!</h3>
                                     <p>Your message has been sent successfully. We'll get back to you shortly.</p>
                                     <button type="button" class="btn btn-outline-primary mt-3" id="sendAnotherBtn">
                                         <i class="bi bi-arrow-repeat me-2"></i> Send Another Message
@@ -378,7 +350,7 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                 <div class="cta-box">
                     <div class="row align-items-center">
                         <div class="col-md-8">
-                            <h3 class="text-white mb-2">Looking for product information?</h3>
+                            <h2 class="text-white mb-2 h3">Looking for product information?</h2>
                             <p class="text-white-50 mb-md-0">Check our product page or submit a detailed product enquiry.</p>
                         </div>
                         <div class="col-md-4 text-md-end">
@@ -391,72 +363,56 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
             </div>
         </div>
     </section>
-</main>
+</div>
 
 <!-- Floating Ice Cream Elements for Background Animation -->
 <div class="floating-background">
     <!-- Ice cream elements will be generated by JavaScript -->
 </div>
 
-<?php include 'footer.php'; ?>
-
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- AOS Animation Library -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<!-- Ice Cream Background Animation -->
-<script src="js/icecream-bg.js"></script>
-<!-- Main site JavaScript -->
-<script src="js/main.js"></script>
-
+<?php
+$extraFooterScripts = <<<'HTML'
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-        
-        // Form validation and submission
         const contactForm = document.getElementById('contactForm');
         const formSuccessMessage = document.querySelector('.form-success-message');
         const sendAnotherBtn = document.getElementById('sendAnotherBtn');
-        
+
         if (contactForm) {
             contactForm.addEventListener('submit', function(event) {
-                // Phone number validation
                 const phoneInput = document.getElementById('phone');
                 if (phoneInput.value.length !== 10) {
                     phoneInput.setCustomValidity('Phone number must be exactly 10 digits');
                 } else {
                     phoneInput.setCustomValidity('');
                 }
-                
+
                 if (!contactForm.checkValidity()) {
                     event.preventDefault();
                     event.stopPropagation();
                 } else {
                     event.preventDefault();
-                    
-                    // Simulate form submission with loading state
+
                     const submitBtn = contactForm.querySelector('button[type="submit"]');
                     submitBtn.disabled = true;
                     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Sending...';
-                    
-                    // Submit form via AJAX
+
                     const formData = new FormData(contactForm);
-                    
+
                     fetch('submit_contact.php', {
                         method: 'POST',
                         body: formData
                     })
-                    .then(response => response.text())
-                    .then(data => {
-                        // Hide form and show success message
+                    .then(async response => {
+                        const data = await response.json().catch(() => ({ success: response.ok }));
+                        if (!response.ok || data.success === false) {
+                            throw new Error(data.message || 'Submission failed');
+                        }
+                        return data;
+                    })
+                    .then(() => {
                         contactForm.classList.add('fade-out');
-                        
+
                         setTimeout(function() {
                             contactForm.style.display = 'none';
                             formSuccessMessage.classList.remove('d-none');
@@ -466,60 +422,58 @@ include 'db/db.php'; // This tells PHP to load db.php from the db folder
                     .catch(error => {
                         console.error('Error:', error);
                         alert('There was an error submitting the form. Please try again later.');
-                        
-                        // Reset button state
+
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = '<i class="bi bi-send me-2"></i> Send Message <div class="btn-animation-wrapper"><span class="btn-animation-circle"></span></div>';
                     });
                 }
-                
+
                 contactForm.classList.add('was-validated');
             });
         }
-        
-        // Reset form to send another message
+
         if (sendAnotherBtn) {
             sendAnotherBtn.addEventListener('click', function() {
                 formSuccessMessage.classList.add('fade-out');
-                
+
                 setTimeout(function() {
                     formSuccessMessage.classList.add('d-none');
                     formSuccessMessage.classList.remove('fade-in', 'fade-out');
-                    
+
                     contactForm.reset();
                     contactForm.classList.remove('was-validated');
                     contactForm.style.display = 'block';
                     contactForm.classList.remove('fade-out');
                     contactForm.classList.add('fade-in');
-                    
+
                     const submitBtn = contactForm.querySelector('button[type="submit"]');
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = '<i class="bi bi-send me-2"></i> Send Message <div class="btn-animation-wrapper"><span class="btn-animation-circle"></span></div>';
                 }, 300);
             });
         }
-        
-        // Add parallax effect to contact hero background
+
         const contactHeroBg = document.querySelector('.contact-hero-bg');
         if (contactHeroBg) {
             window.addEventListener('scroll', function() {
                 const scrollPosition = window.pageYOffset;
                 contactHeroBg.style.transform = `translateY(${scrollPosition * 0.4}px)`;
-            });
+            }, { passive: true });
         }
-        
-        // Button hover animations
+
         const animatedButtons = document.querySelectorAll('.btn-primary, .btn-accent, .btn-accent-2, .btn-outline-primary, .btn-outline-success, .btn-outline-danger');
         animatedButtons.forEach(button => {
             button.addEventListener('mouseenter', function() {
                 this.classList.add('animate__animated', 'animate__pulse');
             });
-            
+
             button.addEventListener('mouseleave', function() {
                 this.classList.remove('animate__animated', 'animate__pulse');
             });
         });
     });
 </script>
-</body>
-</html>
+HTML;
+
+include 'footer.php';
+?>

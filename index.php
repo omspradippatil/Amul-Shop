@@ -1,107 +1,51 @@
 <?php
-// Check if device is mobile for optimized content delivery
-function isMobile() {
-    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", 
-        $_SERVER['HTTP_USER_AGENT']);
-}
-$isMobile = isMobile();
-
 // SEO metadata for improved search indexing
 $siteName = 'Shree Laxmi Amul Shopiee';
-$pageTitle = 'Shree Laxmi Amul Shopiee - Official Amul Store in Pachmarg, Palghar';
-$pageDescription = 'Buy fresh and authentic Amul products in Pachmarg, Palghar. Ice creams, milk, butter, cheese, beverages, and more at Shree Laxmi Amul Shopiee.';
+$pageTitle = 'Shree Laxmi Amul Shopiee - Official Amul Store Pachmarg';
+$pageDescription = 'Buy fresh and authentic Amul products in Pachmarg, Kudan, Palghar. Ice creams, milk, butter, cheese, and beverages at Shree Laxmi Amul Shopiee.';
 $pageKeywords = 'Amul shop Pachmarg, Amul ice cream Palghar, dairy products, Amul milk, Amul butter, Amul cheese, Shree Laxmi Amul Shopiee Kudan';
+$pageCanonicalPath = '/';
 
-$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$requestUri = strtok($_SERVER['REQUEST_URI'] ?? '/index.php', '?');
-$canonicalUrl = $scheme . '://' . $host . $requestUri;
+$productionUrl = 'https://shreelaxmiamul.fast-page.org';
+$extraHeadHtml = '<link rel="preload" href="images/Ice Cream Collection.jpg" as="image" fetchpriority="high" />' . "\n"
+    . '    <link rel="stylesheet" href="css/slider-controls.css" />';
 
-$ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
+$pageSchemaJsonLd = json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'GroceryStore',
+    'name' => 'Shree Laxmi Amul Shopiee',
+    'description' => 'Official Amul products outlet in Pachmarg, Palghar offering fresh dairy products, ice creams, butter, cheese, paneer, and beverages since 2014.',
+    'url' => $productionUrl . '/',
+    'image' => $productionUrl . '/images/iceindex.webp',
+    'logo' => $productionUrl . '/Amul.jpg',
+    'telephone' => '+91-9890377098',
+    'email' => 'ompradippatil@gmail.com',
+    'priceRange' => '₹',
+    'address' => [
+        '@type' => 'PostalAddress',
+        'streetAddress' => '210, Pachmarg Road, opp. Police Station, Delwadi',
+        'addressLocality' => 'Kudan, Palghar',
+        'addressRegion' => 'Maharashtra',
+        'postalCode' => '401502',
+        'addressCountry' => 'IN',
+    ],
+    'openingHoursSpecification' => [[
+        '@type' => 'OpeningHoursSpecification',
+        'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        'opens' => '07:00',
+        'closes' => '23:00',
+    ]],
+    'sameAs' => [
+        'https://www.facebook.com/share/16Y5YfVZGN/?mibextid=qi2Omg',
+    ],
+    'brand' => [
+        '@type' => 'Brand',
+        'name' => 'Amul',
+    ],
+], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+
+include 'header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-        <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
-        <meta name="description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta name="keywords" content="<?php echo htmlspecialchars($pageKeywords, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-        <meta name="author" content="<?php echo htmlspecialchars($siteName, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN">
-        <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
-
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="<?php echo htmlspecialchars($siteName, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta property="og:description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta property="og:url" content="<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta property="og:image" content="<?php echo htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
-
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="<?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta name="twitter:description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
-        <meta name="twitter:image" content="<?php echo htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>">
-
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Store",
-            "name": "Shree Laxmi Amul Shopiee",
-            "description": "Official Amul products outlet offering fresh dairy products, ice creams and beverages.",
-            "url": "<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>",
-            "image": "<?php echo htmlspecialchars($ogImage, ENT_QUOTES, 'UTF-8'); ?>",
-            "brand": {
-                "@type": "Brand",
-                "name": "Amul"
-            }
-        }
-        </script>
-    <!-- Mobile-specific meta tags -->
-    <meta name="theme-color" content="#0a4da3">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    
-    <!-- Performance optimization -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    
-    <!-- Preloading critical resources -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="<?php echo $isMobile ? 'images/Ice Cream Collection-mobile.jpg' : 'images/Ice Cream Collection.jpg'; ?>" as="image">
-    <link rel="preload" href="css/common.css" as="style">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Animate.css (with reduced payload for mobile) -->
-    <?php if ($isMobile): ?>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <?php else: ?>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <?php endif; ?>
-    <!-- Core CSS files -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/layouts/header-footer.css">
-    
-    <!-- Page-specific styling -->
-    <link rel="stylesheet" href="css/pages/index.css">
-    <!-- Mobile optimization CSS -->
-    <link rel="stylesheet" href="css/mobile-fixes.css">
-    <!-- InfinityFree compatibility fixes -->
-    <link rel="stylesheet" href="css/compatibility/infinity-compatibility.css">
-    <!-- Animation fixes to ensure colors and animations work -->
-    <link rel="stylesheet" href="css/animation-fixes.css">
-    <!-- AOS Animation Library (loaded for all devices) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
-<body>
-
-<?php include 'header.php'; ?>
 
 <div class="floating-background">
     <!-- Ice cream elements will be generated by JavaScript -->
@@ -123,13 +67,13 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
       <div class="carousel-item active" data-slide-id="1">
         <div class="premium-slide-wrapper">
           <div class="carousel-image-container">
-            <img src="images/Ice Cream Collection.jpg" alt="Ice Cream Collection" onerror="this.src='Amul.jpg';">
+            <img src="images/Ice Cream Collection.jpg" alt="Amul Ice Cream Collection at Shree Laxmi Amul Shopiee" fetchpriority="high" onerror="this.src='Amul.jpg';">
             <div class="slide-particles" id="particles-1"></div>
             <div class="image-reflections"></div>
           </div>
           <div class="premium-caption">
             <div class="caption-badge">Featured</div>
-            <h2 class="slide-title">Delicious<br><span class="highlight">Ice Creams</span></h2>
+            <p class="slide-title">Delicious<br><span class="highlight">Ice Creams</span></p>
             <div class="caption-divider"><span></span></div>
             <p class="slide-description">Explore our premium collection of rich, creamy Amul ice creams in various flavors.</p>
             <a href="products.php" class="btn btn-slider">
@@ -145,13 +89,13 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
       <div class="carousel-item" data-slide-id="2">
         <div class="premium-slide-wrapper">
           <div class="carousel-image-container">
-            <img src="images/Dairy Products.jpg" alt="Dairy Products" onerror="this.src='Amul.jpg';">
+            <img src="images/Dairy Products.jpg" alt="Fresh Amul Dairy Products" loading="lazy" onerror="this.src='Amul.jpg';">
             <div class="slide-particles" id="particles-2"></div>
             <div class="image-reflections"></div>
           </div>
           <div class="premium-caption">
             <div class="caption-badge">Popular</div>
-            <h2 class="slide-title">Fresh<br><span class="highlight">Dairy Products</span></h2>
+            <p class="slide-title">Fresh<br><span class="highlight">Dairy Products</span></p>
             <div class="caption-divider"><span></span></div>
             <p class="slide-description">Premium quality butter, cheese and milk products for your daily needs.</p>
             <a href="products.php" class="btn btn-slider">
@@ -167,13 +111,13 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
       <div class="carousel-item" data-slide-id="3">
         <div class="premium-slide-wrapper">
           <div class="carousel-image-container">
-            <img src="images/Refreshing Beverages.jpg" alt="Refreshing Beverages" onerror="this.src='Amul.jpg';">
+            <img src="images/Refreshing Beverages.jpg" alt="Amul Refreshing Beverages" loading="lazy" onerror="this.src='Amul.jpg';">
             <div class="slide-particles" id="particles-3"></div>
             <div class="image-reflections"></div>
           </div>
           <div class="premium-caption">
             <div class="caption-badge">New</div>
-            <h2 class="slide-title">Refreshing<br><span class="highlight">Beverages</span></h2>
+            <p class="slide-title">Refreshing<br><span class="highlight">Beverages</span></p>
             <div class="caption-divider"><span></span></div>
             <p class="slide-description">Cool down with Amul's refreshing drink collection for hot summer days.</p>
             <a href="products.php" class="btn btn-slider">
@@ -201,7 +145,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
 </div>
 
 <!-- SECTION 2: ABOUT US -->
-<main class="container py-4">
+<div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <!-- Hero Section -->
@@ -225,7 +169,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                     </div>
                     <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
                         <div class="text-center">
-                            <img src="images/iceindex.webp" alt="Amul Products" class="img-fluid rounded shadow-sm" style="max-height: 300px;">
+                            <img src="images/iceindex.webp" alt="Amul Products at Shree Laxmi Amul Shopiee" class="img-fluid rounded shadow-sm" style="max-height: 300px;" width="945" height="531" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -243,7 +187,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                     <div class="icon-box icon-box-blue mb-4">
                         <i class="bi bi-droplet-fill"></i>
                     </div>
-                    <h5 class="card-title text-primary">Amul Milk & Dairy Products</h5>
+                    <h3 class="card-title h5 text-primary">Amul Milk & Dairy Products</h3>
                     <p class="card-text">Fresh milk, curd, and other dairy essentials for your daily needs.</p>
                 </div>
                 <div class="card-animation-element"></div>
@@ -255,7 +199,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                     <div class="icon-box icon-box-red mb-4">
                         <i class="bi bi-snow2"></i>
                     </div>
-                    <h5 class="card-title text-danger">Ice Creams & Desserts</h5>
+                    <h3 class="card-title h5 text-danger">Ice Creams & Desserts</h3>
                     <p class="card-text">Delicious ice creams and frozen desserts in various flavors.</p>
                 </div>
                 <div class="card-animation-element"></div>
@@ -267,7 +211,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                     <div class="icon-box icon-box-orange mb-4">
                         <i class="bi bi-cup-straw"></i>
                     </div>
-                    <h5 class="card-title text-warning">Chocolates & Beverages</h5>
+                    <h3 class="card-title h5 text-warning">Chocolates & Beverages</h3>
                     <p class="card-text">Tasty chocolates and refreshing beverages for all ages.</p>
                 </div>
                 <div class="card-animation-element"></div>
@@ -279,7 +223,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                     <div class="icon-box icon-box-green mb-4">
                         <i class="bi bi-egg-fried"></i>
                     </div>
-                    <h5 class="card-title text-success">Paneer, Cheese, Butter & More</h5>
+                    <h3 class="card-title h5 text-success">Paneer, Cheese, Butter & More</h3>
                     <p class="card-text">Wide range of dairy products for your cooking needs.</p>
                 </div>
                 <div class="card-animation-element"></div>
@@ -308,7 +252,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                 </div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h5>100% Genuine Amul Products</h5>
+                                <h3 class="h5">100% Genuine Amul Products</h3>
                                 <p class="mb-0">Authorized Amul outlet with authentic products</p>
                             </div>
                         </div>
@@ -321,7 +265,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                 </div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h5>Best Prices Guaranteed</h5>
+                                <h3 class="h5">Best Prices Guaranteed</h3>
                                 <p class="mb-0">Competitive pricing for all our products</p>
                             </div>
                         </div>
@@ -334,7 +278,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                 </div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h5>Friendly & Quick Service</h5>
+                                <h3 class="h5">Friendly & Quick Service</h3>
                                 <p class="mb-0">Courteous staff ready to assist you</p>
                             </div>
                         </div>
@@ -347,7 +291,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                 </div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h5>Clean, Hygienic Store Environment</h5>
+                                <h3 class="h5">Clean, Hygienic Store Environment</h3>
                                 <p class="mb-0">Maintaining highest standards of cleanliness</p>
                             </div>
                         </div>
@@ -364,49 +308,49 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                     <div class="col" data-aos="flip-left" data-aos-delay="100">
                         <div class="product-thumbnail">
                             <div class="product-img-wrapper">
-                                <img src="images/Tricone.jpg" alt="Amul Tricone" class="img-fluid rounded product-img">
+                                <img src="images/Tricone.jpg" alt="Amul Tricone" class="img-fluid rounded product-img" loading="lazy">
                                 <div class="product-overlay">
                                     <a href="products.php" class="btn btn-sm btn-light">View Details</a>
                                 </div>
                             </div>
                             <div class="product-badge"><span>Popular</span></div>
-                            <h5 class="mt-2 text-center">Amul Tricone</h5>
+                            <h3 class="h5 mt-2 text-center">Amul Tricone</h3>
                         </div>
                     </div>
                     <div class="col" data-aos="flip-left" data-aos-delay="200">
                         <div class="product-thumbnail">
                             <div class="product-img-wrapper">
-                                <img src="images/Amul Butter.jpg" alt="Amul Butter" class="img-fluid rounded product-img">
+                                <img src="images/Amul Butter.jpg" alt="Amul Butter" class="img-fluid rounded product-img" loading="lazy">
                                 <div class="product-overlay">
                                     <a href="products.php" class="btn btn-sm btn-light">View Details</a>
                                 </div>
                             </div>
                             <div class="product-badge"><span>Classic</span></div>
-                            <h5 class="mt-2 text-center">Amul Butter</h5>
+                            <h3 class="h5 mt-2 text-center">Amul Butter</h3>
                         </div>
                     </div>
                     <div class="col" data-aos="flip-left" data-aos-delay="300">
                         <div class="product-thumbnail">
                             <div class="product-img-wrapper">
-                                <img src="images/Amul Taaza Milk.jpg" alt="Amul Taaza Milk" class="img-fluid rounded product-img">
+                                <img src="images/Amul Taaza Milk.jpg" alt="Amul Taaza Milk" class="img-fluid rounded product-img" loading="lazy">
                                 <div class="product-overlay">
                                     <a href="products.php" class="btn btn-sm btn-light">View Details</a>
                                 </div>
                             </div>
                             <div class="product-badge"><span>Essential</span></div>
-                            <h5 class="mt-2 text-center">Amul Taaza Milk</h5>
+                            <h3 class="h5 mt-2 text-center">Amul Taaza Milk</h3>
                         </div>
                     </div>
                     <div class="col" data-aos="flip-left" data-aos-delay="400">
                         <div class="product-thumbnail">
                             <div class="product-img-wrapper">
-                                <img src="images/Mango Lassi.jpg" alt="Mango Lassi" class="img-fluid rounded product-img">
+                                <img src="images/Mango Lassi.jpg" alt="Mango Lassi" class="img-fluid rounded product-img" loading="lazy">
                                 <div class="product-overlay">
                                     <a href="products.php" class="btn btn-sm btn-light">View Details</a>
                                 </div>
                             </div>
                             <div class="product-badge"><span>Refreshing</span></div>
-                            <h5 class="mt-2 text-center">Mango Lassi</h5>
+                            <h3 class="h5 mt-2 text-center">Mango Lassi</h3>
                         </div>
                     </div>
                 </div>
@@ -439,7 +383,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                     <div class="testimonial-avatar">
                                         <i class="bi bi-person-circle"></i>
                                     </div>
-                                    <h5>Suresh Patel</h5>
+                                    <h3 class="h5">Suresh Patel</h3>
                                 </div>
                             </div>
                         </div>
@@ -457,7 +401,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                     <div class="testimonial-avatar">
                                         <i class="bi bi-person-circle"></i>
                                     </div>
-                                    <h5>Priya Sharma</h5>
+                                    <h3 class="h5">Priya Sharma</h3>
                                 </div>
                             </div>
                         </div>
@@ -475,7 +419,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                     <div class="testimonial-avatar">
                                         <i class="bi bi-person-circle"></i>
                                     </div>
-                                    <h5>Raj Malhotra</h5>
+                                    <h3 class="h5">Raj Malhotra</h3>
                                 </div>
                             </div>
                         </div>
@@ -498,7 +442,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                 <div class="row justify-content-center">
                     <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
                         <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.227876302633!2d72.85!3d19.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzAwLjAiTiA3MsKwNTAnMjQuMCJF!5e0!3m2!1sen!2sin!4v1620112345678!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.227876302633!2d72.85!3d19.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzAwLjAiTiA3MsKwNTAnMjQuMCJF!5e0!3m2!1sen!2sin!4v1620112345678!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Shree Laxmi Amul Shopiee Location Map"></iframe>
                         </div>
                     </div>
                     <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
@@ -506,7 +450,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                             <div class="card-body">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item bg-transparent location-item">
-                                        <i class="bi bi-geo-alt-fill text-danger"></i> <strong>Location:</strong> Shree Laxmi Amul Shopiee, [Pachmarg]
+                                        <i class="bi bi-geo-alt-fill text-danger"></i> <strong>Location:</strong> Shree Laxmi Amul Shopiee, 210 Pachmarg Road, Delwadi, Kudan, Maharashtra 401502
                                     </li>
                                     <li class="list-group-item bg-transparent location-item">
                                         <i class="bi bi-clock-fill text-danger"></i> <strong>Timing:</strong> Open Daily – 7:00 AM to 11:00 PM
@@ -516,7 +460,7 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
                                     </li>
                                 </ul>
                                 <div class="text-center mt-3">
-                                    <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank" class="btn btn-danger pulsate-btn">
+                                    <a href="https://maps.app.goo.gl/pG3D8cZ4Udd39mgs9" target="_blank" rel="noopener noreferrer" class="btn btn-danger pulsate-btn">
                                         <i class="bi bi-map me-2"></i> Get Directions
                                     </a>
                                 </div>
@@ -542,70 +486,33 @@ $ogImage = $scheme . '://' . $host . '/images/iceindex.webp';
             
         </div>
     </div>
-</main>
+</div>
 
-<?php include 'footer.php'; ?>
-
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- InfinityFree compatibility fixes -->
-<script src="infinity-fixes.js"></script>
-
-<!-- AOS Animation Library (always loaded) -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<!-- Ice Cream Background Animation -->
-<script src="js/icecream-bg.js"></script>
-
-<!-- Animation fixes script -->
-<script src="animations.js"></script>
-
-<!-- Additional page-specific animations -->
+<?php
+$extraFooterScripts = <<<'HTML'
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all animations via our animation script
-    
-    // Extra animations for this page
     document.querySelectorAll('.product-thumbnail').forEach(product => {
         product.addEventListener('mouseenter', function() {
             this.classList.add('animate__animated', 'animate__pulse');
         });
-        
         product.addEventListener('mouseleave', function() {
             this.classList.remove('animate__animated', 'animate__pulse');
         });
     });
-    
-    // Enable all animations that might be disabled
+
     document.querySelectorAll('.animate__animated').forEach(el => {
-        // Make sure animations aren't disabled
         el.style.animationDuration = '';
         el.style.animationDelay = '';
     });
-    
-    // Initialize AOS with more dynamic settings
+
     if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: false,
-            mirror: false
-        });
-        
-        // Refresh AOS when scrolling to catch any missed animations
         window.addEventListener('scroll', function() {
             AOS.refresh();
-        }, {passive: true});
+        }, { passive: true });
     }
-});
-</script>
 
-<!-- IntersectionObserver for lazy loading and animation -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Use IntersectionObserver for lazy loading and animations
     if ('IntersectionObserver' in window) {
-        // Lazy load images
         const lazyImages = document.querySelectorAll('img[loading="lazy"]');
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -620,30 +527,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-        
         lazyImages.forEach(img => imageObserver.observe(img));
-        
-        // Animate elements when they scroll into view
-        <?php if (!$isMobile): ?>
-        const animatedElems = document.querySelectorAll('.animate-on-scroll');
-        const animationObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    animationObserver.unobserve(entry.target);
-                }
-            });
-        });
-        
-        animatedElems.forEach(elem => animationObserver.observe(elem));
-        <?php else: ?>
-        // Just show elements immediately on mobile for better performance
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            el.classList.add('visible');
-        });
-        <?php endif; ?>
     }
 });
 </script>
-</body>
-</html>
+HTML;
+
+include 'footer.php';
+?>

@@ -1,8 +1,13 @@
 User-agent: *
 Allow: /
 
-# Block admin panel from search indexing
+# Block admin panel, internal database files, and form handlers from search indexing
 Disallow: /Amul-Shop-AdminPanel/
+Disallow: /db/
+Disallow: /database/
+Disallow: /submit_contact.php
+Disallow: /submit_enquiry.php
+Disallow: /test_db.php
 
 # Point crawlers to sitemap
 Sitemap: https://shreelaxmiamul.fast-page.org/sitemap.xml

@@ -1,0 +1,25 @@
+# Canonical URL & SEO Indexing Rules
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Canonicalize /index.php to / with a permanent 301 redirect (GET/HEAD only)
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+    RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+    RewriteRule ^index\.php$ / [R=301,L]
+</IfModule>
+
+# Prevent search engines from trying to index sitemap.xml or form/internal endpoints as web pages
+<IfModule mod_headers.c>
+    <Files "sitemap.xml">
+        Header set X-Robots-Tag "noindex, follow"
+    </Files>
+    <FilesMatch "^(submit_contact|submit_enquiry|test_db)\.php$">
+        Header set X-Robots-Tag "noindex, nofollow"
+    </FilesMatch>
+</IfModule>
+
+# Protect sensitive directories and dotfiles
+RedirectMatch 404 /\.(git|github|vscode|DS_Store)
+RedirectMatch 404 ^/(db|database)/

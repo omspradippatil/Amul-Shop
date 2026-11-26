@@ -252,6 +252,7 @@
     flex-shrink: 0;
 }
 
+.contact-info-text h3,
 .contact-info-text h5 {
     font-size: 1rem;
     margin-bottom: 0.25rem;

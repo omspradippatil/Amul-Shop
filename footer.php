@@ -11,17 +11,15 @@
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="footer-brand">
-                    <img src="Amul.jpg" alt="Amul Logo" class="footer-logo">
-                    <h5 class="text-white mb-0" style="font-size:1.25rem;">Shree Laxmi Amul Shopiee</h5>
+                    <img src="Amul.jpg" alt="Shree Laxmi Amul Shopiee Logo" class="footer-logo" width="40" height="40" loading="lazy">
+                    <h2 class="text-white mb-0 h5" style="font-size:1.25rem;">Shree Laxmi Amul Shopiee</h2>
                 </div>
                 <p class="text-white-50 mb-4">Your one-stop destination for all authentic Amul products. Serving the freshest dairy products since 2014.</p>
                 
                 <!-- Social icons with enhanced styling -->
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/share/16Y5YfVZGN/?mibextid=qi2Omg" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="social-icon" title="Twitter"><i class="bi bi-twitter"></i></a>
-                    <a href="https://wa.me/919890377098" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/share/16Y5YfVZGN/?mibextid=qi2Omg" class="social-icon" title="Facebook" aria-label="Visit our Facebook page" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+                    <a href="https://wa.me/919890377098" class="social-icon" title="WhatsApp" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
                 </div>
                 
                 <!-- Awards section -->
@@ -46,7 +44,7 @@
             </div>
             
             <div class="col-md-3 col-sm-6 mb-4">
-                <h5 class="text-white">Quick Links</h5>
+                <h3 class="text-white h5">Quick Links</h3>
                 <ul class="list-unstyled">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About Us</a></li>
@@ -57,7 +55,7 @@
             </div>
             
             <div class="col-md-3 col-sm-6 mb-4">
-                <h5 class="text-white">Information</h5>
+                <h3 class="text-white h5">Information</h3>
                 <ul class="list-unstyled">
                     <li><a href="faq.php">FAQ</a></li>
                     <li><a href="nutritional-info.php">Nutritional Info</a></li>
@@ -68,9 +66,9 @@
             </div>
             
             <div class="col-lg-2 mb-4">
-                <h5 class="text-white">Contact Us</h5>
+                <h3 class="text-white h5">Contact Us</h3>
                 <address class="text-white-50">
-                    <p><i class="bi bi-geo-alt-fill"></i> 210, Pachmarg, road,<br>opp. police station, Delwadi, Kudan,<br>Maharashtra 401502</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> 210, Pachmarg Road,<br>opp. Police Station, Delwadi, Kudan,<br>Maharashtra 401502</p>
                     <p><i class="bi bi-telephone-fill"></i> <a href="tel:+919890377098">+91 9890377098</a></p>
                     <p style="display: flex; align-items: center;"><i class="bi bi-envelope-fill me-1"></i> <a href="mailto:ompradippatil@gmail.com" style="word-break: break-word; font-size: 0.90em;">ompradippatil@gmail.com</a></p>
                 </address>
@@ -91,60 +89,50 @@
 </footer>
 
 <!-- WhatsApp Float Button -->
-<a href="https://wa.me/919890377098" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/919890377098" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
 
-
-<!-- Back to Top Button - Only one instance -->
-<button id="back-to-top" title="Go to top" style="position: fixed; bottom: 20px; right: 25px; z-index: 999;">
+<!-- Back to Top Button -->
+<button id="back-to-top" type="button" title="Go to top" aria-label="Back to top" style="position: fixed; bottom: 20px; right: 25px; z-index: 999;">
     <i class="bi bi-arrow-up"></i>
 </button>
 
 <!-- Bootstrap JS Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- InfinityFree compatibility fixes -->
-<script src="js/infinity-fixes.js"></script>
-<!-- Animation fixes script -->
-<script src="js/animations.js"></script>
 <!-- AOS Animation Library -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<!-- Main site JavaScript -->
+<!-- Shared site scripts -->
+<script src="js/common.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/icecream-bg.js"></script>
 <script src="js/main.js"></script>
 
-<!-- Custom JS with Performance Optimizations -->
 <script>
-    // Initialize back to top button
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize AOS animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-        
-        // Initialize back to top button via main.js
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        }
+
         if (typeof initBackToTop === 'function') {
             initBackToTop();
         } else {
-            // Fallback if main.js function isn't loaded
             const backToTop = document.getElementById('back-to-top');
             if (backToTop) {
                 window.addEventListener('scroll', function() {
-                    if (window.scrollY > 200) {
-                        backToTop.classList.add('show');
-                    } else {
-                        backToTop.classList.remove('show');
-                    }
-                });
-                
+                    backToTop.classList.toggle('show', window.scrollY > 200);
+                }, { passive: true });
+
                 backToTop.addEventListener('click', function(e) {
                     e.preventDefault();
-                    window.scrollTo({top: 0, behavior: 'smooth'});
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
-                
-                // Force check on load
+
                 if (window.scrollY > 200) {
                     backToTop.classList.add('show');
                 }
@@ -152,5 +140,6 @@
         }
     });
 </script>
+<?php if (!empty($extraFooterScripts)) { echo $extraFooterScripts; } ?>
 </body>
 </html>

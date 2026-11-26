@@ -117,7 +117,8 @@ footer {
     opacity: 0.1;
 }
 
-footer h5 {
+footer h5,
+footer h3.h5 {
     color: white !important;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -125,7 +126,8 @@ footer h5 {
     display: inline-block;
 }
 
-footer h5::after {
+footer h5::after,
+footer h3.h5::after {
     content: '';
     position: absolute;
     left: 0;

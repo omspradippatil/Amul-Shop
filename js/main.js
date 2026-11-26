@@ -64,16 +64,10 @@ function initCarouselWithFixedImages() {
             
             // Add error handler for images
             img.onerror = function() {
+                if (this.dataset.fallbackApplied) return;
+                this.dataset.fallbackApplied = '1';
                 this.src = 'Amul.jpg';
-                console.warn('Image failed to load, using fallback');
             };
-            
-            // Force image to reload with new dimensions
-            const currentSrc = img.src;
-            img.src = '';
-            setTimeout(() => {
-                img.src = currentSrc;
-            }, 10);
         });
         
         // Fix caption to ensure visibility
@@ -466,22 +460,14 @@ function initFormValidations() {
     const forms = document.querySelectorAll('.needs-validation');
     
     forms.forEach(form => {
+        if (form.id === 'contactForm' || form.id === 'enquiryForm') {
+            return;
+        }
         form.addEventListener('submit', function(event) {
             if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();
                 
-                // Find the first invalid field
-                const invalidField = form.querySelector(':invalid');
-                if (invalidField) {
-                    invalidField.focus();
-                }
-            }
-            
-            form.classList.add('was-validated');
-        });
-    });
-}
                 // Find the first invalid field
                 const invalidField = form.querySelector(':invalid');
                 if (invalidField) {
